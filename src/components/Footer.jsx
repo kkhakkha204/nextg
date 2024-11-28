@@ -3,7 +3,7 @@ import {MdCallMade, MdLocationCity} from "react-icons/md";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#19183a] text-white font-[Oswald] lg:grid lg:grid-cols-5">
+        <footer className="bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 text-white font-[Oswald] lg:grid lg:grid-cols-5">
             <div className="relative block h-32 lg:col-span-2 lg:h-full">
                 <img
                     src="/assets/images/footer/anhfooter.jpg"
@@ -203,7 +203,7 @@ const Footer = () => {
                 <div className="pt-80 border-t border-gray-100 ">
                     <div className="sm:flex sm:items-center sm:justify-between">
                         <div className="flex absolute items-center space-x-2 sm:-mt-[30rem] -mt-64 ">
-                            <img src="/assets/images/footer/logoNG.png" alt="Nextg Logo"
+                            <img src="/assets/images/logos/logoNGson2.png" alt="Nextg Logo"
                                  className="h-10 p-1.5 w-auto object-contain "/>
                         </div>
                         <div className="flex items-center space-x-3 mb-2 absolute sm:-mt-80 -mt-44">
@@ -211,24 +211,6 @@ const Footer = () => {
                             <span className="text-sm">
                             2/11 Vương Thừa Vũ, Hanoi, Vietnam
                         </span>
-                        </div>
-
-                        <div className=" absolute transform-style-preserve-3d w-full -mt-96 left-[96rem] hidden md:block ">
-                            <h1
-                                className="text-center tracking-wide inline-block mt-0 font-[Osward] text-[2.25rem] font-medium leading-tight"
-                            >
-                                Khám phá
-                                <span
-                                    className="font-[Osward] text-[2rem] italic font-normal"> tiềm năng
-                                    </span>
-                                <br/>
-                                xây dựng tương lai
-                            </h1>
-                            <div className="relative">
-                                <h1 className="font-[Osward] text-[2rem] italic font-normal">
-                                    cùng NEXT.G
-                                </h1>
-                            </div>
                         </div>
 
                         <ul className="flex flex-wrap gap-4 text-xs">
