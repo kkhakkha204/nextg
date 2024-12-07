@@ -8,11 +8,13 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import JoinPage from "./pages/JoinPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
     return (
         <Router>
-        <div className="relative min-h-screen w-screen overflow-hidden">
+            <ScrollToTop />
+            <div className="relative min-h-screen w-screen overflow-hidden">
                 {/* Navbar */}
                 <Navbar />
 
@@ -23,13 +25,12 @@ const App = () => {
                     <Route path="/giới-thiệu" element={<AboutPage />} />
                     <Route path="/liên-hệ" element={<ContactPage />} />
                     <Route path="/blog" element={<BlogPage />} />
-
                     <Route path="/tuyển-dụng" element={<JoinPage />} />
                 </Routes>
 
                 {/* Footer */}
                 <Footer />
-        </div>
+            </div>
         </Router>
     );
 };
