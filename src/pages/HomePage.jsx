@@ -4,15 +4,16 @@ import { PiStrategyBold } from "react-icons/pi";
 import { GiBigWave } from "react-icons/gi";
 import {MdCallMade} from "react-icons/md";
 import { MdReadMore } from "react-icons/md";
+import {Link} from "react-router-dom";
 const services = [
     {
         id: 1,
         text: "THU HÚT KHÁCH HÀNG",
         iconData: [
-            {icon: "/assets/images/quytrinh/seo.png", description: "SEO"},
-            {icon: "/assets/images/quytrinh/blogging.png", description: "Blogging"},
-            {icon: "/assets/images/quytrinh/contentmarketing.png", description: "Tiếp thị nội dung"},
-            {icon: "/assets/images/quytrinh/ad.png", description: "Quảng cáo"},
+            {icon: "/assets/images/quytrinh/seo.svg", description: "SEO"},
+            {icon: "/assets/images/quytrinh/blog.svg", description: "Blogging"},
+            {icon: "/assets/images/quytrinh/content.svg", description: "Tiếp thị nội dung"},
+            {icon: "/assets/images/quytrinh/ads.svg", description: "Quảng cáo"},
 
         ],
     },
@@ -20,33 +21,33 @@ const services = [
         id: 2,
         text: "NHẬN ĐỊNH KHÁCH HÀNG TIỀM NĂNG",
         iconData: [
-            {icon: "/assets/images/quytrinh/contentmarketing.png", description: "Tiếp thị nội dung"},
-            {icon: "/assets/images/quytrinh/ad.png", description: "Quảng cáo"},
-            {icon: "/assets/images/quytrinh/email-marketing.png", description: "Email Marketing"},
-            {icon: "/assets/images/quytrinh/blogging.png", description: "Blogging"},
-            {icon: "/assets/images/quytrinh/case-study.png", description: "Case Study"},
-            {icon: "/assets/images/quytrinh/automation.png", description: "Automation"},
-            {icon: "/assets/images/quytrinh/event.png", description: "Sự Kiện"},
+            {icon: "/assets/images/quytrinh/content.svg", description: "Tiếp thị nội dung"},
+            {icon: "/assets/images/quytrinh/ads.svg", description: "Quảng cáo"},
+            {icon: "/assets/images/quytrinh/email.svg", description: "Email Marketing"},
+            {icon: "/assets/images/quytrinh/blog.svg", description: "Blogging"},
+            {icon: "/assets/images/quytrinh/case.svg", description: "Case Study"},
+            {icon: "/assets/images/quytrinh/automation.svg", description: "Automation"},
+            {icon: "/assets/images/quytrinh/event.svg", description: "Sự Kiện"},
         ],
     },
     {
         id: 3,
         text: "CHUYỂN ĐỔI KHÁCH HÀNG",
         iconData: [
-            {icon: "/assets/images/quytrinh/demo.png", description: "Demo"},
-            {icon: "/assets/images/quytrinh/testimonials.png", description: "Ý Kiến Khách Hàng"},
-            {icon: "/assets/images/quytrinh/case-study.png", description: "Case Study"},
+            {icon: "/assets/images/quytrinh/demo.svg", description: "Demo"},
+            {icon: "/assets/images/quytrinh/testimonials.svg", description: "Ý Kiến Khách Hàng"},
+            {icon: "/assets/images/quytrinh/case.svg", description: "Case Study"},
         ],
     },
     {
         id: 4,
         text: "GIỮ CHÂN KHÁCH HÀNG",
         iconData: [
-            {icon: "/assets/images/quytrinh/trust.png", description: "Xây dựng lòng tin"},
-            {icon: "/assets/images/quytrinh/personal.png", description: "Cá nhân hóa"},
-            {icon: "/assets/images/quytrinh/promo.png", description: "Triển khai ưu đãi"},
-            {icon: "/assets/images/quytrinh/support.png", description: "Hỗ trợ tận tâm"},
-            {icon: "/assets/images/quytrinh/contentmarketing.png", description: "Tiếp thị nội dung"},
+            {icon: "/assets/images/quytrinh/trust.svg", description: "Xây dựng lòng tin"},
+            {icon: "/assets/images/quytrinh/personal.svg", description: "Cá nhân hóa"},
+            {icon: "/assets/images/quytrinh/promo.svg", description: "Triển khai ưu đãi"},
+            {icon: "/assets/images/quytrinh/support.svg", description: "Hỗ trợ tận tâm"},
+            {icon: "/assets/images/quytrinh/content.svg", description: "Tiếp thị nội dung"},
         ],
     },
 ];
@@ -84,12 +85,11 @@ const stats = [
 const posts = [
     {
         id: 1,
-        title: 'Boost your conversion rate',
+        title: 'Chiến Lược Marketing Sáng Tạo Để Thương Hiệu Bứt Phá',
         href: '#',
         description:
-            'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
+            'Tìm hiểu cách các chiến lược marketing sáng tạo có thể giúp thương hiệu của bạn nổi bật trong thị trường cạnh tranh. Khám phá bí quyết tối ưu hóa nội dung và gắn kết khách hàng hiệu quả.',
+
         category: { title: 'Marketing', href: '#' },
         author: {
             name: 'Michael Foster',
@@ -102,12 +102,11 @@ const posts = [
 
     {
         id: 2,
-        title: 'Boost your conversion rate',
+        title: 'Tăng Trưởng Doanh Thu Với Quảng Cáo Đa Nền Tảng',
         href: '#',
         description:
-            'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
+            'Quảng cáo đa nền tảng là chìa khóa để tiếp cận khách hàng ở mọi điểm chạm. Trong bài viết này, chúng tôi chia sẻ cách kết hợp hiệu quả các kênh để đạt được kết quả kinh doanh vượt mong đợi.',
+
         category: { title: 'Marketing', href: '#' },
         author: {
             name: 'Michael Foster',
@@ -120,12 +119,11 @@ const posts = [
 
     {
         id: 3,
-        title: 'Boost your conversion rate',
+        title: 'Tối Ưu Hóa Hành Trình Khách Hàng Trong Thời Đại Số',
         href: '#',
         description:
-            'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
+            'Khách hàng ngày nay mong đợi trải nghiệm liền mạch và được cá nhân hóa. Tìm hiểu cách xây dựng hành trình khách hàng tối ưu để tăng cường lòng trung thành và tỷ lệ chuyển đổi.',
+
         category: { title: 'Marketing', href: '#' },
         author: {
             name: 'Michael Foster',
@@ -377,12 +375,12 @@ const HomePage = () => {
                             {/* Heading Section */}
                             <div className=" z-50 transform-style-preserve-3d w-full text-center">
                                 <h2
-                                    className="text-center z-50 tracking-wide inline-block mt-0 mb-8 font-[Oswald] text-[1.25rem] sm:text-[2.5rem] md:text-[3.5rem] font-normal"
+                                    className="text-center z-50 tracking-tight inline-block mt-0 mb-8 font-[Oswald] text-[1.25rem] sm:text-[2.5rem] md:text-[3.5rem] font-semibold"
                                 >
                                     Chiến dịch Marketing chuyên biệt dựa trên
                                     <br/>
                                     <span
-                                        className="font-[Oswald] tracking-tight bg-gradient-to-r from-gray-800 via-sky-500 to-blue-900 bg-clip-text text-transparent text-[1.5rem] sm:text-[2.5rem] md:text-[3.5rem] font-normal"> quy trình bán hàng của bạn
+                                        className="font-[Oswald] tracking-tight bg-gradient-to-r from-gray-800 via-sky-500 to-blue-900 bg-clip-text text-transparent text-[1.5rem] sm:text-[2.5rem] md:text-[3.5rem] font-semibold"> quy trình bán hàng của bạn
                                             </span>
                                     <br/>
                                 </h2>
@@ -461,16 +459,16 @@ const HomePage = () => {
                                     sáng tạo
                                 </p>
                                 <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-                                    <div className="relative lg:row-span-2">
+                                    <div className="relative lg:row-span-2 ">
                                         <div
-                                            className="absolute inset-px rounded-lg bg-custom-gradient lg:rounded-l-[2rem]"></div>
+                                            className="absolute inset-px rounded-lg bg-gradient-to-br from-sky-800 via-blue-950 to-gray-800 border-l-4 border-t-4 border-sky-400 lg:rounded-l-[2rem]"></div>
                                         <div
                                             className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                                             <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                                                <p className="mt-2 text-3xl font-medium tracking-tight text-gray-950 max-lg:text-center">
+                                                <p className="mt-2 text-3xl font-medium tracking-tight text-white max-lg:text-center">
                                                     Branding
                                                 </p>
-                                                <ul className="mt-2 max-w-lg text-xl sm:ml-5 lg:ml-2 text-gray-700 max-lg:text-center">
+                                                <ul className="mt-2 max-w-lg text-xl sm:ml-5 lg:ml-2 text-gray-100 max-lg:text-center">
                                                     <li>
                                                         <span>
                                                             Nghiên cứu thương hiệu
@@ -498,8 +496,8 @@ const HomePage = () => {
                                                     </li>
                                                 </ul>
                                                 {/* Nút More */}
-                                                <a
-                                                    href="/liên-hệ"
+                                                <Link
+                                                    to="/dịch-vụ#branding"
                                                     className=" ml-[6.5rem] sm:ml-[13rem] lg:ml-0 px-6 py-3 mt-5 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg flex items-center justify-center relative group transition-all"
                                                 >
                                                     <span
@@ -508,7 +506,7 @@ const HomePage = () => {
                                                     </span>
                                                     <span
                                                         className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Xem Thêm</span>
-                                                </a>
+                                                </Link>
                                             </div>
 
                                             <div
@@ -617,8 +615,9 @@ const HomePage = () => {
                                                     </li>
                                                 </ul>
                                                 {/* Nút More */}
-                                                <a
-                                                    href="/liên-hệ"
+
+                                                <Link
+                                                    to="/dịch-vụ#marketing"
                                                     className=" ml-[6.5rem] sm:ml-[13rem] lg:ml-0 px-6 py-3 mt-5 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg flex items-center justify-center relative group transition-all"
                                                 >
                                                     <span
@@ -627,7 +626,7 @@ const HomePage = () => {
                                                     </span>
                                                     <span
                                                         className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Xem Thêm</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="relative min-h-[30rem] w-full grow">
                                                 <div
@@ -760,10 +759,10 @@ const HomePage = () => {
                                         <div className="lg:max-w-lg">
                                             <h2 className="text-base/7 font-semibold text-indigo-600">NEXT.GENCY</h2>
                                             <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                                                Khám phá về Next.G
+                                                Khám phá về NextGency
                                             </p>
                                             <p className="mt-6 text-lg/8 text-gray-600">
-                                                "Khám phá Next.G – Nơi sáng tạo và chiến lược hội tụ để thúc đẩy sự bứt
+                                                "Khám phá NextGency – Nơi sáng tạo và chiến lược hội tụ để thúc đẩy sự bứt
                                                 phá vượt mọi giới hạn"
                                             </p>
                                             <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
@@ -837,8 +836,7 @@ const HomePage = () => {
 
 
             {/*Feedback section*/}
-            <div
-                className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full border-t-8 border-blue-400">
+            <div className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full border-t-8 border-blue-400">
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
 
@@ -846,31 +844,14 @@ const HomePage = () => {
                             <div className="md:flex md:items-end md:justify-between">
                                 <div className="max-w-xl">
                                 <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                                        Read trusted reviews from our customers
+                                    Đánh giá từ khách hàng đã tin tưởng
+                                    <span className="text-4xl font-bold tracking-tight text-blue-500 sm:text-5xl"> Nextgency</span>
                                     </h2>
 
                                     <p className="mt-6 max-w-lg leading-relaxed text-white">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-                                        praesentium natus
-                                        sapiente commodi. Aliquid sunt tempore iste repellendus explicabo
-                                        dignissimos placeat,
-                                        autem harum dolore reprehenderit quis! Quo totam dignissimos earum.
+                                        Đánh giá từ khách hàng đã tin tưởng Nextgency, là minh chứng rõ ràng cho chất lượng và cam kết của chúng tôi. Những phản hồi tích cực không chỉ là kết quả của sự hợp tác hiệu quả mà còn là động lực để Nextgency tiếp tục phát triển và mang đến những giải pháp sáng tạo, đột phá cho mỗi đối tác.
                                     </p>
                                 </div>
-
-
-                                <a
-                                    href="/liên-hệ"
-                                    className=" mt-6 inline-flex shrink-0 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg items-center justify-center relative group transition-all"
-                                >
-                                                    <span
-                                                        className="absolute text-3xl group-hover:opacity-0 transition-opacity duration-300">
-                                                    <MdReadMore/>
-                                                    </span>
-                                    <span
-                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Xem Thêm</span>
-                                </a>
-
                             </div>
 
                             <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -935,21 +916,16 @@ const HomePage = () => {
                                         </div>
 
                                         <div className="mt-4">
-                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Stayin'
-                                                Alive</p>
+                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Thật sự ấn tượng</p>
 
                                             <p className="mt-4 leading-relaxed text-gray-700">
-                                                No, Rose, they are not breathing. And they have no arms or legs …
-                                                Where are they? You
-                                                know what? If we come across somebody with no arms or legs, do we
-                                                bother resuscitating
-                                                them? I mean, what quality of life do we have there?
+                                                Nextgency đã giúp chúng tôi phát triển chiến lược marketing sáng tạo và hiệu quả, mang lại kết quả vượt mong đợi. Đội ngũ chuyên nghiệp, luôn sẵn sàng hỗ trợ và điều chỉnh theo nhu cầu cụ thể của doanh nghiệp. Chúng tôi rất hài lòng.
                                             </p>
                                         </div>
                                     </div>
 
                                     <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                                        &mdash; Michael Scott
+                                        &mdash; Nguyễn Thị Lan, CEO - Lan Huế Bakery
                                     </footer>
                                 </blockquote>
 
@@ -1014,21 +990,16 @@ const HomePage = () => {
                                         </div>
 
                                         <div className="mt-4">
-                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Stayin'
-                                                Alive</p>
+                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Rất đáng tin cậy</p>
 
                                             <p className="mt-4 leading-relaxed text-gray-700">
-                                                No, Rose, they are not breathing. And they have no arms or legs …
-                                                Where are they? You
-                                                know what? If we come across somebody with no arms or legs, do we
-                                                bother resuscitating
-                                                them? I mean, what quality of life do we have there?
+                                                Chúng tôi đã tìm được đối tác đáng tin cậy với Nextgency. Các giải pháp marketing của họ không chỉ sáng tạo mà còn rất thực tế, giúp tăng trưởng doanh thu và nâng cao thương hiệu một cách bền vững.
                                             </p>
                                         </div>
                                     </div>
 
                                     <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                                        &mdash; Michael Scott
+                                        &mdash; Hoàng Minh, Giám đốc - Tech Solutions
                                     </footer>
                                 </blockquote>
 
@@ -1093,21 +1064,16 @@ const HomePage = () => {
                                         </div>
 
                                         <div className="mt-4">
-                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Stayin'
-                                                Alive</p>
+                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Nextgency số 1</p>
 
                                             <p className="mt-4 leading-relaxed text-gray-700">
-                                                No, Rose, they are not breathing. And they have no arms or legs …
-                                                Where are they? You
-                                                know what? If we come across somebody with no arms or legs, do we
-                                                bother resuscitating
-                                                them? I mean, what quality of life do we have there?
+                                                Nextgency đã thay đổi cách chúng tôi tiếp cận khách hàng, giúp tối ưu hóa chiến dịch marketing và gia tăng tỉ lệ chuyển đổi. Họ thực sự hiểu rõ nhu cầu và mang lại những giải pháp hiệu quả nhất.
                                             </p>
                                         </div>
                                     </div>
 
                                     <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                                        &mdash; Michael Scott
+                                        &mdash; Nguyễn Minh Tân, Giám đốc - Tân Phú Electronics
                                     </footer>
                                 </blockquote>
                             </div>
@@ -1189,7 +1155,14 @@ const HomePage = () => {
             >
             </div>
                 {/*Blog section*/}
-            <div className="relative bg-custom-gradient w-full">
+            <div className="relative bg-custom-gradient w-full"
+                 style={{
+                     backgroundImage: "url('/assets/images/banner/bgsec5.png')",
+                     backgroundSize: "cover",
+                     backgroundRepeat: "no-repeat",
+                     backgroundPosition: "center center",
+                     minHeight: "80vh",
+                 }}>
                     {/* SVG Pattern */}
                     <svg
                         aria-hidden="true"
@@ -1221,9 +1194,7 @@ const HomePage = () => {
                                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                                     <div className="mx-auto max-w-2xl lg:mx-0">
                                         <h2 className="text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">Blog</h2>
-                                        <p className="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with
-                                            our
-                                            expert advice.</p>
+                                        <p className="mt-2 text-lg/8 text-gray-600">Đây là nơi đội ngũ của chúng tôi chia sẻ những bài học và góc nhìn về tiếp thị, chiến lược số, tăng trưởng, SEO, sản phẩm, và nhiều hơn nữa.</p>
                                     </div>
                                     <div
                                         className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -1231,9 +1202,6 @@ const HomePage = () => {
                                             <article key={post.id}
                                                      className="flex max-w-xl flex-col items-start justify-between">
                                                 <div className="flex items-center gap-x-4 text-xs">
-                                                    <time dateTime={post.datetime} className="text-gray-500">
-                                                        {post.date}
-                                                    </time>
                                                     <a
                                                         href={post.category.href}
                                                         className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"

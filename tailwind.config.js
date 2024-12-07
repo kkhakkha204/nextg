@@ -1,10 +1,11 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
 
   theme: {
     extend: {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to right, #dbeafe -130%, #f4f4f5 50%, #dbeafe 230%)',
+        'custom-about': 'linear-gradient(to right, #020617 -130%, #020617 50%, #020617 230%)',
         'custom-gradient-banner': 'linear-gradient(to top, #1e3a8a -20%, #f4f4f5 65%, #f4f4f5 180%)',
         'custom-gradient-logo': 'linear-gradient(to right, #93c5fd -140%, #f4f4f5 50%, #93c5fd 240%)',
 
@@ -35,6 +36,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+
+  ],
 };
 

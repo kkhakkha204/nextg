@@ -1,10 +1,105 @@
-import React from "react";
-import { useState } from "react";
-import {MdCallMade, MdReadMore} from "react-icons/md";
+import React, {useRef} from "react";
+import { useState, useEffect } from "react";
+import {
+    MdCallMade,
+    MdContentPaste, MdEmail,
+    MdOutlineAnalytics,
+    MdPersonSearch,
+    MdSettings,
+    MdShare
+} from "react-icons/md";
+import { useLocation } from "react-router-dom";
+
+import {
+    Chart,
+    ArcElement,
+    Tooltip,
+    Legend,
+    PieController,
+    BarController,
+    BarElement,
+    CategoryScale,
+    LinearScale,
+} from 'chart.js';
+
+Chart.register(
+    ArcElement,
+    Tooltip,
+    Legend,
+    PieController,
+    BarController,
+    BarElement,
+    CategoryScale,
+    LinearScale
+);
+
+
 
 const ServicesPage = () => {
-    const [selectedItem, setSelectedItem] = useState(null);
 
+    const posts = [
+        {
+            id: 1,
+            title: 'Chiến Lược Marketing Sáng Tạo Để Thương Hiệu Bứt Phá',
+            href: '#',
+            description:
+                'Tìm hiểu cách các chiến lược marketing sáng tạo có thể giúp thương hiệu của bạn nổi bật trong thị trường cạnh tranh. Khám phá bí quyết tối ưu hóa nội dung và gắn kết khách hàng hiệu quả.',
+
+            category: { title: 'Marketing', href: '#' },
+            author: {
+                name: 'Michael Foster',
+                role: 'Co-Founder / CTO',
+                href: '#',
+                imageUrl:
+                    'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+            },
+        },
+
+        {
+            id: 2,
+            title: 'Tăng Trưởng Doanh Thu Với Quảng Cáo Đa Nền Tảng',
+            href: '#',
+            description:
+                'Quảng cáo đa nền tảng là chìa khóa để tiếp cận khách hàng ở mọi điểm chạm. Trong bài viết này, chúng tôi chia sẻ cách kết hợp hiệu quả các kênh để đạt được kết quả kinh doanh vượt mong đợi.',
+
+            category: { title: 'Marketing', href: '#' },
+            author: {
+                name: 'Michael Foster',
+                role: 'Co-Founder / CTO',
+                href: '#',
+                imageUrl:
+                    'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+            },
+        },
+
+        {
+            id: 3,
+            title: 'Tối Ưu Hóa Hành Trình Khách Hàng Trong Thời Đại Số',
+            href: '#',
+            description:
+                'Khách hàng ngày nay mong đợi trải nghiệm liền mạch và được cá nhân hóa. Tìm hiểu cách xây dựng hành trình khách hàng tối ưu để tăng cường lòng trung thành và tỷ lệ chuyển đổi.',
+
+            category: { title: 'Marketing', href: '#' },
+            author: {
+                name: 'Michael Foster',
+                role: 'Co-Founder / CTO',
+                href: '#',
+                imageUrl:
+                    'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+            },
+        },
+
+    ]
+
+
+    const icons = {
+        1: <MdOutlineAnalytics size={28} className="text-blue-700" />,
+        2: <MdContentPaste size={28} className="text-blue-700" />,
+        3: <MdPersonSearch size={28} className="text-blue-700" />, // Influencer Marketing
+        4: <MdShare size={28} className="text-blue-700" />,         // Social Media Marketing
+        5: <MdSettings size={28} className="text-blue-700" />,      // Marketing Automation
+        6: <MdEmail size={28} className="text-blue-700" />,
+    };
     const data = [
         {
             id: 1,
@@ -61,6 +156,110 @@ const ServicesPage = () => {
             image: "/assets/images/marketing/em.jpg",
         },
     ];
+
+    const [selectedItem, setSelectedItem] = useState(data[0]);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const sectionId = location.hash.slice(1);
+        const targetSection = document.getElementById(sectionId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [location]);
+
+    const pieChartRef = useRef(null);
+    const barChartRef = useRef(null);
+
+    useEffect(() => {
+
+        if (pieChartRef.current) pieChartRef.current.destroy();
+        if (barChartRef.current) barChartRef.current.destroy();
+
+
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        pieChartRef.current = new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Doanh thu', 'Lợi nhuận', 'Chi phí'],
+                datasets: [
+                    {
+                        data: [60, 30, 10],
+                        backgroundColor: ['#38bdf8', '#ea580c', '#0369a1'],
+                    },
+                ],
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white', // Màu chữ trong legend
+                        },
+                    },
+                },
+            },
+        });
+
+        // Biểu đồ cột
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        // Tạo gradient
+        const gradient = barCtx.createLinearGradient(0, 400, 0, 0); // Gradient từ dưới lên trên
+        gradient.addColorStop(0, '#1e3a8a'); // blue-900
+        gradient.addColorStop(0.5, '#1e40af'); // blue-800
+        gradient.addColorStop(1, '#38bdf8'); // sky-400
+
+        barChartRef.current = new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2020', '2021', '2022', '2023'],
+                datasets: [
+                    {
+                        label: 'Doanh thu (triệu USD)',
+                        data: [50, 75, 90, 120],
+                        backgroundColor: gradient, // Áp dụng gradient
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white', // Màu chữ trong legend
+                        },
+                    },
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: 'white', // Màu chữ trục X
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.2)', // Màu đường kẻ lưới trục X
+                        },
+                    },
+                    y: {
+                        ticks: {
+                            color: 'white', // Màu chữ trục Y
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.2)', // Màu đường kẻ lưới trục Y
+                        },
+                    },
+                },
+            },
+        });
+
+        // Cleanup khi component unmount
+        return () => {
+            if (pieChartRef.current) pieChartRef.current.destroy();
+            if (barChartRef.current) barChartRef.current.destroy();
+        };
+    }, []);
+
+
 
     return (
         <main className="relative min-h-screen w-screen bg-custom-gradient overflow-hidden font-[Oswald] text-gray-800">
@@ -191,7 +390,8 @@ const ServicesPage = () => {
             </div>
 
 
-            <div className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950  w-full">
+            <div id="branding"
+                 className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950  w-full border-t-8 border-blue-400">
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
                         <div
@@ -260,7 +460,7 @@ const ServicesPage = () => {
                 </div>
             </div>
 
-            <div className="relative bg-custom-gradient w-full"
+            <div id="ads" className="relative bg-custom-gradient w-full"
                  style={{
                      backgroundImage: "url('/assets/images/banner/servicebg2.png')",
                      backgroundSize: "cover",
@@ -353,7 +553,7 @@ const ServicesPage = () => {
                                             href="/liên-hệ"
                                             className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
                                         >
-                                            Gia Nhập Next.G
+                                            Hợp Tác Ngay
                                             <span
                                                 className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
                                         </a>
@@ -365,7 +565,14 @@ const ServicesPage = () => {
                 </div>
             </div>
 
-            <div className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full px-6 py-10">
+            <div id="marketing"
+                 className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full px-6 py-10 border-t-8 border-blue-400">
+                <div className="mb-10">
+                    <h2 className="text-center text-2xl font-semibold text-indigo-600">Next.Gency</h2>
+                    <p className="mx-auto text-white mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight sm:text-5xl">
+                        MARKETING
+                    </p>
+                </div>
                 {/* Grid 6 hình chữ nhật */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6">
                     {data.map((item) => (
@@ -378,8 +585,8 @@ const ServicesPage = () => {
                             }`}
                             onClick={() => setSelectedItem(item)}
                         >
-                            <h2 className="text-lg font-semibold">{item.id}</h2>
-                            <h3 className="text-xl font-medium mt-2">{item.title}</h3>
+                            <div className="flex justify-center mt-2">{icons[item.id]}</div>
+                            <h3 className="text-xl flex justify-center font-medium mt-2">{item.title}</h3>
                             <p className="text-base mt-2">{item.description}</p>
                         </div>
                     ))}
@@ -415,7 +622,7 @@ const ServicesPage = () => {
                                         href="/liên-hệ"
                                         className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
                                     >
-                                        Gia Nhập Next.G
+                                        Hợp Tác Ngay
                                         <span
                                             className="absolute left-0 bottom-3 w-full h-[1px] bg-white transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
                                     </a>
@@ -434,7 +641,7 @@ const ServicesPage = () => {
             </div>
 
 
-            <div className="relative bg-custom-gradient to-blue-950 w-full"
+            <div id="seo" className="relative bg-custom-gradient to-blue-950 w-full"
                  style={{
                      backgroundImage: "url('/assets/images/banner/servicebg2.png')",
                      backgroundSize: "cover",
@@ -442,6 +649,30 @@ const ServicesPage = () => {
                      backgroundPosition: "center center",
                      minHeight: "100vh",
                  }}>
+                <svg
+                    aria-hidden="true"
+                    className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                >
+                    <defs>
+                        <pattern
+                            id="pattern-id"
+                            x="50%"
+                            y={-1}
+                            width={200}
+                            height={200}
+                            patternUnits="userSpaceOnUse"
+                        >
+                            <path d="M100 200V.5M.5 .5H200" fill="none"/>
+                        </pattern>
+                    </defs>
+                    <svg x="50%" y={-1} className="overflow-visible fill-white">
+                        <path
+                            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                            strokeWidth={0}
+                        />
+                    </svg>
+                    <rect fill="url(#pattern-id)" width="100%" height="100%" strokeWidth={0}/>
+                </svg>
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
                         <div
@@ -518,7 +749,7 @@ const ServicesPage = () => {
                                                     href="/liên-hệ"
                                                     className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
                                                 >
-                                                    Gia Nhập Next.G
+                                                    Hợp Tác Ngay
                                                     <span
                                                         className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
                                                 </a>
@@ -532,12 +763,263 @@ const ServicesPage = () => {
                 </div>
             </div>
 
+            <div id="data" className="relative bg-custom-gradient w-full"
+                 style={{
+                     backgroundImage: "url('/assets/images/banner/servicebg2.png')",
+                     backgroundSize: "cover",
+                     backgroundRepeat: "no-repeat",
+                     backgroundPosition: "center center",
+                     minHeight: "100vh",
+                 }}>
+                <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
+                    <div className="mx-auto w-full max-w-7xl">
+
+                        <div
+                            className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+                            <div className="mx-auto grid max-w-2xl lg:max-w-none lg:grid-cols-2 lg:gap-x-8">
+                                {/* Image Section */}
+                                <div className="lg:col-start-1 lg:row-start-1 lg:overflow-hidden">
+                                    <img
+                                        alt="NEXTGENCY"
+                                        src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
+                                        className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+                                    />
+                                </div>
+                                {/* Text Section */}
+                                <div className="lg:col-start-2 lg:row-start-1 lg:pl-8">
+                                    <p className="text-base font-semibold text-indigo-600">NEXTGENCY</p>
+                                    <h1 className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
+                                        Quản lý dữ liệu và phân tích
+                                    </h1>
+                                    <p className="mt-6 text-xl text-gray-700">
+                                        Chúng tôi giúp doanh nghiệp tổ chức,
+                                        lưu trữ và phân tích dữ liệu một cách hiệu quả,
+                                        biến thông tin thành công cụ hỗ trợ quyết định chiến lược,
+                                        tối ưu hóa hiệu suất và thúc đẩy tăng trưởng.
+                                    </p>
+                                    <ul role="list" className="mt-8 space-y-8 text-gray-600">
+                                        <li className="flex gap-x-3">
+                <span>
+                  <strong className="font-semibold text-gray-900">Chiến lược:</strong> Thu thập và phân tích dữ liệu khách hàng để tạo ra các chiến lược marketing hiệu quả.
+                </span>
+                                        </li>
+                                        <li className="flex gap-x-3">
+                <span>
+                  <strong className="font-semibold text-gray-900">Cách triển khai:</strong> Thiết lập chỉ số đo lường (KPIs), phân tích hành vi người dùng, và báo cáo chi tiết để tối ưu hóa chiến dịch.
+                </span>
+                                        </li>
+                                        <li className="flex gap-x-3">
+                <span>
+                  <strong className="font-semibold text-gray-900">Các kênh sử dụng:</strong> Google Analytics, Tableau, Data Studio.
+                </span>
+                                        </li>
+                                    </ul>
+                                    <div className="mt-24 flex justify-center gap-4">
+                                        {/* Nút Chuyển Sang Trang Liên Hệ */}
+                                        <a
+                                            href="/liên-hệ"
+                                            className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
+                                        >
+                                            <span
+                                                className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
+                                            <MdCallMade/>
+                                            </span>
+                                            <span
+                                                className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
+                                        </a>
+
+                                        {/* Nút Hợp Tác Ngay */}
+                                        <a
+                                            href="/liên-hệ"
+                                            className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
+                                        >
+                                            Hợp Tác Ngay
+                                            <span
+                                                className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id=""
+                 className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950  w-full ">
+
+                <div className="relative z-10 px-6 sm:px-8 md:px-10 sm:pt-0">
+                    <div className="mx-auto w-full max-w-7xl ">
+                        <div className="text-white py-12 px-6">
+                            {/* Tiêu đề chính */}
+                            <div className="text-center mb-10">
+                                <h2 className="text-3xl md:text-4xl font-bold mb-4">Kết Quả Đạt Được</h2>
+                                <p className="text-lg md:text-xl">Khám phá những số liệu minh họa cho hiệu quả chúng tôi
+                                    mang lại.</p>
+                            </div>
+
+                            {/* Grid infographic */}
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+                                {/* Thẻ infographic */}
+                                <div
+                                    className="flex flex-col items-center text-center bg-white text-sky-800 border-x-4 border-sky-600 p-6 rounded-3xl shadow-lg">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-orange-600">85%</h3>
+                                    <p className="mt-2 text-lg">Khách hàng đạt tăng trưởng doanh thu sau 3 tháng hợp
+                                        tác.</p>
+                                </div>
+
+                                <div
+                                    className="flex flex-col items-center text-center bg-white text-sky-800 border-x-4 border-sky-600 p-6 rounded-3xl shadow-lg">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-orange-600">3.2x</h3>
+                                    <p className="mt-2 text-lg">ROAS trung bình từ các chiến dịch tối ưu.</p>
+                                </div>
+
+                                <div
+                                    className="flex flex-col items-center text-center bg-white text-sky-800 border-x-4 border-sky-600 p-6 rounded-3xl shadow-lg">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-orange-600">200+</h3>
+                                    <p className="mt-2 text-lg">Dự án thành công, 150+ khách hàng hài lòng.</p>
+                                </div>
+                            </div>
+
+                            {/* Phần biểu đồ */}
+                            <div className="mt-12">
+                                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">Hiệu quả theo năm</h3>
+                                <div
+                                    className="flex flex-col lg:flex-row justify-center items-center gap-20 mt-10 py-10 bg-gradient-to-br from-sky-800 via-blue-950 to-gray-800 border-t-4 border-sky-400 rounded-xl ">
+                                    {/* Biểu đồ hình tròn */}
+                                    <div className="w-72 h-72 sm:w-96 sm:h-96">
+                                        <canvas id="pieChart"></canvas>
+                                    </div>
+
+                                    {/* Biểu đồ thanh */}
+                                    <div className="w-full max-w-[700px]">
+                                        <canvas id="barChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mt-24 flex justify-center gap-4">
+                                {/* Nút Chuyển Sang Trang Liên Hệ */}
+                                <a
+                                    href="/liên-hệ"
+                                    className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
+                                >
+                                            <span
+                                                className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
+                                            <MdCallMade/>
+                                            </span>
+                                    <span
+                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
+                                </a>
+
+                                {/* Nút Hợp Tác Ngay */}
+                                <a
+                                    href="/liên-hệ"
+                                    className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
+                                >
+                                    Hợp tác ngay
+                                    <span
+                                        className="absolute left-0 bottom-3 w-full h-[1px] bg-white transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            {/*Blog section*/}
+            <div className="relative bg-custom-gradient w-full"
+                 style={{
+                     backgroundImage: "url('/assets/images/banner/bgsec5.png')",
+                     backgroundSize: "cover",
+                     backgroundRepeat: "no-repeat",
+                     backgroundPosition: "center center",
+                     minHeight: "80vh",
+                 }}>
+                {/* SVG Pattern */}
+                <svg
+                    aria-hidden="true"
+                    className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] z-0"
+                >
+                    <defs>
+                        <pattern
+                            id="pattern-id"
+                            x="50%"
+                            y={-1}
+                            width={200}
+                            height={200}
+                            patternUnits="userSpaceOnUse"
+                        >
+                            <path d="M100 200V.5M.5 .5H200" fill="none"/>
+                        </pattern>
+                    </defs>
+                    <svg x="50%" y={-1} className="overflow-visible fill-white">
+                        <path
+                            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                            strokeWidth={0}
+                        />
+                    </svg>
+                    <rect fill="url(#pattern-id)" width="100%" height="100%" strokeWidth={0}/>
+                </svg>
+                <div className="relative z-10 px-6 sm:px-8 md:px-10 sm:pt-0">
+                    <div className="mx-auto w-full max-w-7xl ">
+                        <div className=" py-24 sm:py-32">
+                            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                                <div className="mx-auto max-w-2xl lg:mx-0">
+                                    <h2 className="text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">Blog</h2>
+                                    <p className="mt-2 text-lg/8 text-gray-600">Đây là nơi đội ngũ của chúng tôi chia sẻ
+                                        những bài học và góc nhìn về tiếp thị, chiến lược số, tăng trưởng, SEO, sản
+                                        phẩm, và nhiều hơn nữa.</p>
+                                </div>
+                                <div
+                                    className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                                    {posts.map((post) => (
+                                        <article key={post.id}
+                                                 className="flex max-w-xl flex-col items-start justify-between">
+                                            <div className="flex items-center gap-x-4 text-xs">
+                                                <a
+                                                    href={post.category.href}
+                                                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                                                >
+                                                    {post.category.title}
+                                                </a>
+                                            </div>
+                                            <div className="group relative">
+                                                <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                                                    <a href={post.href}>
+                                                        <span className="absolute inset-0"/>
+                                                        {post.title}
+                                                    </a>
+                                                </h3>
+                                                <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.description}</p>
+                                            </div>
+                                            <div className="relative mt-8 flex items-center gap-x-4">
+                                                <img alt="" src={post.author.imageUrl}
+                                                     className="size-10 rounded-full bg-gray-50"/>
+                                                <div className="text-sm/6">
+                                                    <p className="font-semibold text-gray-900">
+                                                        <a href={post.author.href}>
+                                                            <span className="absolute inset-0"/>
+                                                            {post.author.name}
+                                                        </a>
+                                                    </p>
+                                                    <p className="text-gray-600">{post.author.role}</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
 
 
-)
-    ;
+    )
+        ;
 };
 
 export default ServicesPage;

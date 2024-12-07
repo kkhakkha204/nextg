@@ -4,7 +4,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -22,3 +22,47 @@ code {
 
 
 
+/* Tùy chỉnh thanh cuộn cho trình duyệt Webkit (Chrome, Edge, Safari) */
+body::-webkit-scrollbar {
+  width: 15px; /* Độ rộng thanh cuộn dọc */
+  height: 0px; /* Độ cao thanh cuộn ngang */
+}
+
+body::-webkit-scrollbar-track {
+  background: #ea580c; /* Gradient cho thanh cuộn */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #38bdf8, #1e40af); /* Gradient cho thanh cuộn */
+  border-radius: 10px; /* Bo góc cho thanh cuộn */
+  border: 2px solid #1e3a8a; /* Tạo khoảng cách giữa thumb và track */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(0deg, #38bdf8, #1e40af); /* Gradient cho thanh cuộn */
+}
+
+/* Tùy chỉnh thanh cuộn cho các vùng cụ thể (nếu cần) */
+.custom-scroll {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #38bdf8 #1e3a8a;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #1e3a8a;
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #38bdf8, #1e40af);
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1e40af, #1e3a8a);
+}

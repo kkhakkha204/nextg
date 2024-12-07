@@ -1,6 +1,6 @@
 import React from "react";
 import {MdCallMade, MdLocationCity} from "react-icons/md";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 text-white font-[Oswald] lg:grid lg:grid-cols-5">
@@ -154,23 +154,48 @@ const Footer = () => {
 
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <a href="#" className=" transition hover:opacity-75"> 1 </a>
+                                    <Link
+                                        to="/dịch-vụ#branding"
+                                        className="transition hover:opacity-75"
+                                    >
+                                        Branding
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className=" transition hover:opacity-75"> 2 </a>
+                                    <Link
+                                        to="/dịch-vụ#ads"
+                                        className="transition hover:opacity-75"
+                                    >
+                                        Digital Advertising
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className=" transition hover:opacity-75"> 3 </a>
+                                    <Link
+                                        to="/dịch-vụ#marketing"
+                                        className="transition hover:opacity-75"
+                                    >
+                                        Marketing
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className=" transition hover:opacity-75"> 4 </a>
+                                    <Link
+                                        to="/dịch-vụ#seo"
+                                        className="transition hover:opacity-75"
+                                    >
+                                        Tối ưu SEO
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className=" transition hover:opacity-75"> 5 </a>
+                                    <Link
+                                        to="/dịch-vụ#data"
+                                        className="transition hover:opacity-75"
+                                    >
+                                        Data Management & Analytics
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
