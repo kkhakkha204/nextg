@@ -350,13 +350,14 @@ const ServicesPage = () => {
                             </div>
 
                             <div
-                                className="mt-5 xl:absolute xl:top-[100%] xl:bottom-auto xl:left-auto xl:right-[0.5%] ">
+                                className="mt-5 xl:absolute xl:top-[85%] xl:bottom-auto xl:left-auto xl:right-[0.5%] ">
                                 <div>
                                     <p className="font-[Oswald] md:text-2xl text-lg font-[350] leading-[1.5] tracking-wider">
-                                        Dù bạn đang bắt đầu xây dựng chiến lược marketing
-                                        <br/>hay muốn khám phá các phương pháp mới,
-                                        <br/>chúng tôi có đầy đủ công cụ và kinh nghiệm
-                                        <br/>để giúp doanh nghiệp của bạn phát triển.
+                                        Tiết Kiệm Chi Phí
+                                        <br/>Tăng Độ Phủ Truyền Thông Thương Hiệu
+                                        <br/> Tối Ưu Chuyển Đổi
+                                        <br/>Báo Cáo Minh Bạch
+                                        <br/>Vận Hành Chuyên Nghiệp.
                                     </p>
                                     <div className="mt-6 flex justify-center gap-4">
                                         {/* Nút Chuyển Sang Trang Liên Hệ */}
@@ -405,15 +406,18 @@ const ServicesPage = () => {
                                         <div className="lg:max-w-lg">
                                             <p className="text-base/7 font-semibold text-indigo-600">NEXTGENCY</p>
                                             <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl uppercase">
-                                                Tư vấn và xây dựng thương hiệu
+                                                Content
                                             </h1>
+                                            <div className="border-l-[6px] border-orange-500">
+                                                <p className="ml-4 mt-6 text-xl/8 text-orange-500">
+                                                    Biên soạn nội dung truyền thông tinh tế, khác biệt
+                                                </p>
+                                            </div>
                                             <p className="mt-6 text-xl/8 text-gray-200">
-                                                Chúng tôi giúp doanh nghiệp định hình bản sắc thương hiệu,
-                                                tạo dựng giá trị cốt lõi và xây dựng hình ảnh mạnh mẽ trên thị trường.
-                                                Với sự kết hợp giữa chiến lược sáng tạo và chuyên môn sâu rộng, chúng
-                                                tôi
-                                                không chỉ tư vấn mà còn đồng hành cùng bạn trong việc phát triển một
-                                                thương hiệu bền vững, khác biệt và đầy sức hút.
+                                                Tạo nên những nội dung độc đáo, dễ dàng thu hút sự chú ý, chạm đến trái
+                                                tim người xem và truyền cảm hứng mạnh mẽ. Biến thương hiệu của bạn thành
+                                                tâm điểm, thúc đẩy tương tác tự nhiên, nâng cao nhận diện và tối đa hóa
+                                                hiệu quả kinh doanh thông qua sự lan tỏa không giới hạn.
                                             </p>
                                         </div>
                                     </div>
@@ -435,19 +439,19 @@ const ServicesPage = () => {
                                                 <li className="flex gap-x-3">
 
                                                     <span>
-                    <strong className="font-bold text-blue-500 ">Chiến lược:</strong> Phát triển và củng cố thương hiệu bằng cách xác định thông điệp cốt lõi và bản sắc thương hiệu.
+                    <strong className="font-bold text-blue-500 ">Marketing Plan:</strong>Lập kế hoạch marketing hiệu quả, giúp thương hiệu đạt mục tiêu kinh doanh.
                   </span>
                                                 </li>
                                                 <li className="flex gap-x-3">
 
                                                     <span>
-                    <strong className="font-bold text-blue-500 ">Cách triển khai:</strong> Phân tích thị trường, nghiên cứu hành vi người tiêu dùng, và xây dựng chiến lược thương hiệu bao gồm logo, slogan, và câu chuyện thương hiệu nhất quán trên mọi kênh.
+                    <strong className="font-bold text-blue-500 ">Content Branding - Content Viral:</strong>Tạo nội dung ấn tượng, lan tỏa mạnh mẽ, tăng nhận diện thương hiệu.
                   </span>
                                                 </li>
                                                 <li className="flex gap-x-3">
 
                                                     <span>
-                    <strong className="font-bold text-blue-500 ">Công cụ nghiên cứu:</strong> Các báo cáo thị trường, công cụ nghiên cứu đối thủ, khảo sát khách hàng.
+                    <strong className="font-bold text-blue-500 ">Seeing Campaign - Event Planer:</strong>Tổ chức chiến dịch, sự kiện thu hút, nâng cao uy tín thương hiệu.
                   </span>
                                                 </li>
                                             </ul>
@@ -509,30 +513,28 @@ const ServicesPage = () => {
                                 <div className="lg:col-start-2 lg:row-start-1 lg:pl-8">
                                     <p className="text-base font-semibold text-indigo-600">NEXTGENCY</p>
                                     <h1 className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
-                                        Quảng cáo kỹ thuật số toàn diện
+                                        Media
                                     </h1>
+                                    <div className="border-l-[6px] border-orange-600">
+                                        <p className="ml-4 mt-6 text-xl/8 text-orange-600">
+                                            Xây dựng chiến lược hình ảnh thương hiệu nổi bật, bắt mắt.
+                                        </p>
+                                    </div>
                                     <p className="mt-6 text-xl text-gray-700">
-                                        Chúng tôi triển khai quảng cáo kỹ thuật số toàn diện,
-                                        tối ưu hóa từng giai đoạn trong hành trình khách hàng.
-                                        Từ nhận diện thương hiệu đến chuyển đổi và giữ chân,
-                                        giải pháp của chúng tôi đảm bảo hiệu quả và tăng trưởng bền vững.
+                                        Định hình thương hiệu nhất quán, nhấn mạnh điểm nổi bật riêng biệt. Nội dung được thiết kế chỉn chu với hình ảnh sắc nét, sáng tạo vượt trội, tạo ấn tượng sâu đậm ngay từ ánh nhìn đầu tiên.
                                     </p>
-                                    <ul role="list" className="mt-8 space-y-8 text-gray-600">
+                                    <ul role="list" className="mt-8 space-y-8 text-gray-700">
                                         <li className="flex gap-x-3">
                 <span>
-                  <strong className="font-semibold text-gray-900">Chiến lược:</strong> Triển khai chiến dịch quảng cáo theo mô hình phễu toàn diện để thúc đẩy hành trình khách hàng từ nhận thức đến chuyển đổi.
+                  <strong className="font-semibold text-blue-600">Design - Video Edit:</strong> Sáng tạo thiết kế và chỉnh sửa video chuyên nghiệp, thu hút thị giác.
                 </span>
                                         </li>
                                         <li className="flex gap-x-3">
                 <span>
-                  <strong className="font-semibold text-gray-900">Cách triển khai:</strong> Quảng cáo hiển thị để tăng nhận diện thương hiệu, quảng cáo tìm kiếm và video để thúc đẩy sự quan tâm, retargeting cho các giai đoạn chuyển đổi cuối cùng.
+                  <strong className="font-semibold text-blue-600">Media & Production House:</strong> Sản xuất nội dung chất lượng cao, nâng tầm thương hiệu trên mọi nền tảng.
                 </span>
                                         </li>
-                                        <li className="flex gap-x-3">
-                <span>
-                  <strong className="font-semibold text-gray-900">Các kênh sử dụng:</strong> Google Display Network, YouTube, mạng xã hội như Facebook và Instagram.
-                </span>
-                                        </li>
+
                                     </ul>
                                     <div className="mt-24 flex justify-center gap-4">
                                         {/* Nút Chuyển Sang Trang Liên Hệ */}
@@ -568,7 +570,7 @@ const ServicesPage = () => {
             <div id="marketing"
                  className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full px-6 py-10 border-t-8 border-blue-400">
                 <div className="mb-10">
-                    <h2 className="text-center text-2xl font-semibold text-indigo-600">Next.Gency</h2>
+                <h2 className="text-center text-2xl font-semibold text-indigo-600">Next.Gency</h2>
                     <p className="mx-auto text-white mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight sm:text-5xl">
                         MARKETING
                     </p>
@@ -587,7 +589,7 @@ const ServicesPage = () => {
                         >
                             <div className="flex justify-center mt-2">{icons[item.id]}</div>
                             <h3 className="text-xl flex justify-center font-medium mt-2">{item.title}</h3>
-                            <p className="text-base mt-2">{item.description}</p>
+                            <p className="text-base mt-2 ">{item.description}</p>
                         </div>
                     ))}
                 </div>
@@ -686,13 +688,15 @@ const ServicesPage = () => {
                                         <div className="lg:max-w-lg">
                                             <p className="text-base/7 font-semibold text-indigo-600">NEXTGENCY</p>
                                             <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
-                                                Tối ưu hóa công cụ tìm kiếm
+                                                Digital Ads + Traffic
                                             </h1>
+                                            <div className="border-l-[6px] border-orange-600">
+                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600">
+                                                    Tối ưu chuyển đổi qua các kênh online và offline
+                                                </p>
+                                            </div>
                                             <p className="mt-6 text-xl/8 text-gray-700">
-                                                Tối ưu hóa công cụ tìm kiếm (SEO) giúp cải thiện thứ hạng website trên
-                                                Google và các nền tảng tìm kiếm,
-                                                thu hút lưu lượng truy cập tự nhiên, tăng khả năng tiếp cận khách hàng
-                                                tiềm năng và nâng cao uy tín thương hiệu.
+                                                Xây dựng và tối ưu hóa chiến dịch quảng cáo với độ chính xác cao, sử dụng dữ liệu chuyên sâu để nhằm mục tiêu hiệu quả, tăng tỷ lệ chuyển đổi, và mang lại kết quả ấn tượng
                                             </p>
                                         </div>
                                     </div>
@@ -708,27 +712,22 @@ const ServicesPage = () => {
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
-                                        <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg">
+                                        <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
 
                                             <ul role="list" className="mt-8 space-y-8 ">
                                                 <li className="flex gap-x-3">
 
                                                     <span>
-                    <strong className="font-bold text-gray-900 ">Chiến lược:</strong> Tăng cường khả năng hiển thị trên công cụ tìm kiếm để thu hút lưu lượng truy cập tự nhiên đến website.
+                    <strong className="font-bold text-blue-600 ">Digital Ads: Facebook - TikTok, Google:</strong> Quảng cáo đa nền tảng, tối ưu hiệu quả và tiếp cận khách hàng mục tiêu.
                   </span>
                                                 </li>
                                                 <li className="flex gap-x-3">
 
                                                     <span>
-                    <strong className="font-bold text-gray-900 ">Cách triển khai:</strong> Phân tích từ khóa, tối ưu hóa nội dung và cấu trúc trang web, cải thiện tốc độ tải trang, và xây dựng backlink chất lượng cao.
+                    <strong className="font-bold text-blue-600 ">Chăm sóc khách hàng:</strong> Dịch vụ tận tâm, xây dựng lòng tin và giữ chân khách hàng bền vững.
                   </span>
                                                 </li>
-                                                <li className="flex gap-x-3">
 
-                                                    <span>
-                    <strong className="font-bold text-gray-900 ">Các công cụ hỗ trợ:</strong> Ahrefs, Moz, Google Search Console.
-                  </span>
-                                                </li>
                                             </ul>
                                             <div className="mt-24 flex justify-center gap-4">
                                                 {/* Nút Chuyển Sang Trang Liên Hệ */}
@@ -789,28 +788,33 @@ const ServicesPage = () => {
                                 <div className="lg:col-start-2 lg:row-start-1 lg:pl-8">
                                     <p className="text-base font-semibold text-indigo-600">NEXTGENCY</p>
                                     <h1 className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
-                                        Quản lý dữ liệu và phân tích
+                                        Phòng Marketing thuê ngoài
                                     </h1>
-                                    <p className="mt-6 text-xl text-gray-700">
-                                        Chúng tôi giúp doanh nghiệp tổ chức,
-                                        lưu trữ và phân tích dữ liệu một cách hiệu quả,
-                                        biến thông tin thành công cụ hỗ trợ quyết định chiến lược,
-                                        tối ưu hóa hiệu suất và thúc đẩy tăng trưởng.
-                                    </p>
-                                    <ul role="list" className="mt-8 space-y-8 text-gray-600">
+                                    <div className="border-l-[6px] border-orange-600">
+                                        <p className="ml-4 mt-6 text-xl/8 text-orange-600">
+                                            Cung cấp đầy đủ nhân sự triển khai hoạt động marketing với chi phí tối ưu giúp:
+                                        </p>
+                                    </div>
+
+                                    <ul role="list" className="mt-8 space-y-8 text-gray-700">
                                         <li className="flex gap-x-3">
                 <span>
-                  <strong className="font-semibold text-gray-900">Chiến lược:</strong> Thu thập và phân tích dữ liệu khách hàng để tạo ra các chiến lược marketing hiệu quả.
+                  <strong className="font-semibold text-blue-600">Chuyên nghiệp hóa nhận diện thương hiệu:</strong> Đồng bộ hình ảnh trên mội nền tảng nâng cao uy tín.
                 </span>
                                         </li>
                                         <li className="flex gap-x-3">
                 <span>
-                  <strong className="font-semibold text-gray-900">Cách triển khai:</strong> Thiết lập chỉ số đo lường (KPIs), phân tích hành vi người dùng, và báo cáo chi tiết để tối ưu hóa chiến dịch.
+                  <strong className="font-semibold text-blue-600">Tiết kiệm chi phí:</strong> Tối ưu hơn so với xây dựng phòng marketing in-house.
                 </span>
                                         </li>
                                         <li className="flex gap-x-3">
                 <span>
-                  <strong className="font-semibold text-gray-900">Các kênh sử dụng:</strong> Google Analytics, Tableau, Data Studio.
+                  <strong className="font-semibold text-blue-600">Tiết kiệm thời gian:</strong> Đảm bảo quy trình chuyên nghiệp mà không cần đào tạo nhân sự.
+                </span>
+                                        </li>
+                                        <li className="flex gap-x-3">
+                <span>
+                  <strong className="font-semibold text-blue-600">Bắt kịp xu hướng:</strong> Liên tục cập nhật các trend truyền thông mới nhất.
                 </span>
                                         </li>
                                     </ul>
@@ -849,7 +853,7 @@ const ServicesPage = () => {
                  className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950  w-full ">
 
                 <div className="relative z-10 px-6 sm:px-8 md:px-10 sm:pt-0">
-                    <div className="mx-auto w-full max-w-7xl ">
+                <div className="mx-auto w-full max-w-7xl ">
                         <div className="text-white py-12 px-6">
                             {/* Tiêu đề chính */}
                             <div className="text-center mb-10">

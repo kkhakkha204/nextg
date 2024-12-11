@@ -9,6 +9,7 @@ import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import JoinPage from "./pages/JoinPage";
 import ScrollToTop from "./components/ScrollToTop";
+import Price from "./pages/Price";
 
 const App = () => {
     return (
@@ -26,6 +27,7 @@ const App = () => {
                     <Route path="/liên-hệ" element={<ContactPage />} />
                     <Route path="/blog" element={<BlogPage />} />
                     <Route path="/tuyển-dụng" element={<JoinPage />} />
+                    <Route path="/Price" element={<Price />} />
                 </Routes>
 
                 {/* Footer */}

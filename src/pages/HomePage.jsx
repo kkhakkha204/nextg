@@ -143,7 +143,8 @@ const HomePage = () => {
     }, []);
 
     return (
-        <main className="relative bg-custom-gradient min-h-screen w-screen overflow-hidden font-[Oswald] text-gray-800">
+        <main
+            className="relative bg-custom-gradient md:min-h-screen w-screen overflow-hidden font-[Oswald] text-gray-800 min-h-[70vh]">
             <div className="">
                 <div className="relative pt-16 sm:pt-32 md:pt-48 w-full pb-52 xl:pb-[30rem]"
                      style={{
@@ -151,7 +152,6 @@ const HomePage = () => {
                          backgroundSize: "cover",
                          backgroundRepeat: "no-repeat",
                          backgroundPosition: "center center",
-                         minHeight: "100vh",
                      }}
                 >
                     {/* SVG Pattern */}
@@ -336,7 +336,7 @@ const HomePage = () => {
 
 
             {/*Quy Trinh section*/}
-            <div className="relative  bg-custom-gradient w-full sm:pt-8 "
+            <div className="relative bg-custom-gradient w-full sm:pt-8 "
                  style={{
                      backgroundImage: "url('/assets/images/banner/bgsec5.png')",
                      backgroundSize: "cover",
@@ -375,7 +375,7 @@ const HomePage = () => {
                             {/* Heading Section */}
                             <div className=" z-50 transform-style-preserve-3d w-full text-center">
                                 <h2
-                                    className="text-center z-50 tracking-tight inline-block mt-0 mb-8 font-[Oswald] text-[1.25rem] sm:text-[2.5rem] md:text-[3.5rem] font-semibold"
+                                    className="text-center z-50 tracking-tight inline-block mt-0 mb-8 font-[Oswald] text-[1.5rem] sm:text-[2.5rem] md:text-[3.5rem] font-semibold"
                                 >
                                     Chiến dịch Marketing chuyên biệt dựa trên
                                     <br/>
@@ -448,7 +448,8 @@ const HomePage = () => {
 
 
             {/*Services section*/}
-            <div className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full border-t-8 border-blue-400">
+            <div
+                className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full border-t-8 border-blue-400">
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
                         <div className=" py-24 sm:py-32">
@@ -465,35 +466,28 @@ const HomePage = () => {
                                         <div
                                             className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                                             <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                                                <p className="mt-2 text-3xl font-medium tracking-tight text-white max-lg:text-center">
-                                                    Branding
-                                                </p>
+                                                <div className="border-l-[6px] border-white">
+                                                    <p className="ml-4 mt-2 text-3xl font-medium tracking-tight text-white max-lg:text-center uppercase">
+                                                        Content
+                                                    </p>
+                                                </div>
                                                 <ul className="mt-2 max-w-lg text-xl sm:ml-5 lg:ml-2 text-gray-100 max-lg:text-center">
                                                     <li>
                                                         <span>
-                                                            Nghiên cứu thương hiệu
+                                                            Marketing Plan
                                                         </span>
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            Chiến lược thương hiệu
+                                                            Content Branding - Content Viral
                                                         </span>
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            Nhận diện thương hiệu
+                                                            Seeing Campaign - Event Planer
                                                         </span>
                                                     </li>
-                                                    <li>
-                                                        <span>
-                                                            Đặt tên
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            Nhận dạng hình ảnh và lời nói
-                                                        </span>
-                                                    </li>
+
                                                 </ul>
                                                 {/* Nút More */}
                                                 <Link
@@ -530,10 +524,12 @@ const HomePage = () => {
                                         <div
                                             className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
                                             <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                                                <p className="mt-2 text-3xl font-medium tracking-tight text-gray-950 max-lg:text-center">SEO</p>
+                                                <div className="border-l-[6px] border-blue-600">
+                                                    <p className="ml-4 mt-2 text-3xl font-medium tracking-tight text-blue-600 max-lg:text-center uppercase">Media</p>
+                                                </div>
                                                 <p className="mt-2 max-w-lg text-xl sm:ml-5 lg:ml-2 text-gray-700 max-lg:text-center">
-                                                    Tăng cường khả năng hiển thị trên công cụ tìm kiếm để thu hút lưu
-                                                    lượng truy cập tự nhiên đến website.
+                                                    Design - Video Edit
+                                                    <br/>Media & Production House
 
                                                 </p>
                                             </div>
@@ -554,20 +550,18 @@ const HomePage = () => {
                                         <div
                                             className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
                                             <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                                                <p className="mt-2 text-3xl font-medium tracking-tight text-gray-950 max-lg:text-center">Data
-                                                    Management & Analytics</p>
+                                                <div className="border-l-[6px] border-blue-600">
+                                                    <p className="ml-4 mt-2 text-3xl font-medium tracking-tight text-blue-600 max-lg:text-center uppercase">Digital
+                                                        Ads + Traffic</p>
+                                                </div>
                                                 <p className="mt-2 max-w-lg text-xl sm:ml-5 lg:ml-2 text-gray-700 max-lg:text-center">
-                                                    Thiết lập chỉ số đo lường (KPIs), phân tích hành vi người dùng, và
-                                                    báo cáo chi tiết để tối ưu hóa chiến dịch.
+                                                    Digital Ads: Facebook - TikTok, Google
+                                                    <br/>Chăm sóc khách hàng
                                                 </p>
                                             </div>
                                             <div
                                                 className="flex flex-1 items-center  max-lg:py-6 lg:pb-2 mt-4 mx-10">
-                                                <img
-                                                    className="h-[min(152px,40cqw)] object-cover rounded-3xl border-8 border-gray-600 w-full"
-                                                    src="/assets/images/elements/data2.jpg"
-                                                    alt=""
-                                                />
+
                                             </div>
                                         </div>
                                         <div
@@ -579,9 +573,11 @@ const HomePage = () => {
                                         <div
                                             className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
                                             <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                                                <h3 className="mt-2 text-3xl font-medium tracking-tight text-gray-950 max-lg:text-center">
-                                                    Marketing
-                                                </h3>
+                                                <div className="border-l-[6px] border-blue-600">
+                                                    <h3 className=" ml-4 mt-2 text-3xl font-medium tracking-tight text-blue-600 max-lg:text-center uppercase">
+                                                        Marketing
+                                                    </h3>
+                                                </div>
                                                 <ul className="mt-2 max-w-lg text-xl sm:ml-5 lg:ml-2 text-gray-700 max-lg:text-center">
                                                     <li>
                                                         <span>
@@ -697,15 +693,14 @@ const HomePage = () => {
                                             </a>
                                         </div>
                                     </div>
-                                    <div className="relative mt-16 h-80 lg:mt-8">
+                                    <div className="relative mt-16 h-auto lg:mt-8 max-w-screen-lg mx-auto">
                                         <img
                                             alt="App screenshot"
                                             src="/assets/images/elements/hoptac.jpg"
-                                            width={1824}
-                                            height={1080}
-                                            className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                                            className="w-full h-auto rounded-md bg-white/5 ring-1 ring-white/10"
                                         />
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -762,7 +757,8 @@ const HomePage = () => {
                                                 Khám phá về NextGency
                                             </p>
                                             <p className="mt-6 text-lg/8 text-gray-600">
-                                                "Khám phá NextGency – Nơi sáng tạo và chiến lược hội tụ để thúc đẩy sự bứt
+                                                "Khám phá NextGency – Nơi sáng tạo và chiến lược hội tụ để thúc đẩy sự
+                                                bứt
                                                 phá vượt mọi giới hạn"
                                             </p>
                                             <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
@@ -809,14 +805,14 @@ const HomePage = () => {
                                         src="/assets/images/about/about-us.jpg"
                                         width={2432}
                                         height={1442}
-                                        className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 grayscale-[50%]"
+                                        className="w-full md:mt-14 max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-full md:-ml-4 lg:-ml-0 grayscale-[50%] object-cover"
                                     />
                                 </div>
                             </div>
                         </div>
                         <div className=" pb-24 sm:pb-32">
                             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                                <dl className="grid grid-cols-2 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+                            <dl className="grid grid-cols-2 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
                                     {stats.map((stat) => (
                                         <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
                                             <dt className="text-2xl text-gray-600">{stat.name}</dt>
@@ -833,23 +829,26 @@ const HomePage = () => {
             </div>
 
 
-
-
             {/*Feedback section*/}
-            <div className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full border-t-8 border-blue-400">
+            <div
+                className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full border-t-8 border-blue-400">
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
 
                         <div className="mx-auto max-w-screen-2xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
                             <div className="md:flex md:items-end md:justify-between">
                                 <div className="max-w-xl">
-                                <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                                    Đánh giá từ khách hàng đã tin tưởng
-                                    <span className="text-4xl font-bold tracking-tight text-blue-500 sm:text-5xl"> Nextgency</span>
+                                    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                                        Đánh giá từ khách hàng đã tin tưởng
+                                        <span
+                                            className="text-4xl font-bold tracking-tight text-blue-500 sm:text-5xl"> Nextgency</span>
                                     </h2>
 
                                     <p className="mt-6 max-w-lg leading-relaxed text-white">
-                                        Đánh giá từ khách hàng đã tin tưởng Nextgency, là minh chứng rõ ràng cho chất lượng và cam kết của chúng tôi. Những phản hồi tích cực không chỉ là kết quả của sự hợp tác hiệu quả mà còn là động lực để Nextgency tiếp tục phát triển và mang đến những giải pháp sáng tạo, đột phá cho mỗi đối tác.
+                                        Đánh giá từ khách hàng đã tin tưởng Nextgency, là minh chứng rõ ràng cho chất
+                                        lượng và cam kết của chúng tôi. Những phản hồi tích cực không chỉ là kết quả của
+                                        sự hợp tác hiệu quả mà còn là động lực để Nextgency tiếp tục phát triển và mang
+                                        đến những giải pháp sáng tạo, đột phá cho mỗi đối tác.
                                     </p>
                                 </div>
                             </div>
@@ -916,10 +915,14 @@ const HomePage = () => {
                                         </div>
 
                                         <div className="mt-4">
-                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Thật sự ấn tượng</p>
+                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Thật sự ấn
+                                                tượng</p>
 
                                             <p className="mt-4 leading-relaxed text-gray-700">
-                                                Nextgency đã giúp chúng tôi phát triển chiến lược marketing sáng tạo và hiệu quả, mang lại kết quả vượt mong đợi. Đội ngũ chuyên nghiệp, luôn sẵn sàng hỗ trợ và điều chỉnh theo nhu cầu cụ thể của doanh nghiệp. Chúng tôi rất hài lòng.
+                                                Nextgency đã giúp chúng tôi phát triển chiến lược marketing sáng tạo và
+                                                hiệu quả, mang lại kết quả vượt mong đợi. Đội ngũ chuyên nghiệp, luôn
+                                                sẵn sàng hỗ trợ và điều chỉnh theo nhu cầu cụ thể của doanh nghiệp.
+                                                Chúng tôi rất hài lòng.
                                             </p>
                                         </div>
                                     </div>
@@ -990,10 +993,13 @@ const HomePage = () => {
                                         </div>
 
                                         <div className="mt-4">
-                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Rất đáng tin cậy</p>
+                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Rất đáng tin
+                                                cậy</p>
 
                                             <p className="mt-4 leading-relaxed text-gray-700">
-                                                Chúng tôi đã tìm được đối tác đáng tin cậy với Nextgency. Các giải pháp marketing của họ không chỉ sáng tạo mà còn rất thực tế, giúp tăng trưởng doanh thu và nâng cao thương hiệu một cách bền vững.
+                                                Chúng tôi đã tìm được đối tác đáng tin cậy với Nextgency. Các giải pháp
+                                                marketing của họ không chỉ sáng tạo mà còn rất thực tế, giúp tăng trưởng
+                                                doanh thu và nâng cao thương hiệu một cách bền vững.
                                             </p>
                                         </div>
                                     </div>
@@ -1064,10 +1070,13 @@ const HomePage = () => {
                                         </div>
 
                                         <div className="mt-4">
-                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Nextgency số 1</p>
+                                            <p className="text-2xl font-bold text-gray-800 sm:text-3xl">Nextgency số
+                                                1</p>
 
                                             <p className="mt-4 leading-relaxed text-gray-700">
-                                                Nextgency đã thay đổi cách chúng tôi tiếp cận khách hàng, giúp tối ưu hóa chiến dịch marketing và gia tăng tỉ lệ chuyển đổi. Họ thực sự hiểu rõ nhu cầu và mang lại những giải pháp hiệu quả nhất.
+                                                Nextgency đã thay đổi cách chúng tôi tiếp cận khách hàng, giúp tối ưu
+                                                hóa chiến dịch marketing và gia tăng tỉ lệ chuyển đổi. Họ thực sự hiểu
+                                                rõ nhu cầu và mang lại những giải pháp hiệu quả nhất.
                                             </p>
                                         </div>
                                     </div>
@@ -1154,7 +1163,117 @@ const HomePage = () => {
                  }}
             >
             </div>
-                {/*Blog section*/}
+
+
+            <div className="relative bg-custom-gradient py-24 sm:py-32"
+                 style={{
+                     backgroundImage: "url('/assets/images/banner/bgsec5.png')",
+                     backgroundSize: "cover",
+                     backgroundRepeat: "no-repeat",
+                     backgroundPosition: "center center",
+                     minHeight: "90vh",
+                 }}>
+                <svg
+                    aria-hidden="true"
+                    className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] z-0"
+                >
+                    <defs>
+                        <pattern
+                            id="pattern-id"
+                            x="50%"
+                            y={-1}
+                            width={200}
+                            height={200}
+                            patternUnits="userSpaceOnUse"
+                        >
+                            <path d="M100 200V.5M.5 .5H200" fill="none"/>
+                        </pattern>
+                    </defs>
+                    <svg x="50%" y={-1} className="overflow-visible fill-white">
+                        <path
+                            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                            strokeWidth={0}
+                        />
+                    </svg>
+                    <rect fill="url(#pattern-id)" width="100%" height="100%" strokeWidth={0}/>
+                </svg>
+
+                <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className=" mx-auto max-w-2xl sm:text-center">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl uppercase">Tham Khảo Bảng Giá
+                        <span className="text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl uppercase"> Nextgency</span>
+                        </h2>
+                    </div>
+                    <div
+                        className="bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+                        <div className="p-8 sm:p-10 lg:flex-auto">
+                            <h3 className="text-2xl font-bold tracking-tight text-white">Tổng Quan</h3>
+                            <p className="mt-6 text-base leading-7 text-gray-100">Khám phá bảng giá linh hoạt của Nextgency, được thiết kế phù hợp với mọi nhu cầu marketing, giúp bạn tối ưu ngân sách và đạt hiệu quả vượt mong đợi.</p>
+                            <div className="mt-10 flex items-center gap-x-4">
+                                <h4 className="flex-none text-xl font-semibold leading-6 text-blue-500">Bao Gồm</h4>
+                                <div className="h-px flex-auto bg-gray-100"></div>
+                            </div>
+                            <ul role="list"
+                                className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+                                <li className="flex gap-x-3 text-white">
+                                    <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
+                                         fill="currentColor" aria-hidden="true">
+                                        <path fillRule="evenodd"
+                                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                              clipRule="evenodd"/>
+                                    </svg>
+                                    Content
+                                </li>
+                                <li className="flex gap-x-3 text-white">
+                                    <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
+                                         fill="currentColor" aria-hidden="true">
+                                        <path fillRule="evenodd"
+                                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                              clipRule="evenodd"/>
+                                    </svg>
+                                    Thiết kế
+                                </li>
+                                <li className="flex gap-x-3 text-white">
+                                    <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
+                                         fill="currentColor" aria-hidden="true">
+                                        <path fillRule="evenodd"
+                                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                              clipRule="evenodd"/>
+                                    </svg>
+                                    Media
+                                </li>
+                                <li className="flex gap-x-3 text-white">
+                                    <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
+                                         fill="currentColor" aria-hidden="true">
+                                        <path fillRule="evenodd"
+                                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                              clipRule="evenodd"/>
+                                    </svg>
+                                    Digital Ads
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0 ">
+                            <div
+                                className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+                                <div className="mx-auto max-w-xs px-8">
+                                    <p className="text-base font-semibold text-gray-600"></p>
+                                    <p className="mt-6 flex items-baseline justify-center gap-x-2">
+                                        <span className="text-3xl font-bold tracking-tight text-gray-900">Bảng Giá Niêm Yết</span>
+                                        <span
+                                            className="text-sm font-semibold leading-6 tracking-wide text-gray-600"></span>
+                                    </p>
+                                    <a href="/Price"
+                                       className="mt-10 block w-full rounded-[4rem] bg-blue-600 py-4 text-center text-lg font-bold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">Xem Bảng Giá</a>
+                                    <p className="mt-6 text-lg leading-5 text-gray-600">Liên hệ trực tiếp để nhận giá khuyến mãi </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/*Blog section*/}
             <div className="relative bg-custom-gradient w-full"
                  style={{
                      backgroundImage: "url('/assets/images/banner/bgsec5.png')",
@@ -1163,84 +1282,63 @@ const HomePage = () => {
                      backgroundPosition: "center center",
                      minHeight: "80vh",
                  }}>
-                    {/* SVG Pattern */}
-                    <svg
-                        aria-hidden="true"
-                        className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] z-0"
-                    >
-                        <defs>
-                            <pattern
-                                id="pattern-id"
-                                x="50%"
-                                y={-1}
-                                width={200}
-                                height={200}
-                                patternUnits="userSpaceOnUse"
-                            >
-                                <path d="M100 200V.5M.5 .5H200" fill="none"/>
-                            </pattern>
-                        </defs>
-                        <svg x="50%" y={-1} className="overflow-visible fill-white">
-                            <path
-                                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-                                strokeWidth={0}
-                            />
-                        </svg>
-                        <rect fill="url(#pattern-id)" width="100%" height="100%" strokeWidth={0}/>
-                    </svg>
-                    <div className="relative z-10 px-6 sm:px-8 md:px-10 sm:pt-0">
-                        <div className="mx-auto w-full max-w-7xl ">
-                            <div className=" py-24 sm:py-32">
-                                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                                    <div className="mx-auto max-w-2xl lg:mx-0">
-                                        <h2 className="text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">Blog</h2>
-                                        <p className="mt-2 text-lg/8 text-gray-600">Đây là nơi đội ngũ của chúng tôi chia sẻ những bài học và góc nhìn về tiếp thị, chiến lược số, tăng trưởng, SEO, sản phẩm, và nhiều hơn nữa.</p>
-                                    </div>
-                                    <div
-                                        className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                                        {posts.map((post) => (
-                                            <article key={post.id}
-                                                     className="flex max-w-xl flex-col items-start justify-between">
-                                                <div className="flex items-center gap-x-4 text-xs">
-                                                    <a
-                                                        href={post.category.href}
-                                                        className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                                                    >
-                                                        {post.category.title}
+
+                <div className="relative z-10 px-6 sm:px-8 md:px-10 sm:pt-0">
+                    <div className="mx-auto w-full max-w-7xl ">
+                        <div className=" py-24 sm:py-32">
+                            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                                <div className="mx-auto max-w-2xl lg:mx-0">
+                                    <h2 className="text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">Blog</h2>
+                                    <p className="mt-2 text-lg/8 text-gray-600">Đây là nơi đội ngũ của chúng tôi chia sẻ
+                                        những bài học và góc nhìn về tiếp thị, chiến lược số, tăng trưởng, SEO, sản
+                                        phẩm, và nhiều hơn nữa.</p>
+                                </div>
+                                <div
+                                    className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                                    {posts.map((post) => (
+                                        <article key={post.id}
+                                                 className="flex max-w-xl flex-col items-start justify-between">
+                                            <div className="flex items-center gap-x-4 text-xs">
+                                                <a
+                                                    href={post.category.href}
+                                                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                                                >
+                                                    {post.category.title}
+                                                </a>
+                                            </div>
+                                            <div className="group relative">
+                                                <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                                                    <a href={post.href}>
+                                                        <span className="absolute inset-0"/>
+                                                        {post.title}
                                                     </a>
-                                                </div>
-                                                <div className="group relative">
-                                                    <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                                                        <a href={post.href}>
+                                                </h3>
+                                                <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.description}</p>
+                                            </div>
+                                            <div className="relative mt-8 flex items-center gap-x-4">
+                                                <img alt="" src={post.author.imageUrl}
+                                                     className="size-10 rounded-full bg-gray-50"/>
+                                                <div className="text-sm/6">
+                                                    <p className="font-semibold text-gray-900">
+                                                        <a href={post.author.href}>
                                                             <span className="absolute inset-0"/>
-                                                            {post.title}
+                                                            {post.author.name}
                                                         </a>
-                                                    </h3>
-                                                    <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.description}</p>
+                                                    </p>
+                                                    <p className="text-gray-600">{post.author.role}</p>
                                                 </div>
-                                                <div className="relative mt-8 flex items-center gap-x-4">
-                                                    <img alt="" src={post.author.imageUrl}
-                                                         className="size-10 rounded-full bg-gray-50"/>
-                                                    <div className="text-sm/6">
-                                                        <p className="font-semibold text-gray-900">
-                                                            <a href={post.author.href}>
-                                                                <span className="absolute inset-0"/>
-                                                                {post.author.name}
-                                                            </a>
-                                                        </p>
-                                                        <p className="text-gray-600">{post.author.role}</p>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        ))}
-                                    </div>
+                                            </div>
+                                        </article>
+                                    ))}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
         </main>
-);
+    );
 };
 
 export default HomePage;
