@@ -2,12 +2,37 @@ import React from "react";
 
 const Price = () => {
     return (
-        <main className="relative bg-custom-gradient md:min-h-screen w-screen overflow-hidden font-[Oswald] text-gray-800 min-h-[70vh]">
+        <main
+            className="relative bg-custom-gradient md:min-h-screen w-screen overflow-hidden font-[Oswald] text-gray-800 min-h-[70vh]">
+            <svg
+                aria-hidden="true"
+                className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+            >
+                <defs>
+                    <pattern
+                        id="pattern-id"
+                        x="50%"
+                        y={-1}
+                        width={200}
+                        height={200}
+                        patternUnits="userSpaceOnUse"
+                    >
+                        <path d="M100 200V.5M.5 .5H200" fill="none"/>
+                    </pattern>
+                </defs>
+                <svg x="50%" y={-1} className="overflow-visible fill-white">
+                    <path
+                        d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                        strokeWidth={0}
+                    />
+                </svg>
+                <rect fill="url(#pattern-id)" width="100%" height="100%" strokeWidth={0}/>
+            </svg>
             <div className="relative pt-16 sm:pt-32 md:pt-48 w-full pb-[5rem] xl:pb-[10rem]">
                 <div className="px-6 sm:px-8 md:px-10 pt-14 sm:pt-0">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 uppercase">
-                            Bảng Giá NEXTGENCY
-                        </h1>
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 uppercase">
+                        Bảng Giá NEXTGENCY
+                    </h1>
 
                     {/* Divider */}
                     <div className="border-t border-gray-400 my-10"></div>
@@ -17,15 +42,20 @@ const Price = () => {
                             <thead>
                             <tr className="border-4 border-gray-800 bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950">
 
-                                <th className="px-4 py-2 text-left text-xl font-semibold text-white uppercase">Gói dịch vụ</th>
-                                <th className="px-4 py-2 text-left text-xl font-semibold text-white uppercase">Phạm vi công
+                                <th className="px-4 py-2 text-left text-xl font-semibold text-white uppercase">Gói dịch
+                                    vụ
+                                </th>
+                                <th className="px-4 py-2 text-left text-xl font-semibold text-white uppercase">Phạm vi
+                                    công
                                     việc
                                 </th>
-                                <th className="px-4 py-2 text-left text-xl font-semibold text-white uppercase">Giá niêm yết</th>
+                                <th className="px-4 py-2 text-left text-xl font-semibold text-white uppercase">Giá niêm
+                                    yết
+                                </th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr className="border-y-2 border-4 border-gray-800">
+                            <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
 
                                 <td className="px-4 py-2 uppercase">Phòng Marketing Thuê Ngoài</td>
                                 <td className="px-4 py-2 border-x-2 border-gray-800">1. Nghiên cứu dịch vụ, khách hàng
@@ -71,9 +101,9 @@ const Price = () => {
                             </thead>
 
                             <tbody>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
+                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
 
-                                <td className="px-4 py-2 uppercase">Sản xuất kịch bản video ngắn</td>
+                                <td className="px-4 py-2 uppercase ">Sản xuất kịch bản video ngắn</td>
                                 <td className="px-4 py-2 border-x-2 border-gray-800">1. Xây dựng outline kịch bản video,
                                     TVC liền mạch, phù hợp chiến dịch.
                                     <br/>2. Viết kịch bản chi tiết theo outline đã duyệt.
@@ -114,12 +144,13 @@ const Price = () => {
                             <thead>
                             <tr className="border-4 border-gray-800 bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950">
                                 <th colSpan="3"
-                                    className="px-4 py-2 text-center text-xl font-semibold text-white uppercase">Thiết Kế
+                                    className="px-4 py-2 text-center text-xl font-semibold text-white uppercase">Thiết
+                                    Kế
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
+                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
 
                                 <td className="px-4 py-2 uppercase">Thiết kế nhận diện thương hiệu</td>
                                 <td className="px-4 py-2 border-x-2 border-gray-800">1. Thiết kế logo thương hiệu, định
@@ -144,7 +175,7 @@ const Price = () => {
                                 </td>
                                 <td className="px-4 py-2">800, 000 VND/ 1 ấn phẩm <br/>(Tùy theo yêu cầu)</td>
                             </tr>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
+                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
 
                                 <td className="px-4 py-2 uppercase">Thiết kế catalogue/ brochure/ flyer</td>
                                 <td className="px-4 py-2 border-x-2 border-gray-800">1. Thu thập thông tin và yêu cầu từ
@@ -185,7 +216,7 @@ const Price = () => {
                             </tr>
                             </thead>
                             <tbody>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
+                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
                                 <td className="px-4 py-2 uppercase">Quay chụp dịch vụ, cơ sở, tvc giới thiệu doanh
                                     nghiệp
                                 </td>
@@ -216,7 +247,7 @@ const Price = () => {
 
                             </tr>
 
-                            <tr className="border-y-2 border-x-4 border-gray-800">
+                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
 
                                 <td className="px-4 py-2 uppercase">quay chụp sự kiện</td>
                                 <td className="px-4 py-2 border-x-2 border-gray-800">1. Xây dựng kịch bản sáng tạo, phù
@@ -244,12 +275,13 @@ const Price = () => {
                             <thead>
                             <tr className="border-4 border-gray-800 bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950">
                                 <th colSpan="3"
-                                    className="px-4 py-2 text-center text-xl font-semibold text-white uppercase">Digital Ads
+                                    className="px-4 py-2 text-center text-xl font-semibold text-white uppercase">Digital
+                                    Ads
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
+                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
 
                                 <td className="px-4 py-2">Chi phí ads 01 tháng dưới 40 triệu</td>
                                 <td className="px-4 py-2 border-x-2 border-gray-800">1. Lên ma trận ads chậy quảng cáo

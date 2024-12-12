@@ -19,13 +19,14 @@ import {
 
 const AboutPage = () => {
     const icons = {
-        1: <LightBulbIcon className="text-blue-600 size-28" />,
-        2: <ServerIcon  className="text-blue-600 size-28" />,
-        3: <ShieldCheckIcon  className="text-blue-600 size-28" />,
-        4: <UserGroupIcon  className="text-blue-600 size-28" />,
-        5: <CogIcon  className="text-blue-600 size-28" />,
-        6: <CheckCircleIcon  className="text-blue-600 size-28" />,
+        1: <LightBulbIcon className="w-12 h-12 text-blue-800" />,
+        2: <ServerIcon className="w-12 h-12 text-blue-800" />,
+        3: <ShieldCheckIcon className="w-12 h-12 text-blue-800" />,
+        4: <UserGroupIcon className="w-12 h-12 text-blue-800" />,
+        5: <CogIcon className="w-12 h-12 text-blue-800" />,
+        6: <CheckCircleIcon className="w-12 h-12 text-blue-800" />,
     };
+
     const data = [
         {
             id: 1,
@@ -593,18 +594,27 @@ const AboutPage = () => {
                     </p>
                 </div>
                 {/* Grid 6 hình chữ nhật */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6 justify-items-center">
                     {data.map((item) => (
                         <div
                             key={item.id}
-                            className={`p-4 rounded-2xl shadow-md cursor-pointer transition ${
+                            className={`relative w-24 h-24 sm:w-28 sm:h-28 rounded-full flex flex-col items-center justify-center cursor-pointer transition ${
                                 selectedItem?.id === item.id
-                                    ? "bg-gray-700 text-white border-4 border-sky-400"
-                                    : "bg-white hover:bg-gray-700 text-sky-800 hover:text-white border-4 border-sky-600"
+                                    ? "bg-gradient-to-r from-blue-900 via-blue-800 to-sky-400 text-white border-8 border-sky-400"
+                                    : "bg-white hover:bg-gray-700 text-sky-800 hover:text-white border-8 border-sky-400"
                             }`}
                             onClick={() => setSelectedItem(item)}
                         >
-                            <div className="flex justify-center mt-2">{icons[item.id]}</div>
+                            {/* Số thứ tự */}
+                            <div
+                                className="absolute top-2 left-2 bg-sky-400 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold"
+                            >
+                                {item.id}
+                            </div>
+                            {/* Icon */}
+                            <div className="flex justify-center items-center text-2xl">
+                                {icons[item.id]}
+                            </div>
                         </div>
                     ))}
                 </div>

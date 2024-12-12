@@ -171,18 +171,7 @@ const ContactPage = () => {
                                 <span>Hotline: 097 265 53 57</span>
                             </div>
 
-                            <div className="flex justify-center md:justify-start items-center gap-4">
-                                <a title="youtube" href="#">
-                                    <img className="h-8 w-8 invert"
-                                         src="https://www.svgrepo.com/show/521936/youtube.svg"/>
-                                </a>
-                                <a title="linkedin" href="#">
-                                    <img className="h-12 w-12 invert"
-                                         src="https://www.svgrepo.com/show/520815/linkedin.svg"/>
-                                </a>
 
-
-                            </div>
                         </div>
                     </div>
                 </div>

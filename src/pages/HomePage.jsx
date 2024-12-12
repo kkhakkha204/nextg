@@ -373,14 +373,14 @@ const HomePage = () => {
                     <div className="mx-auto w-full max-w-7xl ">
                         <div className="">
                             {/* Heading Section */}
-                            <div className=" z-50 transform-style-preserve-3d w-full text-center">
+                            <div className=" z-50 mt-10 transform-style-preserve-3d w-full text-center">
                                 <h2
-                                    className="text-center z-50 tracking-tight inline-block mt-0 mb-8 font-[Oswald] text-[1.5rem] sm:text-[2.5rem] md:text-[3.5rem] font-semibold"
+                                    className="text-center z-50 tracking-tight inline-block mt-0 mb-8 font-[Oswald] text-[1.5rem] sm:text-[2rem] md:text-[3rem] font-semibold uppercase"
                                 >
                                     Chiến dịch Marketing chuyên biệt dựa trên
                                     <br/>
                                     <span
-                                        className="font-[Oswald] tracking-tight bg-gradient-to-r from-gray-800 via-sky-500 to-blue-900 bg-clip-text text-transparent text-[1.5rem] sm:text-[2.5rem] md:text-[3.5rem] font-semibold"> quy trình bán hàng của bạn
+                                        className="font-[Oswald] tracking-tight bg-gradient-to-r from-gray-800 via-sky-500 to-blue-900 bg-clip-text text-transparent text-[1.5rem] sm:text-[2rem] md:text-[3rem] font-semibold uppercase"> quy trình bán hàng của bạn
                                             </span>
                                     <br/>
                                 </h2>
@@ -560,8 +560,12 @@ const HomePage = () => {
                                                 </p>
                                             </div>
                                             <div
-                                                className="flex flex-1 items-center  max-lg:py-6 lg:pb-2 mt-4 mx-10">
-
+                                                className="flex flex-1 items-center  max-lg:py-6 lg:pb-2 mx-10">
+                                                <img
+                                                    className="size-full object-cover object-top "
+                                                    src="/assets/images/elements/3.svg"
+                                                    alt=""
+                                                />
                                             </div>
                                         </div>
                                         <div

@@ -103,7 +103,7 @@ const ServicesPage = () => {
     const data = [
         {
             id: 1,
-            title: "Performance Marketing",
+            title: "Performance",
             description: "Đo lường hiệu quả, tối ưu chi phí quảng cáo.",
             details: ["Chiến lược: Sử dụng phân tích dữ liệu để tối ưu hóa các chiến dịch quảng cáo nhằm tăng tỷ lệ chuyển đổi và tối đa hóa lợi tức đầu tư quảng cáo (ROAS).",
                 "Cách triển khai: Bao gồm quảng cáo nhắm mục tiêu dựa trên hành vi và thói quen mua sắm của khách hàng, các chiến dịch tiếp thị liên kết, và đo lường hiệu suất từng chiến dịch để điều chỉnh kịp thời.",
@@ -130,7 +130,7 @@ const ServicesPage = () => {
         },
         {
             id: 4,
-            title: "Social Media Marketing",
+            title: "Social Media",
             description: "Kết nối khách hàng qua nền tảng mạng xã hội.",
             details: ["Chiến lược: Tận dụng sức mạnh của các nền tảng mạng xã hội để xây dựng sự gắn kết với khách hàng và quảng bá sản phẩm/dịch vụ.",
                 "Cách triển khai: Tạo nội dung tương tác như cuộc thi, khảo sát, livestream, và bài đăng đa dạng phù hợp với từng nền tảng mạng xã hội.",
@@ -464,7 +464,7 @@ const ServicesPage = () => {
                 </div>
             </div>
 
-            <div id="ads" className="relative bg-custom-gradient w-full"
+            <div id="ads" className="relative bg-custom-gradient to-blue-950 w-full"
                  style={{
                      backgroundImage: "url('/assets/images/banner/servicebg2.png')",
                      backgroundSize: "cover",
@@ -472,93 +472,111 @@ const ServicesPage = () => {
                      backgroundPosition: "center center",
                      minHeight: "100vh",
                  }}>
-                <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
-                    <div className="mx-auto w-full max-w-7xl">
-                        <svg
-                            aria-hidden="true"
-                            className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                <svg
+                    aria-hidden="true"
+                    className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                >
+                    <defs>
+                        <pattern
+                            id="pattern-id"
+                            x="50%"
+                            y={-1}
+                            width={200}
+                            height={200}
+                            patternUnits="userSpaceOnUse"
                         >
-                            <defs>
-                                <pattern
-                                    id="pattern-id"
-                                    x="50%"
-                                    y={-1}
-                                    width={200}
-                                    height={200}
-                                    patternUnits="userSpaceOnUse"
-                                >
-                                    <path d="M100 200V.5M.5 .5H200" fill="none"/>
-                                </pattern>
-                            </defs>
-                            <svg x="50%" y={-1} className="overflow-visible fill-white">
-                                <path
-                                    d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-                                    strokeWidth={0}
-                                />
-                            </svg>
-                            <rect fill="url(#pattern-id)" width="100%" height="100%" strokeWidth={0}/>
-                        </svg>
+                            <path d="M100 200V.5M.5 .5H200" fill="none"/>
+                        </pattern>
+                    </defs>
+                    <svg x="50%" y={-1} className="overflow-visible fill-white">
+                        <path
+                            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                            strokeWidth={0}
+                        />
+                    </svg>
+                    <rect fill="url(#pattern-id)" width="100%" height="100%" strokeWidth={0}/>
+                </svg>
+                <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
+                    <div className="mx-auto w-full max-w-7xl ">
                         <div
                             className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-                            <div className="mx-auto grid max-w-2xl lg:max-w-none lg:grid-cols-2 lg:gap-x-8">
-                                {/* Image Section */}
-                                <div className="lg:col-start-1 lg:row-start-1 lg:overflow-hidden">
+
+                            <div
+                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+                                <div
+                                    className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                                    <div className="lg:pr-4">
+                                        <div className="lg:max-w-lg">
+                                            <p className="text-base/7 font-semibold text-indigo-600">NEXTGENCY</p>
+                                            <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
+                                                Media
+                                            </h1>
+                                            <div className="border-l-[6px] border-orange-600">
+                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600">
+                                                    Xây dựng chiến lược hình ảnh thương hiệu nổi bật, bắt mắt.
+                                                </p>
+                                            </div>
+                                            <p className="mt-6 text-xl/8 text-gray-700">
+                                                Định hình thương hiệu nhất quán, nhấn mạnh điểm nổi bật riêng biệt. Nội
+                                                dung được thiết kế chỉn chu với hình ảnh sắc nét, sáng tạo vượt trội,
+                                                tạo ấn tượng sâu đậm ngay từ ánh nhìn đầu tiên.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                                     <img
-                                        alt="NEXTGENCY"
+                                        alt=""
                                         src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
-                                        className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+                                        className="w-[48rem] max-w-none border-l-4 border-blue-400 ring-1 ring-gray-400/10 sm:w-[57rem]"
                                     />
                                 </div>
-                                {/* Text Section */}
-                                <div className="lg:col-start-2 lg:row-start-1 lg:pl-8">
-                                    <p className="text-base font-semibold text-indigo-600">NEXTGENCY</p>
-                                    <h1 className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
-                                        Media
-                                    </h1>
-                                    <div className="border-l-[6px] border-orange-600">
-                                        <p className="ml-4 mt-6 text-xl/8 text-orange-600">
-                                            Xây dựng chiến lược hình ảnh thương hiệu nổi bật, bắt mắt.
-                                        </p>
-                                    </div>
-                                    <p className="mt-6 text-xl text-gray-700">
-                                        Định hình thương hiệu nhất quán, nhấn mạnh điểm nổi bật riêng biệt. Nội dung được thiết kế chỉn chu với hình ảnh sắc nét, sáng tạo vượt trội, tạo ấn tượng sâu đậm ngay từ ánh nhìn đầu tiên.
-                                    </p>
-                                    <ul role="list" className="mt-8 space-y-8 text-gray-700">
-                                        <li className="flex gap-x-3">
-                <span>
-                  <strong className="font-semibold text-blue-600">Design - Video Edit:</strong> Sáng tạo thiết kế và chỉnh sửa video chuyên nghiệp, thu hút thị giác.
-                </span>
-                                        </li>
-                                        <li className="flex gap-x-3">
-                <span>
-                  <strong className="font-semibold text-blue-600">Media & Production House:</strong> Sản xuất nội dung chất lượng cao, nâng tầm thương hiệu trên mọi nền tảng.
-                </span>
-                                        </li>
+                                <div
+                                    className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                                    <div className="lg:pr-4">
+                                        <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
 
-                                    </ul>
-                                    <div className="mt-24 flex justify-center gap-4">
-                                        {/* Nút Chuyển Sang Trang Liên Hệ */}
-                                        <a
-                                            href="/liên-hệ"
-                                            className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
-                                        >
+                                            <ul role="list" className="mt-8 space-y-8 ">
+                                                <li className="flex gap-x-3">
+
+                                                    <span>
+                    <strong className="font-bold text-blue-600 ">Design - Video Edit:</strong> Sáng tạo thiết kế và chỉnh sửa video chuyên nghiệp, thu hút thị giác.
+                  </span>
+                                                </li>
+                                                <li className="flex gap-x-3">
+
+                                                    <span>
+                    <strong className="font-bold text-blue-600 ">Media & Production House:</strong> Sản xuất nội dung chất lượng cao, nâng tầm thương hiệu trên mọi nền tảng.
+                  </span>
+                                                </li>
+
+                                            </ul>
+                                            <div className="mt-24 flex justify-center gap-4">
+                                                {/* Nút Chuyển Sang Trang Liên Hệ */}
+                                                <a
+                                                    href="/liên-hệ"
+                                                    className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
+                                                >
                                             <span
                                                 className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
                                             <MdCallMade/>
                                             </span>
-                                            <span
-                                                className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
-                                        </a>
+                                                    <span
+                                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
+                                                </a>
 
-                                        {/* Nút Hợp Tác Ngay */}
-                                        <a
-                                            href="/liên-hệ"
-                                            className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
-                                        >
-                                            Hợp Tác Ngay
-                                            <span
-                                                className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
-                                        </a>
+                                                {/* Nút Hợp Tác Ngay */}
+                                                <a
+                                                    href="/liên-hệ"
+                                                    className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
+                                                >
+                                                    Hợp Tác Ngay
+                                                    <span
+                                                        className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -570,13 +588,13 @@ const ServicesPage = () => {
             <div id="marketing"
                  className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full px-6 py-10 border-t-8 border-blue-400">
                 <div className="mb-10">
-                <h2 className="text-center text-2xl font-semibold text-indigo-600">Next.Gency</h2>
+                    <h2 className="text-center text-2xl font-semibold text-indigo-600">Next.Gency</h2>
                     <p className="mx-auto text-white mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight sm:text-5xl">
                         MARKETING
                     </p>
                 </div>
                 {/* Grid 6 hình chữ nhật */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6 ">
                     {data.map((item) => (
                         <div
                             key={item.id}
@@ -589,7 +607,7 @@ const ServicesPage = () => {
                         >
                             <div className="flex justify-center mt-2">{icons[item.id]}</div>
                             <h3 className="text-xl flex justify-center font-medium mt-2">{item.title}</h3>
-                            <p className="text-base mt-2 ">{item.description}</p>
+
                         </div>
                     ))}
                 </div>
@@ -696,7 +714,9 @@ const ServicesPage = () => {
                                                 </p>
                                             </div>
                                             <p className="mt-6 text-xl/8 text-gray-700">
-                                                Xây dựng và tối ưu hóa chiến dịch quảng cáo với độ chính xác cao, sử dụng dữ liệu chuyên sâu để nhằm mục tiêu hiệu quả, tăng tỷ lệ chuyển đổi, và mang lại kết quả ấn tượng
+                                                Xây dựng và tối ưu hóa chiến dịch quảng cáo với độ chính xác cao, sử
+                                                dụng dữ liệu chuyên sâu để nhằm mục tiêu hiệu quả, tăng tỷ lệ chuyển
+                                                đổi, và mang lại kết quả ấn tượng
                                             </p>
                                         </div>
                                     </div>
@@ -762,7 +782,7 @@ const ServicesPage = () => {
                 </div>
             </div>
 
-            <div id="data" className="relative bg-custom-gradient w-full"
+            <div id="data" className="relative bg-custom-gradient to-blue-950 w-full"
                  style={{
                      backgroundImage: "url('/assets/images/banner/servicebg2.png')",
                      backgroundSize: "cover",
@@ -770,77 +790,117 @@ const ServicesPage = () => {
                      backgroundPosition: "center center",
                      minHeight: "100vh",
                  }}>
+                <svg
+                    aria-hidden="true"
+                    className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                >
+                    <defs>
+                        <pattern
+                            id="pattern-id"
+                            x="50%"
+                            y={-1}
+                            width={200}
+                            height={200}
+                            patternUnits="userSpaceOnUse"
+                        >
+                            <path d="M100 200V.5M.5 .5H200" fill="none"/>
+                        </pattern>
+                    </defs>
+                    <svg x="50%" y={-1} className="overflow-visible fill-white">
+                        <path
+                            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                            strokeWidth={0}
+                        />
+                    </svg>
+                    <rect fill="url(#pattern-id)" width="100%" height="100%" strokeWidth={0}/>
+                </svg>
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
-                    <div className="mx-auto w-full max-w-7xl">
-
+                    <div className="mx-auto w-full max-w-7xl ">
                         <div
                             className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-                            <div className="mx-auto grid max-w-2xl lg:max-w-none lg:grid-cols-2 lg:gap-x-8">
-                                {/* Image Section */}
-                                <div className="lg:col-start-1 lg:row-start-1 lg:overflow-hidden">
+
+                            <div
+                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+                                <div
+                                    className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                                    <div className="lg:pr-4">
+                                        <div className="lg:max-w-lg">
+                                            <p className="text-base/7 font-semibold text-indigo-600">NEXTGENCY</p>
+                                            <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
+                                                Phòng Marketing thuê ngoài
+                                            </h1>
+                                            <div className="border-l-[6px] border-orange-600">
+                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600">
+                                                    Cung cấp đầy đủ nhân sự triển khai hoạt động marketing với chi phí tối ưu giúp:
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                                     <img
-                                        alt="NEXTGENCY"
+                                        alt=""
                                         src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
-                                        className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+                                        className="w-[48rem] max-w-none border-l-4 border-blue-400 ring-1 ring-gray-400/10 sm:w-[57rem]"
                                     />
                                 </div>
-                                {/* Text Section */}
-                                <div className="lg:col-start-2 lg:row-start-1 lg:pl-8">
-                                    <p className="text-base font-semibold text-indigo-600">NEXTGENCY</p>
-                                    <h1 className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
-                                        Phòng Marketing thuê ngoài
-                                    </h1>
-                                    <div className="border-l-[6px] border-orange-600">
-                                        <p className="ml-4 mt-6 text-xl/8 text-orange-600">
-                                            Cung cấp đầy đủ nhân sự triển khai hoạt động marketing với chi phí tối ưu giúp:
-                                        </p>
-                                    </div>
+                                <div
+                                    className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                                    <div className="lg:pr-4">
+                                        <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
 
-                                    <ul role="list" className="mt-8 space-y-8 text-gray-700">
-                                        <li className="flex gap-x-3">
-                <span>
-                  <strong className="font-semibold text-blue-600">Chuyên nghiệp hóa nhận diện thương hiệu:</strong> Đồng bộ hình ảnh trên mội nền tảng nâng cao uy tín.
-                </span>
-                                        </li>
-                                        <li className="flex gap-x-3">
-                <span>
-                  <strong className="font-semibold text-blue-600">Tiết kiệm chi phí:</strong> Tối ưu hơn so với xây dựng phòng marketing in-house.
-                </span>
-                                        </li>
-                                        <li className="flex gap-x-3">
-                <span>
-                  <strong className="font-semibold text-blue-600">Tiết kiệm thời gian:</strong> Đảm bảo quy trình chuyên nghiệp mà không cần đào tạo nhân sự.
-                </span>
-                                        </li>
-                                        <li className="flex gap-x-3">
-                <span>
-                  <strong className="font-semibold text-blue-600">Bắt kịp xu hướng:</strong> Liên tục cập nhật các trend truyền thông mới nhất.
-                </span>
-                                        </li>
-                                    </ul>
-                                    <div className="mt-24 flex justify-center gap-4">
-                                        {/* Nút Chuyển Sang Trang Liên Hệ */}
-                                        <a
-                                            href="/liên-hệ"
-                                            className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
-                                        >
+                                            <ul role="list" className="mt-8 space-y-8 ">
+                                                <li className="flex gap-x-3">
+
+                                                    <span>
+                    <strong className="font-bold text-blue-600 ">Chuyên nghiệp hóa nhận diện thương hiệu:</strong> Đồng bộ hình ảnh trên mội nền tảng nâng cao uy tín.
+                  </span>
+                                                </li>
+                                                <li className="flex gap-x-3">
+
+                                                    <span>
+                    <strong className="font-bold text-blue-600 ">Tiết kiệm chi phí: </strong> Tối ưu hơn so với xây dựng phòng marketing in-house.
+                  </span>
+                                                </li>
+                                                <li className="flex gap-x-3">
+
+                                                    <span>
+                    <strong className="font-bold text-blue-600 ">Tiết kiệm thời gian: </strong> Đảm bảo quy trình chuyên nghiệp mà không cần đào tạo nhân sự.
+                  </span>
+                                                </li>
+                                                <li className="flex gap-x-3">
+
+                                                    <span>
+                    <strong className="font-bold text-blue-600 ">Bắt kịp xu hướng:  </strong> Liên tục cập nhật các trend truyền thông mới nhất.
+                  </span>
+                                                </li>
+                                            </ul>
+                                            <div className="mt-24 flex justify-center gap-4">
+                                                {/* Nút Chuyển Sang Trang Liên Hệ */}
+                                                <a
+                                                    href="/liên-hệ"
+                                                    className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
+                                                >
                                             <span
                                                 className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
                                             <MdCallMade/>
                                             </span>
-                                            <span
-                                                className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
-                                        </a>
+                                                    <span
+                                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
+                                                </a>
 
-                                        {/* Nút Hợp Tác Ngay */}
-                                        <a
-                                            href="/liên-hệ"
-                                            className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
-                                        >
-                                            Hợp Tác Ngay
-                                            <span
-                                                className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
-                                        </a>
+                                                {/* Nút Hợp Tác Ngay */}
+                                                <a
+                                                    href="/liên-hệ"
+                                                    className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
+                                                >
+                                                    Hợp Tác Ngay
+                                                    <span
+                                                        className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -853,11 +913,11 @@ const ServicesPage = () => {
                  className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950  w-full ">
 
                 <div className="relative z-10 px-6 sm:px-8 md:px-10 sm:pt-0">
-                <div className="mx-auto w-full max-w-7xl ">
+                    <div className="mx-auto w-full max-w-7xl ">
                         <div className="text-white py-12 px-6">
                             {/* Tiêu đề chính */}
                             <div className="text-center mb-10">
-                                <h2 className="text-3xl md:text-4xl font-bold mb-4">Kết Quả Đạt Được</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase">Kết Quả Đạt Được</h2>
                                 <p className="text-lg md:text-xl">Khám phá những số liệu minh họa cho hiệu quả chúng tôi
                                     mang lại.</p>
                             </div>
@@ -867,27 +927,27 @@ const ServicesPage = () => {
                                 {/* Thẻ infographic */}
                                 <div
                                     className="flex flex-col items-center text-center bg-white text-sky-800 border-x-4 border-sky-600 p-6 rounded-3xl shadow-lg">
-                                    <h3 className="text-2xl md:text-3xl font-bold text-orange-600">85%</h3>
+                                    <h3 className="text-2xl md:text-5xl font-bold text-orange-600">85%</h3>
                                     <p className="mt-2 text-lg">Khách hàng đạt tăng trưởng doanh thu sau 3 tháng hợp
                                         tác.</p>
                                 </div>
 
                                 <div
                                     className="flex flex-col items-center text-center bg-white text-sky-800 border-x-4 border-sky-600 p-6 rounded-3xl shadow-lg">
-                                    <h3 className="text-2xl md:text-3xl font-bold text-orange-600">3.2x</h3>
+                                    <h3 className="text-2xl md:text-5xl font-bold text-orange-600">3.2x</h3>
                                     <p className="mt-2 text-lg">ROAS trung bình từ các chiến dịch tối ưu.</p>
                                 </div>
 
                                 <div
                                     className="flex flex-col items-center text-center bg-white text-sky-800 border-x-4 border-sky-600 p-6 rounded-3xl shadow-lg">
-                                    <h3 className="text-2xl md:text-3xl font-bold text-orange-600">200+</h3>
+                                    <h3 className="text-2xl md:text-5xl font-bold text-orange-600">200+</h3>
                                     <p className="mt-2 text-lg">Dự án thành công, 150+ khách hàng hài lòng.</p>
                                 </div>
                             </div>
 
                             {/* Phần biểu đồ */}
                             <div className="mt-12">
-                                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">Hiệu quả theo năm</h3>
+                                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center uppercase">Hiệu quả theo năm</h3>
                                 <div
                                     className="flex flex-col lg:flex-row justify-center items-center gap-20 mt-10 py-10 bg-gradient-to-br from-sky-800 via-blue-950 to-gray-800 border-t-4 border-sky-400 rounded-xl ">
                                     {/* Biểu đồ hình tròn */}
@@ -931,16 +991,14 @@ const ServicesPage = () => {
                 </div>
             </div>
 
-            {/*Blog section*/}
-            <div className="relative bg-custom-gradient w-full"
+            <div className="relative bg-custom-gradient py-24 sm:py-32"
                  style={{
                      backgroundImage: "url('/assets/images/banner/bgsec5.png')",
                      backgroundSize: "cover",
                      backgroundRepeat: "no-repeat",
                      backgroundPosition: "center center",
-                     minHeight: "80vh",
+                     minHeight: "90vh",
                  }}>
-                {/* SVG Pattern */}
                 <svg
                     aria-hidden="true"
                     className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] z-0"
@@ -965,53 +1023,81 @@ const ServicesPage = () => {
                     </svg>
                     <rect fill="url(#pattern-id)" width="100%" height="100%" strokeWidth={0}/>
                 </svg>
-                <div className="relative z-10 px-6 sm:px-8 md:px-10 sm:pt-0">
-                    <div className="mx-auto w-full max-w-7xl ">
-                        <div className=" py-24 sm:py-32">
-                            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                                <div className="mx-auto max-w-2xl lg:mx-0">
-                                    <h2 className="text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">Blog</h2>
-                                    <p className="mt-2 text-lg/8 text-gray-600">Đây là nơi đội ngũ của chúng tôi chia sẻ
-                                        những bài học và góc nhìn về tiếp thị, chiến lược số, tăng trưởng, SEO, sản
-                                        phẩm, và nhiều hơn nữa.</p>
-                                </div>
-                                <div
-                                    className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                                    {posts.map((post) => (
-                                        <article key={post.id}
-                                                 className="flex max-w-xl flex-col items-start justify-between">
-                                            <div className="flex items-center gap-x-4 text-xs">
-                                                <a
-                                                    href={post.category.href}
-                                                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                                                >
-                                                    {post.category.title}
-                                                </a>
-                                            </div>
-                                            <div className="group relative">
-                                                <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                                                    <a href={post.href}>
-                                                        <span className="absolute inset-0"/>
-                                                        {post.title}
-                                                    </a>
-                                                </h3>
-                                                <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.description}</p>
-                                            </div>
-                                            <div className="relative mt-8 flex items-center gap-x-4">
-                                                <img alt="" src={post.author.imageUrl}
-                                                     className="size-10 rounded-full bg-gray-50"/>
-                                                <div className="text-sm/6">
-                                                    <p className="font-semibold text-gray-900">
-                                                        <a href={post.author.href}>
-                                                            <span className="absolute inset-0"/>
-                                                            {post.author.name}
-                                                        </a>
-                                                    </p>
-                                                    <p className="text-gray-600">{post.author.role}</p>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    ))}
+
+                <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className=" mx-auto max-w-2xl sm:text-center">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl uppercase">Tham Khảo
+                            Bảng Giá
+                            <span
+                                className="text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl uppercase"> Nextgency</span>
+                        </h2>
+                    </div>
+                    <div
+                        className="bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+                        <div className="p-8 sm:p-10 lg:flex-auto">
+                            <h3 className="text-2xl font-bold tracking-tight text-white">Tổng Quan</h3>
+                            <p className="mt-6 text-base leading-7 text-gray-100">Khám phá bảng giá linh hoạt của
+                                Nextgency, được thiết kế phù hợp với mọi nhu cầu marketing, giúp bạn tối ưu ngân sách và
+                                đạt hiệu quả vượt mong đợi.</p>
+                            <div className="mt-10 flex items-center gap-x-4">
+                                <h4 className="flex-none text-xl font-semibold leading-6 text-blue-500">Bao Gồm</h4>
+                                <div className="h-px flex-auto bg-gray-100"></div>
+                            </div>
+                            <ul role="list"
+                                className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+                                <li className="flex gap-x-3 text-white">
+                                    <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
+                                         fill="currentColor" aria-hidden="true">
+                                        <path fillRule="evenodd"
+                                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                              clipRule="evenodd"/>
+                                    </svg>
+                                    Content
+                                </li>
+                                <li className="flex gap-x-3 text-white">
+                                    <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
+                                         fill="currentColor" aria-hidden="true">
+                                        <path fillRule="evenodd"
+                                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                              clipRule="evenodd"/>
+                                    </svg>
+                                    Thiết kế
+                                </li>
+                                <li className="flex gap-x-3 text-white">
+                                    <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
+                                         fill="currentColor" aria-hidden="true">
+                                        <path fillRule="evenodd"
+                                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                              clipRule="evenodd"/>
+                                    </svg>
+                                    Media
+                                </li>
+                                <li className="flex gap-x-3 text-white">
+                                    <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
+                                         fill="currentColor" aria-hidden="true">
+                                        <path fillRule="evenodd"
+                                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                              clipRule="evenodd"/>
+                                    </svg>
+                                    Digital Ads
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0 ">
+                            <div
+                                className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+                                <div className="mx-auto max-w-xs px-8">
+                                    <p className="text-base font-semibold text-gray-600"></p>
+                                    <p className="mt-6 flex items-baseline justify-center gap-x-2">
+                                        <span className="text-3xl font-bold tracking-tight text-gray-900">Bảng Giá Niêm Yết</span>
+                                        <span
+                                            className="text-sm font-semibold leading-6 tracking-wide text-gray-600"></span>
+                                    </p>
+                                    <a href="/Price"
+                                       className="mt-10 block w-full rounded-[4rem] bg-blue-600 py-4 text-center text-lg font-bold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">Xem
+                                        Bảng Giá</a>
+                                    <p className="mt-6 text-lg leading-5 text-gray-600">Liên hệ trực tiếp để nhận giá
+                                        khuyến mãi </p>
                                 </div>
                             </div>
                         </div>
