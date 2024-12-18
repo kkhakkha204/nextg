@@ -3,7 +3,7 @@ import {MdCallMade, MdLocationCity} from "react-icons/md";
 import { Link } from "react-router-dom";
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 text-white font-[Oswald] lg:grid lg:grid-cols-5">
+        <footer className="relative z-0 bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 text-white font-[Oswald] lg:grid lg:grid-cols-5">
             <div className="relative block h-32 lg:col-span-2 lg:h-full">
                 <img
                     src="/assets/images/footer/anhfooter.jpg"
@@ -100,7 +100,7 @@ const Footer = () => {
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
                                     <Link
-                                        to="/dịch-vụ#branding"
+                                        to="/dịch-vụ#content"
                                         className="transition hover:opacity-75"
                                     >
                                         Content
@@ -109,7 +109,7 @@ const Footer = () => {
 
                                 <li>
                                     <Link
-                                        to="/dịch-vụ#ads"
+                                        to="/dịch-vụ#media"
                                         className="transition hover:opacity-75"
                                     >
                                         Media
@@ -127,7 +127,7 @@ const Footer = () => {
 
                                 <li>
                                     <Link
-                                        to="/dịch-vụ#seo"
+                                        to="/dịch-vụ#digital"
                                         className="transition hover:opacity-75"
                                     >
                                         Digital Ads + Traffic
@@ -136,7 +136,7 @@ const Footer = () => {
 
                                 <li>
                                     <Link
-                                        to="/dịch-vụ#data"
+                                        to="/dịch-vụ#phongmarketing"
                                         className="transition hover:opacity-75"
                                     >
                                         Phòng Marketing thuê ngoài
@@ -146,7 +146,7 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <p className="font-medium uppercase">Next.G</p>
+                            <p className="font-medium uppercase">NextGency</p>
 
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
@@ -163,7 +163,7 @@ const Footer = () => {
 
                                 <li>
                                     <a href="/tuyển-dụng" className=" transition hover:opacity-75"> Gia Nhập
-                                        Next.G </a>
+                                        NextGency </a>
                                 </li>
                             </ul>
                         </div>

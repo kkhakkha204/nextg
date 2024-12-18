@@ -1,6 +1,59 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Price = () => {
+    const [isPMTNModalOpen, setPMTNModalOpen] = useState(false);
+    const [isCSKHModalOpen, setCSKHModalOpen] = useState(false);
+    const [isVideoNganModalOpen, setVideoNganModalOpen] = useState(false);
+    const [isFanpageModalOpen, setFanpageModalOpen] = useState(false);
+    const [isTK1ModalOpen, setTK1ModalOpen] = useState(false);
+    const [isTK2ModalOpen, setTK2ModalOpen] = useState(false);
+    const [isTK3ModalOpen, setTK3ModalOpen] = useState(false);
+    const [isM1ModalOpen, setM1ModalOpen] = useState(false);
+    const [isM2ModalOpen, setM2ModalOpen] = useState(false);
+    const [isM3ModalOpen, setM3ModalOpen] = useState(false);
+    const [isAD1ModalOpen, setAD1ModalOpen] = useState(false);
+    const [isAD2ModalOpen, setAD2ModalOpen] = useState(false);
+    const togglePMTNModal = () => {
+        setPMTNModalOpen(!isPMTNModalOpen);
+    };
+
+    const toggleCSKHModal = () => {
+        setCSKHModalOpen(!isCSKHModalOpen);
+    };
+
+    const toggleVideoNganModal = () => {
+        setVideoNganModalOpen(!isVideoNganModalOpen);
+    };
+
+    const toggleFanpageModal = () => {
+        setFanpageModalOpen(!isFanpageModalOpen);
+    };
+
+    const toggleTK1Modal = () => {
+        setTK1ModalOpen(!isTK1ModalOpen);
+    };
+
+    const toggleTK2Modal = () => {
+        setTK2ModalOpen(!isTK2ModalOpen);
+    };
+    const toggleTK3Modal = () => {
+        setTK3ModalOpen(!isTK3ModalOpen);
+    };
+    const toggleM1Modal = () => {
+        setM1ModalOpen(!isM1ModalOpen);
+    };
+    const toggleM2Modal = () => {
+        setM2ModalOpen(!isM2ModalOpen);
+    };
+    const toggleM3Modal = () => {
+        setM3ModalOpen(!isM3ModalOpen);
+    };
+    const toggleAD1Modal = () => {
+        setAD1ModalOpen(!isAD1ModalOpen);
+    };
+    const toggleAD2Modal = () => {
+        setAD2ModalOpen(!isAD2ModalOpen);
+    };
     return (
         <main
             className="relative bg-custom-gradient md:min-h-screen w-screen overflow-hidden font-[Oswald] text-gray-800 min-h-[70vh]">
@@ -30,7 +83,7 @@ const Price = () => {
             </svg>
             <div className="relative pt-16 sm:pt-32 md:pt-48 w-full pb-[5rem] xl:pb-[10rem]">
                 <div className="px-6 sm:px-8 md:px-10 pt-14 sm:pt-0">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 uppercase">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 uppercase text-center">
                         Bảng Giá NEXTGENCY
                     </h1>
 
@@ -38,272 +91,756 @@ const Price = () => {
                     <div className="border-t border-gray-400 my-10"></div>
                     {/* Bảng giá */}
                     <div className="overflow-x-auto">
-                        <table className="min-w-full table-auto">
-                            <thead>
-                            <tr className="border-4 border-gray-800 bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950">
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Phòng Marketing Thuê Ngoài
+                                    </th>
+                                </tr>
 
-                                <th className="px-4 py-2 text-left text-xl font-semibold text-white uppercase">Gói dịch
-                                    vụ
-                                </th>
-                                <th className="px-4 py-2 text-left text-xl font-semibold text-white uppercase">Phạm vi
-                                    công
-                                    việc
-                                </th>
-                                <th className="px-4 py-2 text-left text-xl font-semibold text-white uppercase">Giá niêm
-                                    yết
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={togglePMTNModal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        25 Triệu VND/ 1 tháng<br/>Ký tối thiểu 3 tháng
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                                <td className="px-4 py-2 uppercase">Phòng Marketing Thuê Ngoài</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Nghiên cứu dịch vụ, khách hàng
-                                    của Brand.
-                                    <br/>2. Định hình gu, tone, trải nghiệm đọc. Của Page.
-                                    <br/>3. Lên chiến lược marketing tổng thể theo tháng.
-                                    <br/>4. Lên flow content đổ nền Fanpage.
-                                    <br/>5. Viết bài chi tiết theo flow content đã duyệt.
-                                    <br/>6. Viết kịch bản quảng cáo chất lượng.
-                                    <br/>7. Thiết kế hình ảnh theo flow content.
-                                    <br/>8. Dựng video theo kịch bản đã duyệt.
-                                </td>
-                                <td className="px-4 py-2">25,000,000 VND/ 1 tháng<br/>Ký hợp đồng tối thiểu 3 tháng</td>
+                            {/* Modal */}
+                            {isPMTNModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={togglePMTNModal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Nghiên cứu dịch vụ, khách hàng của Brand.</li>
+                                            <li>Định hình gu, tone, trải nghiệm đọc của Page.</li>
+                                            <li>Lên chiến lược marketing tổng thể theo tháng.</li>
+                                            <li>Lên flow content đổ nền Fanpage.</li>
+                                            <li>Viết bài chi tiết theo flow content đã duyệt.</li>
+                                            <li>Viết kịch bản quảng cáo chất lượng.</li>
+                                            <li>Thiết kế hình ảnh theo flow content.</li>
+                                            <li>Dựng video theo kịch bản đã duyệt.</li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={togglePMTNModal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
 
-                            </tr>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
 
-                                <td className="px-4 py-2 uppercase">Chăm sóc khách hàng</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Xây dựng kịch bản tin nhắn phù
-                                    hợp với dịch vụ và ưu đãi.
-                                    <br/>2. Nhắn tin CSKH hoặc chốt đơn linh hoạt theo kịch bản.
-                                    <br/>3. Xử lý phàn nàn khéo léo, bảo vệ uy tín thương hiệu.
-                                </td>
-                                <td className="px-4 py-2">3,000,000 - 6,000,000 VND/ 1 tháng<br/>Ký hợp đồng tối thiểu 3
-                                    tháng
-                                </td>
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Chăm sóc khách hàng
+                                    </th>
+                                </tr>
 
-                            </tr>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleCSKHModal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        3 - 6 Triệu VND/ 1 tháng<br/>Ký tối thiểu 3 tháng
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                        {/* Ảnh ngăn cách */}
-                        <div className="w-full h-[300px] bg-cover bg-center border-x-4 border-gray-800"
-                             style={{backgroundImage: "url('/assets/images/elements/price.jpg')"}}></div>
-
-                        <table className="min-w-full table-auto">
-                            <thead>
-                            <tr className="border-4 border-gray-800 bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950">
-                                <th colSpan="3"
-                                    className="px-4 py-2 text-center text-xl font-semibold text-white uppercase">Content
-                                </th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
-
-                                <td className="px-4 py-2 uppercase ">Sản xuất kịch bản video ngắn</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Xây dựng outline kịch bản video,
-                                    TVC liền mạch, phù hợp chiến dịch.
-                                    <br/>2. Viết kịch bản chi tiết theo outline đã duyệt.
-                                    <br/>3. Tách Call sheet gồm: đạo cụ, bối cảnh, footage, text, demo, ghi chú hỗ trợ
-                                    production.
-                                    <br/>4. Số lượng: 10-30 kịch bản.
-
-                                </td>
-                                <td className="px-4 py-2">Tùy theo yêu cầu</td>
-
-                            </tr>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
-
-                                <td className="px-4 py-2 uppercase">Chăm sóc fanpage</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Lập kế hoạch nội dung hàng
-                                    tháng: Xây dựng kế hoạch nội dung fanpage liên kết chặt chẽ giữa các bài viết.
-                                    <br/>2. Triển khai và đăng bài viết: Thực hiện và đăng các bài viết theo khung nội
-                                    dung đã duyệt.
-                                    <br/>3. Soạn thảo nội dung fanpage: Tạo và quản lý nội dung bài viết trên Fanpage.
-                                    <br/>4. Đặt hàng thiết kế: Gửi yêu cầu thiết kế theo kế hoạch, phối hợp và đảm bảo
-                                    tiến độ với team thiết kế.
-                                    <br/>5. Đặt hình ảnh: Yêu cầu hình ảnh từ khách hàng hoặc studio, lựa chọn và cung
-                                    cấp cho team thiết kế.
-                                    <br/>6. Số lượng bài viết: Đăng từ 30-35 bài mỗi tháng.
-                                </td>
-                                <td className="px-4 py-2">12,000,000 - 15,000,000 VND/ 1 tháng
-                                </td>
-
-                            </tr>
-                            </tbody>
-                        </table>
-
-                        {/* Ảnh ngăn cách */}
-                        <div className="w-full h-[300px] bg-cover bg-center border-x-4 border-gray-800"
-                             style={{backgroundImage: "url('/assets/images/elements/price.jpg')"}}></div>
-
-                        <table className="min-w-full table-auto">
-                            <thead>
-                            <tr className="border-4 border-gray-800 bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950">
-                                <th colSpan="3"
-                                    className="px-4 py-2 text-center text-xl font-semibold text-white uppercase">Thiết
-                                    Kế
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
-
-                                <td className="px-4 py-2 uppercase">Thiết kế nhận diện thương hiệu</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Thiết kế logo thương hiệu, định
-                                    hình gu thẩm mỹ và phong
-                                    cách.
-                                    <br/>2. Thiết kế các ấn phẩm thương hiệu phái sinh chuyên nghiệp.
-                                    <br/>3. Đưa các ấn phẩm nhận diện thương hiệu lên mockup ấn tượng.
-                                </td>
-                                <td className="px-4 py-2">7,000,000 - 20,000,000 VND</td>
-
-                            </tr>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
-
-                                <td className="px-4 py-2 uppercase">Thiết kế ấn phẩm sự kiện</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Nghiên cứu visual, palette màu
-                                    và asset hình ảnh cho sự
-                                    kiện.
-                                    <br/>2. Thiết kế demo visual của sự kiện.
-                                    <br/>3. Lên outline và nội dung chi tiết cho ấn phẩm thiết kế.
-                                    <br/>4. Team nội dung gửi yêu cầu thiết kế theo kế hoạch.
-                                    <br/>5. Danh sách ấn phẩm sự kiện: 1 backdrop, 2 standee, 4 hashtag, 20 thư mời.
-                                </td>
-                                <td className="px-4 py-2">800, 000 VND/ 1 ấn phẩm <br/>(Tùy theo yêu cầu)</td>
-                            </tr>
-                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
-
-                                <td className="px-4 py-2 uppercase">Thiết kế catalogue/ brochure/ flyer</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Thu thập thông tin và yêu cầu từ
-                                    nhãn hàng.
-                                    <br/>2. Nghiên cứu nhận diện thương hiệu.
-                                    <br/>3. Xây dựng outline và bố cục thiết kế.
-                                    <br/>4. Hoàn thiện nội dung chi tiết.
-                                    <br/>5. Thiết kế theo nội dung đã duyệt.
-                                    <br/>5. Chỉnh sửa theo yêu cầu.
-                                </td>
-                                <td className="px-4 py-2">Tùy theo yêu cầu</td>
-                            </tr>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
-
-                                <td className="px-4 py-2 uppercase">Thiết kế tranh tường nội thất</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Lên kịch bản quay, chụp cơ sở,
-                                    dịch vụ thiết kế ấn phẩm online/offline.
-                                    <br/>2. Chọn vị trí hợp phong thủy, phù hợp nội thất.
-                                    <br/>3. Lên nội dung tranh tường phù hợp công năng, mục đích.
-                                    <br/>4. Thiết kế tranh tường đảm bảo nhận diện thương hiệu và không gian.
-                                    <br/>5. Ấn phẩm tranh tường thẩm mỹ, kích thích sale, hợp phong thủy.
-                                </td>
-                                <td className="px-4 py-2">1, 500, 000 VND/ 1 bức</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                            {/* Modal */}
+                            {isCSKHModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleCSKHModal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Xây dựng kịch bản tin nhắn phù hợp với dịch vụ và ưu đãi.</li>
+                                            <li>Nhắn tin CSKH hoặc chốt đơn linh hoạt theo kịch bản.</li>
+                                            <li>Xử lý phàn nàn khéo léo, bảo vệ uy tín thương hiệu.</li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleCSKHModal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
 
                         {/* Ảnh ngăn cách */}
-                        <div className="w-full h-[300px] bg-cover bg-center border-x-4 border-gray-800"
-                             style={{backgroundImage: "url('/assets/images/elements/price.jpg')"}}></div>
+                        <div className="w-full h-[150px] bg-cover bg-center border-x-4 border-gray-800"
+                             style={{backgroundImage: "url('/assets/images/price/contentprice.jpg')"}}></div>
 
-                        <table className="min-w-full table-auto">
-                            <thead>
-                            <tr className="border-4 border-gray-800 bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950">
-                                <th colSpan="3"
-                                    className="px-4 py-2 text-center text-xl font-semibold text-white uppercase">media
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
-                                <td className="px-4 py-2 uppercase">Quay chụp dịch vụ, cơ sở, tvc giới thiệu doanh
-                                    nghiệp
-                                </td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Lập kế hoạch kịch bản quay, chụp
-                                    dịch vụ.
-                                    <br/>2. Triển khai quay, chụp theo kế hoạch đã duyệt.
-                                    <br/>3. Hậu kỳ ảnh, video phù hợp mục đích thiết kế, chạy quảng cáo.
-                                </td>
-                                <td className="px-4 py-2">Tùy theo yêu cầu</td>
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Sản xuất kịch bản video ngắn
+                                    </th>
+                                </tr>
 
-                            </tr>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleVideoNganModal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        Tùy theo yêu cầu
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                                <td className="px-4 py-2 uppercase">quay chụp sự kiện</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Xây dựng kịch bản chi tiết, xác
-                                    định những khoảnh khắc quan
-                                    trọng trong sự kiện.
-                                    <br/>2. Thực hiện quay và chụp các khoảnh khắc, hoạt động nổi bật trong suốt sự
-                                    kiện.
-                                    <br/>3. Sửa chữa, cắt ghép, tạo dựng video và ảnh chất lượng cao phù hợp với yêu
-                                    cầu.
-                                    <br/>4. Đảm bảo giao sản phẩm chỉnh sửa nhanh chóng, đáp ứng mọi nhu cầu của khách
-                                    hàng.
-                                    <br/>5. Số lượng: 1 video sự kiện chung, 3-4 video tập trung vào celeb.
+                            {/* Modal */}
+                            {isVideoNganModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleVideoNganModal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Xây dựng outline kịch bản video, TVC liền mạch, phù hợp chiến dịch.</li>
+                                            <li>Viết kịch bản chi tiết theo outline đã duyệt.</li>
+                                            <li>Tách Call sheet gồm: đạo cụ, bối cảnh, footage, text, demo, ghi chú hỗ
+                                                trợ production.
+                                            </li>
+                                            <li>Số lượng: 10-30 kịch bản.</li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleVideoNganModal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
 
-                                </td>
-                                <td className="px-4 py-2">Tùy theo yêu cầu</td>
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Chăm sóc fanpage
+                                    </th>
+                                </tr>
 
-                            </tr>
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleFanpageModal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        12 - 15 Triệu VND/ 1 tháng
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
-
-                                <td className="px-4 py-2 uppercase">quay chụp sự kiện</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Xây dựng kịch bản sáng tạo, phù
-                                    hợp với mục tiêu truyền thông
-                                    <br/>2. Thực hiện quay video ngắn với chất lượng hình ảnh sắc nét, đảm bảo nội dung
-                                    hấp dẫn.
-                                    kiện.
-                                    <br/>3. Sử dụng kỹ thuật dựng video hiện đại, tạo ra những sản phẩm ngắn gọn, ấn
-                                    tượng.
-                                    <br/>4. Thêm hiệu ứng hình ảnh, âm thanh sống động, phù hợp với phong cách video.
-                                    <br/>5. Số lượng: 20 kịch bản
-
-                                </td>
-                                <td className="px-4 py-2">Tùy theo yêu cầu</td>
-
-                            </tr>
-                            </tbody>
-                        </table>
+                            {/* Modal */}
+                            {isFanpageModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleFanpageModal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Lập kế hoạch nội dung hàng tháng: Xây dựng kế hoạch nội dung fanpage
+                                                liên kết chặt chẽ giữa các bài viết.
+                                            </li>
+                                            <li>Triển khai và đăng bài viết: Thực hiện và đăng các bài viết theo khung
+                                                nội dung đã duyệt.
+                                            </li>
+                                            <li>Soạn thảo nội dung fanpage: Tạo và quản lý nội dung bài viết trên
+                                                Fanpage.
+                                            </li>
+                                            <li>Đặt hàng thiết kế: Gửi yêu cầu thiết kế theo kế hoạch, phối hợp và đảm
+                                                bảo tiến độ với team thiết kế.
+                                            </li>
+                                            <li>Đặt hình ảnh: Yêu cầu hình ảnh từ khách hàng hoặc studio, lựa chọn và
+                                                cung cấp cho team thiết kế.
+                                            </li>
+                                            <li>Số lượng bài viết: Đăng từ 30-35 bài mỗi tháng.</li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleFanpageModal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
 
                         {/* Ảnh ngăn cách */}
-                        <div className="w-full h-[300px] bg-cover bg-center border-x-4 border-gray-800"
-                             style={{backgroundImage: "url('/assets/images/elements/price.jpg')"}}></div>
+                        <div className="w-full h-[150px] bg-cover bg-center border-x-4 border-gray-800"
+                             style={{backgroundImage: "url('/assets/images/price/ThietKePrice.jpg')"}}></div>
 
-                        <table className="min-w-full table-auto border-b-[45px] border-b-gray-800">
-                            <thead>
-                            <tr className="border-4 border-gray-800 bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950">
-                                <th colSpan="3"
-                                    className="px-4 py-2 text-center text-xl font-semibold text-white uppercase">Digital
-                                    Ads
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className="border-y-2 border-x-4 border-gray-800 bg-slate-200">
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Thiết kế nhận diện thương hiệu
+                                    </th>
+                                </tr>
 
-                                <td className="px-4 py-2">Chi phí ads 01 tháng dưới 40 triệu</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Lên ma trận ads chậy quảng cáo
-                                    phù hợp.
-                                    <br/>2. Lập kế hoạch ads và dự trù ngân sách ads.
-                                    <br/>3. Tối ưu ma trận ads.
-                                </td>
-                                <td className="px-4 py-2">15% phí tối ưu</td>
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleTK1Modal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        7 - 20 Triệu VND/ 1 tháng
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                            </tr>
-                            <tr className="border-y-2 border-x-4 border-gray-800">
+                            {/* Modal */}
+                            {isTK1ModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleTK1Modal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Thiết kế logo thương hiệu, định hình gu thẩm mỹ và phong cách.
+                                            </li>
+                                            <li>Thiết kế các ấn phẩm thương hiệu phái sinh chuyên nghiệp.
+                                            </li>
+                                            <li>Đưa các ấn phẩm nhận diện thương hiệu lên mockup ấn tượng.
+                                            </li>
 
-                                <td className="px-4 py-2">Chi phí ads 01 tháng trên 40 triệu</td>
-                                <td className="px-4 py-2 border-x-2 border-gray-800">1. Lên ma trận ads chậy quảng cáo
-                                    phù hợp.
-                                    <br/>2. Lập kế hoạch ads và dự trù ngân sách ads.
-                                    <br/>3. Tối ưu ma trận ads.
-                                </td>
-                                <td className="px-4 py-2 ">12% phí tối ưu</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleTK1Modal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Thiết kế ấn phẩm sự kiện
+                                    </th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleTK2Modal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        800,000 VND/ 1 ấn phẩm
+                                        <br/>(Tùy theo yêu cầu)
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            {/* Modal */}
+                            {isTK2ModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleTK2Modal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Nghiên cứu visual, palette màu và asset hình ảnh cho sự kiện.
+                                            </li>
+                                            <li>Thiết kế demo visual của sự kiện.
+                                            </li>
+                                            <li>Lên outline và nội dung chi tiết cho ấn phẩm thiết kế.
+                                            </li>
+                                            <li>Team nội dung gửi yêu cầu thiết kế theo kế hoạch.
+                                            </li>
+                                            <li>Danh sách ấn phẩm sự kiện: 1 backdrop, 2 standee, 4 hashtag, 20 thư mời.
+                                            </li>
+
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleTK2Modal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Thiết kế catalogue/ brochure/ flyer
+                                    </th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleTK3Modal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        Tùy theo yêu cầu
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            {/* Modal */}
+                            {isTK3ModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleTK3Modal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Thu thập thông tin và yêu cầu từ nhãn hàng.
+                                            </li>
+                                            <li>Nghiên cứu nhận diện thương hiệu.
+                                            </li>
+                                            <li>Xây dựng outline và bố cục thiết kế.
+                                            </li>
+                                            <li>Hoàn thiện nội dung chi tiết.
+                                            </li>
+                                            <li>Thiết kế theo nội dung đã duyệt.
+                                            </li>
+                                            <li>Chỉnh sửa theo yêu cầu.
+                                            </li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleTK3Modal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+
+                        {/* Ảnh ngăn cách */}
+                        <div className="w-full h-[150px] bg-cover bg-center border-x-4 border-gray-800"
+                             style={{backgroundImage: "url('/assets/images/price/MediaPrice.jpg')"}}></div>
+
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Quay chụp dịch vụ, cơ sở, tvc giới thiệu doanh nghiệp
+                                    </th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleM1Modal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        Tùy theo yêu cầu
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            {/* Modal */}
+                            {isM1ModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleM1Modal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Lập kế hoạch kịch bản quay, chụp dịch vụ.
+                                            </li>
+                                            <li>Triển khai quay, chụp theo kế hoạch đã duyệt.
+                                            </li>
+                                            <li>Hậu kỳ ảnh, video phù hợp mục đích thiết kế, chạy quảng cáo.
+                                            </li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleM1Modal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        quay chụp sự kiện
+                                    </th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleM2Modal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        Tùy theo yêu cầu
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            {/* Modal */}
+                            {isM2ModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleM2Modal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Xây dựng kịch bản chi tiết, xác định những khoảnh khắc quan trọng trong
+                                                sự kiện.
+                                            </li>
+                                            <li>Thực hiện quay và chụp các khoảnh khắc, hoạt động nổi bật trong suốt sự
+                                                kiện.
+                                            </li>
+                                            <li>Sửa chữa, cắt ghép, tạo dựng video và ảnh chất lượng cao phù hợp với yêu
+                                                cầu.
+                                            </li>
+                                            <li>Đảm bảo giao sản phẩm chỉnh sửa nhanh chóng, đáp ứng mọi nhu cầu của
+                                                khách hàng.
+                                            </li>
+                                            <li>Số lượng: 1 video sự kiện chung, 3-4 video tập trung vào celeb.
+                                            </li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleM2Modal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Quay dựng/ Sản xuất video ngắn
+                                    </th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleM3Modal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        Tùy theo yêu cầu
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            {/* Modal */}
+                            {isM3ModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleM3Modal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Xây dựng kịch bản sáng tạo, phù hợp với mục tiêu truyền thông.
+                                            </li>
+                                            <li>Thực hiện quay video ngắn với chất lượng hình ảnh sắc nét, đảm bảo nội
+                                                dung hấp dẫn.
+                                            </li>
+                                            <li>Sử dụng kỹ thuật dựng video hiện đại, tạo ra những sản phẩm ngắn gọn, ấn
+                                                tượng.
+                                            </li>
+                                            <li>Thêm hiệu ứng hình ảnh, âm thanh sống động, phù hợp với phong cách
+                                                video.
+                                            </li>
+                                            <li>Số lượng: 20 kịch bản
+                                            </li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleM3Modal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Ảnh ngăn cách */}
+                        <div className="w-full h-[150px] bg-cover bg-center border-x-4 border-gray-800"
+                             style={{backgroundImage: "url('/assets/images/price/DigitalAdsPrice.jpg')"}}></div>
+
+                        <div>
+                            <table className="min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Chi phí ads 01 tháng dưới 40 triệu
+                                    </th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleAD1Modal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        15% phí tối ưu
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            {/* Modal */}
+                            {isAD1ModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleAD1Modal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Lên ma trận ads chậy quảng cáo phù hợp.
+                                            </li>
+                                            <li>Lập kế hoạch ads và dự trù ngân sách ads.
+                                            </li>
+                                            <li>Tối ưu ma trận ads.
+                                            </li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleAD1Modal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        <div>
+                            <table className=" min-w-full table-auto">
+                                <thead>
+                                <tr className="border-4 border-gray-800 bg-gradient-to-b from-gray-950 via-slate-800 to-blue-950">
+                                    <th colSpan="2"
+                                        className="px-4 py-2 text-center text-xl font-semibold text-white w-1/2">
+                                        Chi phí ads 01 tháng trên 40 triệu
+                                    </th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr className="border-y-2 border-4 border-gray-800 bg-slate-200">
+                                    <td className="px-4 py-2 text-center border-x-2 border-gray-800 w-1/2">
+                                        <button
+                                            className="text-blue-600 underline"
+                                            onClick={toggleAD2Modal}
+                                        >
+                                            Chi tiết
+                                        </button>
+                                    </td>
+                                    <td className="px-4 py-2 text-center w-1/2">
+                                        12% phí tối ưu
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            {/* Modal */}
+                            {isAD2ModalOpen && (
+                                <div
+                                    className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+                                    onClick={toggleAD2Modal}
+                                >
+                                    <div
+                                        className="bg-white p-8 rounded-lg max-w-lg w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <h2 className="text-xl font-semibold mb-4">Phạm vi công việc chi tiết</h2>
+                                        <ul className="list-disc pl-5">
+                                            <li>Lên ma trận ads chậy quảng cáo phù hợp.
+                                            </li>
+                                            <li>Lập kế hoạch ads và dự trù ngân sách ads.
+                                            </li>
+                                            <li>Tối ưu ma trận ads.
+                                            </li>
+                                        </ul>
+                                        <button
+                                            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                                            onClick={toggleAD2Modal}
+                                        >
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

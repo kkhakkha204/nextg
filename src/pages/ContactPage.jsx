@@ -17,9 +17,7 @@ const ContactPage = () => {
 
                     <div className="absolute top-1/2 left-[5%] md:left-[10%] -translate-y-1/2 text-white">
                         <h1 className="text-3xl md:text-5xl font-bold">NEXTGENCY</h1>
-                        <p className="text-sm md:text-lg">
-                            The Ultimate Guide To Ace SDE Interviews.
-                        </p>
+
                     </div>
                 </div>
 

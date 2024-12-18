@@ -8,7 +8,7 @@ import {
     MdSettings,
     MdShare
 } from "react-icons/md";
-import { useLocation } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 import {
     Chart,
@@ -112,7 +112,7 @@ const ServicesPage = () => {
         },
         {
             id: 2,
-            title: "Content Marketing",
+            title: "Content",
             description: "Nội dung chất lượng, thu hút và giữ chân khách hàng.",
             details: ["Chiến lược: Xây dựng và phân phối nội dung giá trị nhằm tăng cường sự hiện diện thương hiệu và tạo dựng lòng tin của khách hàng.",
                 "Cách triển khai: Phát triển nội dung dạng bài viết blog, video hướng dẫn, đồ họa thông tin (infographics), và ebook. Nội dung phải phù hợp với từng giai đoạn trong hành trình khách hàng, từ thông tin chung đến hướng dẫn chi tiết.",
@@ -121,7 +121,7 @@ const ServicesPage = () => {
         },
         {
             id: 3,
-            title: "Influencer Marketing",
+            title: "Influencer",
             description: "Hợp tác cùng KOLs để tăng độ phủ thương hiệu.",
             details: ["Chiến lược: Hợp tác với những người ảnh hưởng (influencers) phù hợp với tệp khách hàng mục tiêu của thương hiệu để tăng độ tin cậy và tiếp cận.",
                 "Cách triển khai: Tìm kiếm các influencers có uy tín và tương tác tốt, sau đó thiết lập các chiến dịch đánh giá sản phẩm, video mở hộp, hoặc livestream dùng thử sản phẩm để thu hút khách hàng.",
@@ -139,7 +139,7 @@ const ServicesPage = () => {
         },
         {
             id: 5,
-            title: "Marketing Automation",
+            title: "Automation",
             description: "Tự động hóa tiếp thị, tối ưu hóa quy trình.",
             details: ["Chiến lược: Sử dụng công nghệ tự động hóa để tối ưu hóa và cá nhân hóa quy trình chăm sóc khách hàng.",
                 "Cách triển khai: Phân khúc khách hàng, thiết lập chuỗi email chào mừng, nhắc nhở giỏ hàng bỏ dở, và gửi thông báo về các ưu đãi mới đến khách hàng cũ.",
@@ -344,21 +344,20 @@ const ServicesPage = () => {
 
                             {/* Heading Section */}
                             <div className="w-full z-index: 0 text-center">
-                                <h1 className="tracking-wide mt-0 mb-1 text-gray-800 font-[Oswald] text-[4.05rem] sm:text-[5.5rem] md:text-[9.25rem] lg:text-[12.25rem] xl:text-[14.25rem] 2xl:text-[14.75rem] xl:mt-14 2xl:mt-10 font-bold ">
+                                <h1 className="tracking-wide mt-0 mb-1 text-gray-800 font-[Oswald] text-[4.75rem] sm:text-[5.5rem] md:text-[9.25rem] lg:text-[12.25rem] xl:text-[14.25rem] 2xl:text-[14.75rem] xl:mt-14 2xl:mt-10 font-bold ">
                                     NEXTGENCY
+                                    <p className="mx-auto max-w-lg text-center text-[1.40rem] font-semibold tracking-tight sm:text-5xl italic">
+
+                                        FROM IDEAS TO IMPACT
+                                        <br/> OUR SERVICES DELIVER
+                                    </p>
                                 </h1>
                             </div>
 
                             <div
                                 className="mt-5 xl:absolute xl:top-[85%] xl:bottom-auto xl:left-auto xl:right-[0.5%] ">
                                 <div>
-                                    <p className="font-[Oswald] md:text-2xl text-lg font-[350] leading-[1.5] tracking-wider">
-                                        Tiết Kiệm Chi Phí
-                                        <br/>Tăng Độ Phủ Truyền Thông Thương Hiệu
-                                        <br/> Tối Ưu Chuyển Đổi
-                                        <br/>Báo Cáo Minh Bạch
-                                        <br/>Vận Hành Chuyên Nghiệp.
-                                    </p>
+
                                     <div className="mt-6 flex justify-center gap-4">
                                         {/* Nút Chuyển Sang Trang Liên Hệ */}
                                         <a
@@ -391,20 +390,20 @@ const ServicesPage = () => {
             </div>
 
 
-            <div id="branding"
+            <div id="content"
                  className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950  w-full border-t-8 border-blue-400">
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
                         <div
-                            className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+                            className="relative isolate overflow-hidden px-6 py-10 sm:py-32 lg:overflow-visible lg:px-0">
 
                             <div
-                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
                                         <div className="lg:max-w-lg">
-                                            <p className="text-base/7 font-semibold text-indigo-600">NEXTGENCY</p>
+                                            <p className="text-base/7 font-semibold text-blue-500">NEXTGENCY</p>
                                             <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl uppercase">
                                                 Content
                                             </h1>
@@ -423,7 +422,7 @@ const ServicesPage = () => {
                                     </div>
                                 </div>
                                 <div
-                                    className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+                                    className="-ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                                     <img
                                         alt=""
                                         src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
@@ -435,7 +434,7 @@ const ServicesPage = () => {
                                     <div className="lg:pr-4">
                                         <div className="max-w-xl text-base/7 text-gray-200 lg:max-w-lg">
 
-                                            <ul role="list" className="mt-8 space-y-8 ">
+                                            <ul role="list" className=" space-y-4 ">
                                                 <li className="flex gap-x-3">
 
                                                     <span>
@@ -464,7 +463,7 @@ const ServicesPage = () => {
                 </div>
             </div>
 
-            <div id="ads" className="relative bg-custom-gradient to-blue-950 w-full"
+            <div id="media" className="relative bg-custom-gradient to-blue-950 w-full"
                  style={{
                      backgroundImage: "url('/assets/images/banner/servicebg2.png')",
                      backgroundSize: "cover",
@@ -499,15 +498,15 @@ const ServicesPage = () => {
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
                         <div
-                            className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+                            className="relative isolate overflow-hidden px-6 py-10 sm:py-32 lg:overflow-visible lg:px-0">
 
                             <div
-                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
                                         <div className="lg:max-w-lg">
-                                            <p className="text-base/7 font-semibold text-indigo-600">NEXTGENCY</p>
+                                            <p className="text-base/7 font-semibold text-blue-600">NEXTGENCY</p>
                                             <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
                                                 Media
                                             </h1>
@@ -537,7 +536,7 @@ const ServicesPage = () => {
                                     <div className="lg:pr-4">
                                         <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
 
-                                            <ul role="list" className="mt-8 space-y-8 ">
+                                            <ul role="list" className=" space-y-4 ">
                                                 <li className="flex gap-x-3">
 
                                                     <span>
@@ -588,7 +587,7 @@ const ServicesPage = () => {
             <div id="marketing"
                  className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full px-6 py-10 border-t-8 border-blue-400">
                 <div className="mb-10">
-                    <h2 className="text-center text-2xl font-semibold text-indigo-600">Next.Gency</h2>
+                    <h2 className="text-center text-2xl font-semibold text-blue-500">Next.Gency</h2>
                     <p className="mx-auto text-white mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight sm:text-5xl">
                         MARKETING
                     </p>
@@ -619,7 +618,7 @@ const ServicesPage = () => {
                         <h2 className="text-2xl font-semibold mb-4">{selectedItem.title}</h2>
                         <div className="flex flex-col md:flex-row items-center gap-6">
                             {/* Danh sách chi tiết */}
-                            <ul className="list-disc pl-5 space-y-20 flex-1">
+                            <ul className="list-disc pl-5 space-y-5 md:space-y-20 flex-1">
                                 {selectedItem.details.map((detail, index) => (
                                     <li key={index} className="text-md">{detail}</li>
                                 ))}
@@ -637,15 +636,6 @@ const ServicesPage = () => {
                                             className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
                                     </a>
 
-                                    {/* Nút Hợp Tác Ngay */}
-                                    <a
-                                        href="/liên-hệ"
-                                        className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
-                                    >
-                                        Hợp Tác Ngay
-                                        <span
-                                            className="absolute left-0 bottom-3 w-full h-[1px] bg-white transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
-                                    </a>
                                 </div>
                             </ul>
 
@@ -661,7 +651,7 @@ const ServicesPage = () => {
             </div>
 
 
-            <div id="seo" className="relative bg-custom-gradient to-blue-950 w-full"
+            <div id="digital" className="relative bg-custom-gradient to-blue-950 w-full"
                  style={{
                      backgroundImage: "url('/assets/images/banner/servicebg2.png')",
                      backgroundSize: "cover",
@@ -696,15 +686,15 @@ const ServicesPage = () => {
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
                         <div
-                            className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+                            className="relative isolate overflow-hidden px-6 py-10 sm:py-32 lg:overflow-visible lg:px-0">
 
                             <div
-                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
                                         <div className="lg:max-w-lg">
-                                            <p className="text-base/7 font-semibold text-indigo-600">NEXTGENCY</p>
+                                            <p className="text-base/7 font-semibold text-blue-600">NEXTGENCY</p>
                                             <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
                                                 Digital Ads + Traffic
                                             </h1>
@@ -713,7 +703,7 @@ const ServicesPage = () => {
                                                     Tối ưu chuyển đổi qua các kênh online và offline
                                                 </p>
                                             </div>
-                                            <p className="mt-6 text-xl/8 text-gray-700">
+                                            <p className=" text-xl/8 text-gray-700">
                                                 Xây dựng và tối ưu hóa chiến dịch quảng cáo với độ chính xác cao, sử
                                                 dụng dữ liệu chuyên sâu để nhằm mục tiêu hiệu quả, tăng tỷ lệ chuyển
                                                 đổi, và mang lại kết quả ấn tượng
@@ -734,7 +724,7 @@ const ServicesPage = () => {
                                     <div className="lg:pr-4">
                                         <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
 
-                                            <ul role="list" className="mt-8 space-y-8 ">
+                                            <ul role="list" className=" space-y-4 ">
                                                 <li className="flex gap-x-3">
 
                                                     <span>
@@ -749,7 +739,7 @@ const ServicesPage = () => {
                                                 </li>
 
                                             </ul>
-                                            <div className="mt-24 flex justify-center gap-4">
+                                            <div className="mt-10 flex justify-center gap-4">
                                                 {/* Nút Chuyển Sang Trang Liên Hệ */}
                                                 <a
                                                     href="/liên-hệ"
@@ -782,7 +772,7 @@ const ServicesPage = () => {
                 </div>
             </div>
 
-            <div id="data" className="relative bg-custom-gradient to-blue-950 w-full"
+            <div id="phongmarketing" className="relative bg-custom-gradient to-blue-950 w-full"
                  style={{
                      backgroundImage: "url('/assets/images/banner/servicebg2.png')",
                      backgroundSize: "cover",
@@ -817,28 +807,29 @@ const ServicesPage = () => {
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
                         <div
-                            className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+                            className="relative isolate overflow-hidden px-6 py-10 sm:py-32 lg:overflow-visible lg:px-0">
 
                             <div
-                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+                                className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
                                         <div className="lg:max-w-lg">
-                                            <p className="text-base/7 font-semibold text-indigo-600">NEXTGENCY</p>
+                                            <p className="text-base/7 font-semibold text-blue-600">NEXTGENCY</p>
                                             <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
                                                 Phòng Marketing thuê ngoài
                                             </h1>
                                             <div className="border-l-[6px] border-orange-600">
                                                 <p className="ml-4 mt-6 text-xl/8 text-orange-600">
-                                                    Cung cấp đầy đủ nhân sự triển khai hoạt động marketing với chi phí tối ưu giúp:
+                                                    Cung cấp đầy đủ nhân sự triển khai hoạt động marketing với chi phí
+                                                    tối ưu giúp:
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div
-                                    className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+                                    className="-ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                                     <img
                                         alt=""
                                         src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
@@ -850,7 +841,7 @@ const ServicesPage = () => {
                                     <div className="lg:pr-4">
                                         <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
 
-                                            <ul role="list" className="mt-8 space-y-8 ">
+                                            <ul role="list" className=" space-y-4 ">
                                                 <li className="flex gap-x-3">
 
                                                     <span>
@@ -876,7 +867,7 @@ const ServicesPage = () => {
                   </span>
                                                 </li>
                                             </ul>
-                                            <div className="mt-24 flex justify-center gap-4">
+                                            <div className="mt-10 flex justify-center gap-4">
                                                 {/* Nút Chuyển Sang Trang Liên Hệ */}
                                                 <a
                                                     href="/liên-hệ"
@@ -947,7 +938,8 @@ const ServicesPage = () => {
 
                             {/* Phần biểu đồ */}
                             <div className="mt-12">
-                                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center uppercase">Hiệu quả theo năm</h3>
+                                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center uppercase">Hiệu quả theo
+                                    năm</h3>
                                 <div
                                     className="flex flex-col lg:flex-row justify-center items-center gap-20 mt-10 py-10 bg-gradient-to-br from-sky-800 via-blue-950 to-gray-800 border-t-4 border-sky-400 rounded-xl ">
                                     {/* Biểu đồ hình tròn */}
@@ -991,9 +983,9 @@ const ServicesPage = () => {
                 </div>
             </div>
 
-            <div className="relative bg-custom-gradient py-24 sm:py-32"
+            <div className="relative bg-custom-gradient py-10 sm:py-10"
                  style={{
-                     backgroundImage: "url('/assets/images/banner/bgsec5.png')",
+                     backgroundImage: "url('/assets/images/banner/servicebg2.png')",
                      backgroundSize: "cover",
                      backgroundRepeat: "no-repeat",
                      backgroundPosition: "center center",
@@ -1025,17 +1017,10 @@ const ServicesPage = () => {
                 </svg>
 
                 <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className=" mx-auto max-w-2xl sm:text-center">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl uppercase">Tham Khảo
-                            Bảng Giá
-                            <span
-                                className="text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl uppercase"> Nextgency</span>
-                        </h2>
-                    </div>
                     <div
-                        className="bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+                        className="bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-44 lg:mx-0 lg:flex lg:max-w-none">
                         <div className="p-8 sm:p-10 lg:flex-auto">
-                            <h3 className="text-2xl font-bold tracking-tight text-white">Tổng Quan</h3>
+                            <h3 className="text-2xl font-bold tracking-tight text-white">Tổng Quan Bảng Giá</h3>
                             <p className="mt-6 text-base leading-7 text-gray-100">Khám phá bảng giá linh hoạt của
                                 Nextgency, được thiết kế phù hợp với mọi nhu cầu marketing, giúp bạn tối ưu ngân sách và
                                 đạt hiệu quả vượt mong đợi.</p>
@@ -1044,8 +1029,8 @@ const ServicesPage = () => {
                                 <div className="h-px flex-auto bg-gray-100"></div>
                             </div>
                             <ul role="list"
-                                className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
-                                <li className="flex gap-x-3 text-white">
+                                className="mt-8 grid grid-cols-1 gap-4 text-lg leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+                                <Link to="/dịch-vụ#content" className="flex gap-x-3 text-white hover:text-blue-500">
                                     <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
                                          fill="currentColor" aria-hidden="true">
                                         <path fillRule="evenodd"
@@ -1053,17 +1038,17 @@ const ServicesPage = () => {
                                               clipRule="evenodd"/>
                                     </svg>
                                     Content
-                                </li>
-                                <li className="flex gap-x-3 text-white">
+                                </Link>
+                                <Link to="/dịch-vụ#digital" className="flex gap-x-3 text-white hover:text-blue-500">
                                     <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
                                          fill="currentColor" aria-hidden="true">
                                         <path fillRule="evenodd"
                                               d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
                                               clipRule="evenodd"/>
                                     </svg>
-                                    Thiết kế
-                                </li>
-                                <li className="flex gap-x-3 text-white">
+                                    Digital Ads + Traffic
+                                </Link>
+                                <Link to="/dịch-vụ#media" className="flex gap-x-3 text-white hover:text-blue-500">
                                     <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
                                          fill="currentColor" aria-hidden="true">
                                         <path fillRule="evenodd"
@@ -1071,16 +1056,16 @@ const ServicesPage = () => {
                                               clipRule="evenodd"/>
                                     </svg>
                                     Media
-                                </li>
-                                <li className="flex gap-x-3 text-white">
+                                </Link>
+                                <Link to="/dịch-vụ#marketing" className="flex gap-x-3 text-white hover:text-blue-500">
                                     <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
                                          fill="currentColor" aria-hidden="true">
                                         <path fillRule="evenodd"
                                               d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
                                               clipRule="evenodd"/>
                                     </svg>
-                                    Digital Ads
-                                </li>
+                                    Marketing
+                                </Link>
                             </ul>
                         </div>
                         <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0 ">

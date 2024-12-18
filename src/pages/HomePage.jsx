@@ -76,10 +76,7 @@ const stats = [
     { id: 2, name: 'Cán bộ, nhân viên', value: '100 +' },
     { id: 3, name: 'Phản hồi tích cực', value: '96 %' },
     { id: 4, name: 'Khách hàng hài lòng', value: '50.000 +' },
-    { id: 5, name: 'Đối tác chiến lược', value: '10 +' },
-    { id: 6, name: 'Khách hàng quay lại', value: '85 %' },
-    { id: 7, name: 'Giải thưởng đạt được', value: '20 +' },
-    { id: 8, name: 'Chiến dịch thành công', value: '1.000 +' },
+
 ]
 
 const posts = [
@@ -146,7 +143,7 @@ const HomePage = () => {
         <main
             className="relative bg-custom-gradient md:min-h-screen w-screen overflow-hidden font-[Oswald] text-gray-800 min-h-[70vh]">
             <div className="">
-                <div className="relative pt-16 sm:pt-32 md:pt-48 w-full pb-52 xl:pb-[30rem]"
+                <div className="relative pt-16 sm:pt-32 md:pt-48 w-full pb-32 xl:pb-[30rem]"
                      style={{
                          backgroundImage: "url('/assets/images/banner/city3.png')",
                          backgroundSize: "cover",
@@ -193,7 +190,7 @@ const HomePage = () => {
                                             className="scroll-down-loop w-[0.12rem] h-20 bg-[#19183a] animate-scrollLoop transform translate-y-[3.283rem]"></div>
                                     </div>
                                     <div
-                                        className="scroll_text mb-4 mt-4 text-[1.25rem] font-[Oswald] tracking-widest font-medium leading-[100%] inline-block rotate-[-90deg] normal-case sm:text-[1.75rem]">
+                                        className="italic scroll_text mb-4 mt-4 text-[1.25rem] font-[Oswald] tracking-widest font-medium leading-[100%] inline-block rotate-[-90deg] normal-case sm:text-[1.75rem]">
                                         Khám Phá
                                     </div>
                                     <div
@@ -229,18 +226,21 @@ const HomePage = () => {
 
                                 {/* Heading Section */}
                                 <div className="w-full z-index: 0 text-center">
-                                    <h1 className="tracking-wide mt-0 mb-1 text-gray-800 font-[Oswald] text-[4.05rem] sm:text-[5.5rem] md:text-[9.25rem] lg:text-[12.25rem] xl:text-[14.25rem] 2xl:text-[14.75rem] xl:mt-14 2xl:mt-10 font-bold ">
+                                    <h1 className="tracking-wide mt-0 mb-1 text-gray-800 font-[Oswald] text-[4.75rem] sm:text-[5.5rem] md:text-[9.25rem] lg:text-[12.25rem] xl:text-[14.25rem] 2xl:text-[14.75rem] xl:mt-14 2xl:mt-10 font-bold ">
+                                        <p className="mx-auto max-w-lg text-center text-[1.40rem] font-semibold tracking-tight sm:text-5xl italic">
+                                            CREATIVITY TAKES THE LEAD
+                                        </p>
                                         NEXTGENCY
                                     </h1>
                                 </div>
 
                                 <div
-                                    className=" mt-40 lg:mt-20 xl:mt-52 lg:absolute lg:top-[100%] lg:bottom-auto lg:left-auto lg:right-[0.5%] bg-gray-800 text-white pl-[1.35rem] pr-[0.85rem] xl:pl-[5.35rem] xl:pr-[2.85rem] md:pl-[4.35rem] md:pr-[1.85rem] pb-5 rounded-[4rem]">
+                                    className=" mt-36 lg:mt-20 xl:mt-44 lg:absolute lg:top-[100%] lg:bottom-auto lg:left-auto lg:right-[0.5%] bg-gray-800 text-white pl-[1.25rem] pr-[0.75rem] xl:pl-[5.35rem] xl:pr-[2.85rem] md:pl-[4.35rem] md:pr-[1.85rem] pb-5 rounded-[4rem]">
                                     <div>
                                         <div className="mt-6 flex justify-center gap-4">
                                             {/* Nút Chuyển Sang Trang Liên Hệ */}
                                             <a
-                                                href="/lien-he"
+                                                href="/liên-hệ"
                                                 className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-[7.25rem] h-[3.25rem] sm:w-32 sm:h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
                                             >
                                             <span
@@ -253,12 +253,11 @@ const HomePage = () => {
 
                                             {/* Nút Hợp Tác Ngay */}
                                             <a
-                                                href="/lien-he"
+                                                href="/liên-hệ"
                                                 className="relative font-[Oswald] font-bold tracking-widest uppercase text-[0.85rem] sm:text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
                                             >
                                                 Hợp tác ngay
-                                                <span
-                                                    className="absolute left-0 bottom-3 w-full h-[1px] bg-white transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+
                                             </a>
                                         </div>
                                     </div>
@@ -271,13 +270,11 @@ const HomePage = () => {
             </div>
 
             {/*Partners section*/}
-            <div className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full">
-
-
+            <div className="relative bg-custom-about w-full">
                 {/* Content */}
                 <div className="relative  sm:pt-0 z-10">
                     <div className="mx-auto w-full max-w-full">
-                        <div className=" py-7">
+                        <div className=" py-4">
                             <div className="">
 
                                 {/* Slider logo */}
@@ -336,7 +333,7 @@ const HomePage = () => {
 
 
             {/*Quy Trinh section*/}
-            <div className="relative bg-custom-gradient w-full sm:pt-8 "
+            <div className="relative bg-custom-gradient w-full pt-8 "
                  style={{
                      backgroundImage: "url('/assets/images/banner/bgsec5.png')",
                      backgroundSize: "cover",
@@ -372,19 +369,6 @@ const HomePage = () => {
                 <div className="px-6 sm:px-8 md:px-10 relative z-10">
                     <div className="mx-auto w-full max-w-7xl ">
                         <div className="">
-                            {/* Heading Section */}
-                            <div className=" z-50 mt-10 transform-style-preserve-3d w-full text-center">
-                                <h2
-                                    className="text-center z-50 tracking-tight inline-block mt-0 mb-8 font-[Oswald] text-[1.5rem] sm:text-[2rem] md:text-[3rem] font-semibold uppercase"
-                                >
-                                    Chiến dịch Marketing chuyên biệt dựa trên
-                                    <br/>
-                                    <span
-                                        className="font-[Oswald] tracking-tight bg-gradient-to-r from-gray-800 via-sky-500 to-blue-900 bg-clip-text text-transparent text-[1.5rem] sm:text-[2rem] md:text-[3rem] font-semibold uppercase"> quy trình bán hàng của bạn
-                                            </span>
-                                    <br/>
-                                </h2>
-                            </div>
                             <section className="py-9 font-[Oswald] rounded-3xl">
                                 <div className="container mx-auto flex flex-col items-center space-y-10">
                                     {services.map((service) => (
@@ -393,13 +377,13 @@ const HomePage = () => {
                                             <div
                                                 className={`relative flex flex-col items-center justify-center w-44 h-44 right-32 rounded-full border-[5px] cursor-pointer transition-all duration-500 ${
                                                     activeCircle === service.id
-                                                        ? "w-56 h-56 bg-gradient-to-r from-blue-900 via-blue-800 to-sky-400 border-sky-400 text-white"
+                                                        ? "w-44 h-44 sm:w-52 sm:h-52 bg-gradient-to-r from-blue-900 via-blue-800 to-sky-400 border-sky-400 text-white"
                                                         : "bg-white border-sky-600 shadow-lg shadow-blue-900 text-sky-600 translate-x-32 "
                                                 } ${
                                                     service.id % 2 === 0 && activeCircle === service.id
-                                                        ? "xl:translate-x-[33rem] mb-96 sm:mb-0"
+                                                        ? "xl:translate-x-[33rem] mb-80 sm:mb-0"
                                                         : service.id % 2 !== 0 && activeCircle === service.id
-                                                            ? "xl:-translate-x-64 mb-40 sm:mb-0"
+                                                            ? "xl:-translate-x-64 mb-32 sm:mb-0"
                                                             : ""
                                                 }`}
 
@@ -452,79 +436,67 @@ const HomePage = () => {
                 className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full border-t-8 border-blue-400">
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
-                        <div className=" py-24 sm:py-32">
+                        <div className=" py-10 sm:py-32">
                             <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-                                <h2 className="text-center text-2xl font-semibold text-indigo-600">Next.Gency</h2>
+                                <h2 className="text-center text-2xl font-semibold text-blue-500">NextGency</h2>
                                 <p className="mx-auto text-white mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight sm:text-5xl">
                                     Chúng tôi thổi hồn vào các thương hiệu, định hình bản sắc của họ bằng chiến lược
                                     sáng tạo
                                 </p>
                                 <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-                                    <div className="relative lg:row-span-2 ">
+                                    <div className="relative lg:row-span-2 h-[530px] my-auto">
                                         <div
-                                            className="absolute inset-px rounded-lg bg-gradient-to-br from-sky-800 via-blue-950 to-gray-800 border-l-4 border-t-4 border-sky-400 lg:rounded-l-[2rem]"></div>
+                                            className="absolute inset-px rounded-lg bg-gradient-to-br from-sky-800 via-blue-950 to-gray-800 border-l-4 border-t-4 border-sky-400 max-lg:rounded-b-[2rem] lg:rounded-l-[2rem]"></div>
                                         <div
-                                            className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-                                            <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                                                <div className="border-l-[6px] border-white">
-                                                    <p className="ml-4 mt-2 text-3xl font-medium tracking-tight text-white max-lg:text-center uppercase">
-                                                        Content
-                                                    </p>
-                                                </div>
-                                                <ul className="mt-2 max-w-lg text-xl sm:ml-5 lg:ml-2 text-gray-100 max-lg:text-center">
-                                                    <li>
-                                                        <span>
-                                                            Marketing Plan
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            Content Branding - Content Viral
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            Seeing Campaign - Event Planer
-                                                        </span>
-                                                    </li>
+                                            className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
 
+                                            {/* Căn giữa chữ và nút trên màn hình nhỏ */}
+                                            <div
+                                                className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10 flex flex-col items-center justify-center h-full">
+                                                <h3 className="mt-2 text-3xl font-medium tracking-tight text-white text-center uppercase">
+                                                    Content
+                                                </h3>
+
+                                                <ul className="mt-4 text-xl text-gray-100 text-center">
+                                                    <li>Content Branding - Content Viral</li>
+                                                    <li>Seeing Campaign - Event Planer</li>
+                                                    <li>Marketing Plan</li>
                                                 </ul>
+
                                                 {/* Nút More */}
                                                 <Link
-                                                    to="/dịch-vụ#branding"
-                                                    className=" ml-[6.5rem] sm:ml-[13rem] lg:ml-0 px-6 py-3 mt-5 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg flex items-center justify-center relative group transition-all"
+                                                    to="/dịch-vụ#content"
+                                                    className="px-6 py-3 mt-5 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg flex items-center justify-center relative transition-all"
                                                 >
+                <span className="absolute text-3xl group-hover:opacity-0 transition-opacity duration-300">
+                    <MdReadMore/>
+                </span>
                                                     <span
-                                                        className="absolute text-3xl group-hover:opacity-0 transition-opacity duration-300">
-                                                    <MdReadMore/>
-                                                    </span>
-                                                    <span
-                                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Xem Thêm</span>
+                                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Xem Thêm
+                </span>
                                                 </Link>
                                             </div>
 
-                                            <div
-                                                className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                                            <div className="relative min-h-[30rem] w-full grow">
                                                 <div
-                                                    className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                                                    className="flex items-center justify-center px-8 sm:px-10 lg:pb-2">
                                                     <img
-                                                        className="size-full object-cover object-top"
-                                                        src="/assets/images/elements/branding.jpg"
+                                                        className="w-full max-lg:max-w-xs"
+                                                        src="/assets/images/elements/4.svg"
                                                         alt=""
                                                     />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div
-                                            className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
                                     </div>
-                                    <div className="relative max-lg:row-start-1">
+                                    <div className="relative max-lg:row-start-1 flex items-center justify-center text-center">
                                         <div
-                                            className="absolute inset-px rounded-lg bg-custom-gradient max-lg:rounded-t-[2rem]"></div>
+                                            className="absolute inset-px rounded-lg bg-custom-gradient rounded-t-[2rem]"></div>
                                         <div
                                             className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
                                             <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                                                <div className="border-l-[6px] border-blue-600">
+                                                <div className="">
                                                     <p className="ml-4 mt-2 text-3xl font-medium tracking-tight text-blue-600 max-lg:text-center uppercase">Media</p>
                                                 </div>
                                                 <p className="mt-2 max-w-lg text-xl sm:ml-5 lg:ml-2 text-gray-700 max-lg:text-center">
@@ -537,7 +509,7 @@ const HomePage = () => {
                                                 className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
                                                 <img
                                                     className="w-full max-lg:max-w-xs"
-                                                    src="/assets/images/elements/seo.svg"
+                                                    src="/assets/images/elements/2.svg"
                                                     alt=""
                                                 />
                                             </div>
@@ -545,12 +517,13 @@ const HomePage = () => {
                                         <div
                                             className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
                                     </div>
-                                    <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-                                        <div className="absolute inset-px rounded-lg bg-custom-gradient"></div>
+                                    <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 flex items-center justify-center text-center">
                                         <div
-                                            className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-                                            <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                                                <div className="border-l-[6px] border-blue-600">
+                                            className="absolute inset-px rounded-lg bg-custom-gradient sm:rounded-b-[2rem] "></div>
+                                        <div
+                                            className="relative flex h-full flex-col overflow-hidden  ">
+                                            <div className="px-8 pt-8 sm:px-10 sm:pt-10 ">
+                                                <div className="">
                                                     <p className="ml-4 mt-2 text-3xl font-medium tracking-tight text-blue-600 max-lg:text-center uppercase">Digital
                                                         Ads + Traffic</p>
                                                 </div>
@@ -561,7 +534,7 @@ const HomePage = () => {
                                             </div>
                                             <div
                                                 className="flex flex-1 items-center  max-lg:py-6 lg:pb-2 mx-10">
-                                                <img
+                                            <img
                                                     className="size-full object-cover object-top "
                                                     src="/assets/images/elements/3.svg"
                                                     alt=""
@@ -571,75 +544,54 @@ const HomePage = () => {
                                         <div
                                             className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
                                     </div>
-                                    <div className="relative lg:row-span-2">
+                                    <div className="relative lg:row-span-2 h-[550px] my-auto">
                                         <div
-                                            className="absolute inset-px rounded-lg bg-custom-gradient max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+                                            className="absolute inset-px rounded-lg bg-gradient-to-br from-sky-800 via-blue-950 to-gray-800 border-r-4 border-t-4 border-sky-400 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
                                         <div
                                             className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-                                            <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                                                <div className="border-l-[6px] border-blue-600">
-                                                    <h3 className=" ml-4 mt-2 text-3xl font-medium tracking-tight text-blue-600 max-lg:text-center uppercase">
-                                                        Marketing
-                                                    </h3>
-                                                </div>
-                                                <ul className="mt-2 max-w-lg text-xl sm:ml-5 lg:ml-2 text-gray-700 max-lg:text-center">
-                                                    <li>
-                                                        <span>
-                                                            Performance Marketing
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            Content Marketing
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            Influencer Marketing
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            Social Media Marketing
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            Marketing Automation
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            Email Marketing
-                                                        </span>
-                                                    </li>
-                                                </ul>
-                                                {/* Nút More */}
 
+                                            {/* Căn giữa chữ và nút trên màn hình nhỏ */}
+                                            <div
+                                                className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10 flex flex-col items-center justify-center h-full">
+                                                <h3 className="mt-2 text-3xl font-medium tracking-tight text-white text-center uppercase">
+                                                    Marketing
+                                                </h3>
+
+                                                <ul className="mt-4 text-xl text-gray-100 text-center">
+                                                    <li>Performance Marketing</li>
+                                                    <li>Content Marketing</li>
+                                                    <li>Influencer Marketing</li>
+                                                    <li>Marketing Automation</li>
+                                                </ul>
+
+                                                {/* Nút More */}
                                                 <Link
                                                     to="/dịch-vụ#marketing"
-                                                    className=" ml-[6.5rem] sm:ml-[13rem] lg:ml-0 px-6 py-3 mt-5 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg flex items-center justify-center relative group transition-all"
+                                                    className="px-6 py-3 mt-5 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg flex items-center justify-center relative transition-all"
                                                 >
+                <span className="absolute text-3xl group-hover:opacity-0 transition-opacity duration-300">
+                    <MdReadMore/>
+                </span>
                                                     <span
-                                                        className="absolute text-3xl group-hover:opacity-0 transition-opacity duration-300">
-                                                    <MdReadMore/>
-                                                    </span>
-                                                    <span
-                                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Xem Thêm</span>
+                                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Xem Thêm
+                </span>
                                                 </Link>
                                             </div>
+
                                             <div className="relative min-h-[30rem] w-full grow">
                                                 <div
-                                                    className="absolute bottom-0  right-0 top-10 overflow-hidden rounded-tl-xl ">
+                                                    className="flex flex-1 items-center justify-center px-8 sm:px-10 lg:pb-2">
                                                     <img
-                                                        className="size-full object-cover object-top "
-                                                        src="/assets/images/elements/marketing2.svg"
+                                                        className="w-full max-lg:max-w-xs"
+                                                        src="/assets/images/elements/5.svg"
                                                         alt=""
                                                     />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -666,13 +618,13 @@ const HomePage = () => {
                                     <div
                                         className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
                                         <h2 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                                            Hợp tác cùng Next.G – Đưa thương hiệu của bạn vươn xa hơn bao giờ hết !
+                                            Hợp tác cùng NextGency – Đưa thương hiệu của bạn vươn xa hơn bao giờ hết !
                                         </h2>
                                         <p className="mt-6 text-pretty text-xl text-gray-300">
-                                            Next.G đồng hành để nâng tầm thương hiệu và chinh phục mọi mục tiêu kinh
+                                            NextGency đồng hành để nâng tầm thương hiệu và chinh phục mọi mục tiêu kinh
                                             doanh.
                                         </p>
-                                        <div className="mt-24 flex justify-center gap-4">
+                                        <div className="mt-10 sm:mt-24 flex justify-center gap-4">
                                             {/* Nút Chuyển Sang Trang Liên Hệ */}
                                             <a
                                                 href="/liên-hệ"
@@ -750,17 +702,17 @@ const HomePage = () => {
                 </svg>
                 <div className="relative z-10 px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
-                        <div className="overflow-hidden py-24 sm:py-32">
+                        <div className="overflow-hidden py-10 sm:py-32">
                             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                                 <div
                                     className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                                    <div className="lg:pr-8 lg:pt-4">
+                                    <div className="lg:pr-8 ">
                                         <div className="lg:max-w-lg">
-                                            <h2 className="text-base/7 font-semibold text-indigo-600">NEXT.GENCY</h2>
-                                            <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                                            <h2 className="text-base/7 font-semibold text-blue-600 text-center">NEXTGENCY</h2>
+                                            <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl text-center">
                                                 Khám phá về NextGency
                                             </p>
-                                            <p className="mt-6 text-lg/8 text-gray-600">
+                                            <p className="mt-6 text-lg/8 text-gray-600 text-center">
                                                 "Khám phá NextGency – Nơi sáng tạo và chiến lược hội tụ để thúc đẩy sự
                                                 bứt
                                                 phá vượt mọi giới hạn"
@@ -781,7 +733,7 @@ const HomePage = () => {
                                             <div className="mt-24 flex justify-center gap-4">
                                                 {/* Nút Chuyển Sang Trang Liên Hệ */}
                                                 <a
-                                                    href="/liên-hệ"
+                                                    href="/giới-thiệu"
                                                     className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
                                                 >
                                             <span
@@ -797,7 +749,7 @@ const HomePage = () => {
                                                     href="/liên-hệ"
                                                     className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
                                                 >
-                                                    Gia Nhập Next.G
+                                                    Hợp tác ngay
                                                     <span
                                                         className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
                                                 </a>
@@ -1169,7 +1121,7 @@ const HomePage = () => {
             </div>
 
 
-            <div className="relative bg-custom-gradient py-24 sm:py-32"
+            <div className="relative bg-custom-gradient py-10 sm:py-10"
                  style={{
                      backgroundImage: "url('/assets/images/banner/bgsec5.png')",
                      backgroundSize: "cover",
@@ -1203,23 +1155,18 @@ const HomePage = () => {
                 </svg>
 
                 <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className=" mx-auto max-w-2xl sm:text-center">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl uppercase">Tham Khảo Bảng Giá
-                        <span className="text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl uppercase"> Nextgency</span>
-                        </h2>
-                    </div>
                     <div
-                        className="bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+                        className="bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-44 lg:mx-0 lg:flex lg:max-w-none">
                         <div className="p-8 sm:p-10 lg:flex-auto">
-                            <h3 className="text-2xl font-bold tracking-tight text-white">Tổng Quan</h3>
+                            <h3 className="text-2xl font-bold tracking-tight text-white">Tổng Quan Bảng Giá</h3>
                             <p className="mt-6 text-base leading-7 text-gray-100">Khám phá bảng giá linh hoạt của Nextgency, được thiết kế phù hợp với mọi nhu cầu marketing, giúp bạn tối ưu ngân sách và đạt hiệu quả vượt mong đợi.</p>
                             <div className="mt-10 flex items-center gap-x-4">
                                 <h4 className="flex-none text-xl font-semibold leading-6 text-blue-500">Bao Gồm</h4>
                                 <div className="h-px flex-auto bg-gray-100"></div>
                             </div>
                             <ul role="list"
-                                className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
-                                <li className="flex gap-x-3 text-white">
+                                className="mt-8 grid grid-cols-1 gap-4 text-lg leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+                                <Link to="/dịch-vụ#content" className="flex gap-x-3 text-white hover:text-blue-500">
                                     <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
                                          fill="currentColor" aria-hidden="true">
                                         <path fillRule="evenodd"
@@ -1227,17 +1174,17 @@ const HomePage = () => {
                                               clipRule="evenodd"/>
                                     </svg>
                                     Content
-                                </li>
-                                <li className="flex gap-x-3 text-white">
+                                </Link>
+                                <Link to="/dịch-vụ#digital" className="flex gap-x-3 text-white hover:text-blue-500">
                                     <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
                                          fill="currentColor" aria-hidden="true">
                                         <path fillRule="evenodd"
                                               d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
                                               clipRule="evenodd"/>
                                     </svg>
-                                    Thiết kế
-                                </li>
-                                <li className="flex gap-x-3 text-white">
+                                    Digital Ads + Traffic
+                                </Link>
+                                <Link to="/dịch-vụ#media" className="flex gap-x-3 text-white hover:text-blue-500">
                                     <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
                                          fill="currentColor" aria-hidden="true">
                                         <path fillRule="evenodd"
@@ -1245,16 +1192,16 @@ const HomePage = () => {
                                               clipRule="evenodd"/>
                                     </svg>
                                     Media
-                                </li>
-                                <li className="flex gap-x-3 text-white">
+                                </Link>
+                                <Link to="/dịch-vụ#marketing" className="flex gap-x-3 text-white hover:text-blue-500">
                                     <svg className="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20"
                                          fill="currentColor" aria-hidden="true">
                                         <path fillRule="evenodd"
                                               d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
                                               clipRule="evenodd"/>
                                     </svg>
-                                    Digital Ads
-                                </li>
+                                    Marketing
+                                </Link>
                             </ul>
                         </div>
                         <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0 ">
@@ -1289,10 +1236,10 @@ const HomePage = () => {
 
                 <div className="relative z-10 px-6 sm:px-8 md:px-10 sm:pt-0">
                     <div className="mx-auto w-full max-w-7xl ">
-                        <div className=" py-24 sm:py-32">
+                        <div className=" py-10 sm:py-20">
                             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                                <div className="mx-auto max-w-2xl lg:mx-0">
-                                    <h2 className="text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">Blog</h2>
+                                <div className="mx-auto max-w-full text-center lg:mx-0">
+                                    <h2 className="uppercase text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">Blog</h2>
                                     <p className="mt-2 text-lg/8 text-gray-600">Đây là nơi đội ngũ của chúng tôi chia sẻ
                                         những bài học và góc nhìn về tiếp thị, chiến lược số, tăng trưởng, SEO, sản
                                         phẩm, và nhiều hơn nữa.</p>

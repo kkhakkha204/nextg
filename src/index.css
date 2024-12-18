@@ -29,17 +29,18 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #ea580c; /* Gradient cho thanh cuộn */
+  background: linear-gradient(180deg, #38bdf8, #1e40af);
+
 }
 
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #38bdf8, #1e40af); /* Gradient cho thanh cuộn */
+  background: linear-gradient(180deg, ghostwhite, ghostwhite); /* Gradient cho thanh cuộn */
   border-radius: 10px; /* Bo góc cho thanh cuộn */
-  border: 2px solid #1e3a8a; /* Tạo khoảng cách giữa thumb và track */
+  border: 2px solid #38bdf8; /* Tạo khoảng cách giữa thumb và track */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(0deg, #38bdf8, #1e40af); /* Gradient cho thanh cuộn */
+  background: linear-gradient(0deg, white, white); /* Gradient cho thanh cuộn */
 }
 
 /* Tùy chỉnh thanh cuộn cho các vùng cụ thể (nếu cần) */

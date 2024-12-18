@@ -27,17 +27,26 @@ const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     return (
         <nav
-            className={`z-50 bg-custom-gradient-logo font-[Oswald] shadow-2xl shadow-[#172554] fixed w-full top-0 left-0 transition-all duration-300 ${
+            className={`z-50 bg-custom-gradient font-[Oswald] shadow-2xl shadow-sky-600 fixed w-full top-0 left-0 transition-all duration-300 opacity-95 ${
                 scrollingDown ? "sm:-translate-y-full" : "sm:translate-y-0"
             }`}>
             <div className="container mx-auto px-4 flex flex-wrap items-center justify-between h-16">
 
-                {/* Logo */}
                 <div className="flex items-center space-x-2 xl:ml-5">
-                    <Link to="/" className="h-[4rem] w-[12.5rem]">
+                    {/* Logo chính (hiển thị trên tablet và desktop) */}
+                    <Link to="/" className="h-[4rem] w-[12.5rem] hidden sm:block">
                         <img
                             src="/assets/images/logos/logoNGson.png"
                             alt="Nextg Logo"
+                            className="h-full w-full object-contain"
+                        />
+                    </Link>
+
+                    {/* Logo favicon (hiển thị trên điện thoại) */}
+                    <Link to="/" className="h-10 w-10 sm:hidden">
+                        <img
+                            src="/assets/images/logos/logo_favicon.png"
+                            alt="Nextg Favicon"
                             className="h-full w-full object-contain"
                         />
                     </Link>
@@ -48,7 +57,7 @@ const Navbar = () => {
 
                     {["Giới thiệu", "Dịch vụ", "Liên hệ", "Blog"].map((item, index) => (
                         <li key={index} className="group">
-                        <Link
+                            <Link
                                 to={item === "Trang chủ" ? "/" : `/${item.toLowerCase().replace(" ", "-")}`}
                                 className="relative font-bold tracking-widest uppercase px-0 py-2 mx-3 text-gray-700 hover:text-[#38bdf8]"
                             >
@@ -64,10 +73,10 @@ const Navbar = () => {
                 <div className="hidden lg:block xl:ml-0 ml-[10rem] lg:ml-5 mr-5">
 
                     <Link
-                        to="/tuyển-dụng"
+                        to="/liên-hệ"
                         className="relative text-gray-700 font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-2 group"
                     >
-                        Gia nhập Nextg
+                        Hợp tác ngay
                         <span
                             className="absolute left-0 bottom-0 w-full h-[1px] bg-[#19183a] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
                     </Link>
@@ -131,11 +140,11 @@ const Navbar = () => {
                             ))}
                             <li>
                                 <Link
-                                    to="/tuyển-dụng"
+                                    to="/liên-hệ"
                                     className="text-gray-700 font-bold tracking-widest uppercase text-2xl hover:text-[#38bdf8]"
                                     onClick={() => setMenuOpen(false)}
                                 >
-                                    Gia nhập Nextg
+                                    Hợp tác ngay
                                 </Link>
                             </li>
                         </ul>

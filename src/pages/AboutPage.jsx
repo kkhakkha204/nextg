@@ -154,7 +154,7 @@ const AboutPage = () => {
                                         <p className="flex text-xl font-bold text-blue-500 uppercase text-g1 ">
                                             About Us
                                         </p>
-                                        <h2 className="mb-6 max-w-2xl text-5xl text-white font-medium leading-snug tracking-wide sm:text-7xl sm:leading-snug">
+                                        <h2 className="mb-6 max-w-2xl text-5xl text-white font-bold leading-snug tracking-normal sm:text-7xl sm:leading-snug">
                                             <span
                                                 className="inline-block text-white font-bold text-g4 ">NextGency</span> kiến
                                             tạo sự
@@ -320,7 +320,7 @@ const AboutPage = () => {
                                         Được thành lập với tầm nhìn hướng tới tương lai, NEXTGENCY là một công ty trẻ
                                         đầy năng động, tạo dấu ấn mạnh mẽ ngay từ những bước đi đầu tiên. Mặc dù mới ra
                                         mắt, chúng tôi đã nhanh chóng khẳng định mình là một lực lượng sáng tạo, cung
-                                        cấp các thiết kế web đột phá và các chiến lược tiếp thị số ấn tượng, thu hút
+                                        cấp các thiết kế đột phá và các chiến lược tiếp thị số ấn tượng, thu hút
                                         khán giả hiện đại.
                                     </p>
                                     <p className=" mt-14 text-gray-700 text-lg lg:text-xl text-center lg:text-left">
@@ -360,9 +360,9 @@ const AboutPage = () => {
 
                                 <div className="w-full xl:col-span-7  lg:col-span-6 block">
                                     <div className="w-full  sm:w-auto lg:w-[60.8125rem] xl:ml-16">
-                                        <img src="https://pagedone.io/asset/uploads/1694846193.png"
+                                        <img src="/assets/images/elements/about1.jpeg"
                                              alt="Dashboard image" className="rounded-l-3xl object-cover"
-                                             className="w-full  lg:h-auto "/>
+                                             className="w-full grayscale-[80%] rounded-[4rem] lg:h-auto "/>
                                     </div>
                                 </div>
                             </div>
@@ -588,13 +588,13 @@ const AboutPage = () => {
             <div
                  className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full px-6 py-10 border-t-8 border-blue-400">
                 <div className="mb-10">
-                    <h2 className="text-center text-2xl font-semibold text-indigo-600">Next.Gency</h2>
+                    <h2 className="text-center text-2xl font-semibold text-blue-500">Next.Gency</h2>
                     <p className="mx-auto text-white mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight sm:text-5xl">
                         Giá Trị Cốt Lõi
                     </p>
                 </div>
                 {/* Grid 6 hình chữ nhật */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6 justify-items-center">
+                <div className="grid grid-cols-3 sm:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6 justify-items-center">
                     {data.map((item) => (
                         <div
                             key={item.id}
@@ -626,7 +626,7 @@ const AboutPage = () => {
                         <h2 className="text-2xl font-semibold mb-4">{selectedItem.title}</h2>
                         <div className="flex flex-col md:flex-row items-center gap-6">
                             {/* Danh sách chi tiết */}
-                            <ul className="list-disc pl-5 space-y-20 flex-1">
+                            <ul className="list-disc pl-5 space-y-5 sm:space-y-20 flex-1">
                                 {selectedItem.details.map((detail, index) => (
                                     <li key={index} className="text-md">{detail}</li>
                                 ))}
@@ -642,16 +642,6 @@ const AboutPage = () => {
                                             </span>
                                         <span
                                             className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
-                                    </a>
-
-                                    {/* Nút Hợp Tác Ngay */}
-                                    <a
-                                        href="/liên-hệ"
-                                        className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
-                                    >
-                                        Gia Nhập Next.G
-                                        <span
-                                            className="absolute left-0 bottom-3 w-full h-[1px] bg-white transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
                                     </a>
                                 </div>
                             </ul>
