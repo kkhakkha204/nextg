@@ -1051,7 +1051,7 @@ const HomePage = () => {
                 {/* Content */}
                 <div className="relative  sm:pt-0 z-10">
                     <div className="mx-auto w-full max-w-full">
-                        <div className=" py-7">
+                        <div className=" py-4">
                             <div className="">
 
                                 {/* Slider logo */}

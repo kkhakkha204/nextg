@@ -466,7 +466,7 @@ const ServicesPage = () => {
                                             Content
                                         </h1>
                                         <div className="border-l-[6px] border-orange-500">
-                                            <p className="ml-4 mt-6 text-xl/8 text-orange-500">
+                                            <p className="ml-4 mt-6 text-xl/8 text-orange-500 italic">
                                                 Biên soạn nội dung truyền thông tinh tế, khác biệt
                                             </p>
                                         </div>
@@ -490,6 +490,30 @@ const ServicesPage = () => {
                                 </div>
                                 <div className="lg:pr-4">
                                     <Accordion items={items}/>
+                                    <div className="mt-10 flex justify-center gap-4">
+                                        {/* Nút Chuyển Sang Trang Liên Hệ */}
+                                        <a
+                                            href="/liên-hệ"
+                                            className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
+                                        >
+                                            <span
+                                                className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
+                                            <MdCallMade/>
+                                            </span>
+                                            <span
+                                                className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
+                                        </a>
+
+                                        {/* Nút Hợp Tác Ngay */}
+                                        <a
+                                            href="/liên-hệ"
+                                            className="relative font-[Oswald] font-bold text-white tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
+                                        >
+                                            Hợp tác ngay
+                                            <span
+                                                className="absolute left-0 bottom-3 w-full h-[1px] bg-white transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -545,7 +569,7 @@ const ServicesPage = () => {
                                                 Media
                                             </h1>
                                             <div className="border-l-[6px] border-orange-600">
-                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600">
+                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600 italic">
                                                     Xây dựng chiến lược hình ảnh thương hiệu nổi bật, bắt mắt.
                                                 </p>
                                             </div>
@@ -569,6 +593,30 @@ const ServicesPage = () => {
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
                                         <Accordion items={itemsmedia} textColor="text-gray-700"/>
+                                        <div className="mt-10 flex justify-center gap-4">
+                                            {/* Nút Chuyển Sang Trang Liên Hệ */}
+                                            <a
+                                                href="/liên-hệ"
+                                                className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
+                                            >
+                                            <span
+                                                className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
+                                            <MdCallMade/>
+                                            </span>
+                                                <span
+                                                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
+                                            </a>
+
+                                            {/* Nút Hợp Tác Ngay */}
+                                            <a
+                                                href="/liên-hệ"
+                                                className="relative font-[Oswald] font-bold text-gray-950 tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
+                                            >
+                                                Hợp tác ngay
+                                                <span
+                                                    className="absolute left-0 bottom-3 w-full h-[1px] bg-black transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -692,7 +740,7 @@ const ServicesPage = () => {
                                                 Digital Ads + Traffic
                                             </h1>
                                             <div className="border-l-[6px] border-orange-600">
-                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600">
+                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600 italic">
                                                     Tối ưu chuyển đổi qua các kênh online và offline
                                                 </p>
                                             </div>
@@ -716,6 +764,30 @@ const ServicesPage = () => {
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
                                         <Accordion items={itemsdigital} textColor="text-gray-700"/>
+                                        <div className="mt-10 flex justify-center gap-4">
+                                            {/* Nút Chuyển Sang Trang Liên Hệ */}
+                                            <a
+                                                href="/liên-hệ"
+                                                className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
+                                            >
+                                            <span
+                                                className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
+                                            <MdCallMade/>
+                                            </span>
+                                                <span
+                                                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
+                                            </a>
+
+                                            {/* Nút Hợp Tác Ngay */}
+                                            <a
+                                                href="/liên-hệ"
+                                                className="relative font-[Oswald] font-bold text-gray-950 tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
+                                            >
+                                                Hợp tác ngay
+                                                <span
+                                                    className="absolute left-0 bottom-3 w-full h-[1px] bg-black transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -772,7 +844,7 @@ const ServicesPage = () => {
                                                 Phòng Marketing thuê ngoài
                                             </h1>
                                             <div className="border-l-[6px] border-orange-600">
-                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600">
+                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600 italic">
                                                     Cung cấp đầy đủ nhân sự triển khai hoạt động marketing với chi phí
                                                     tối ưu giúp:
                                                 </p>
@@ -792,6 +864,30 @@ const ServicesPage = () => {
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
                                         <Accordion items={itemsphongmarketing} textColor="text-gray-700"/>
+                                        <div className="mt-10 flex justify-center gap-4">
+                                            {/* Nút Chuyển Sang Trang Liên Hệ */}
+                                            <a
+                                                href="/liên-hệ"
+                                                className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
+                                            >
+                                            <span
+                                                className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
+                                            <MdCallMade/>
+                                            </span>
+                                                <span
+                                                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
+                                            </a>
+
+                                            {/* Nút Hợp Tác Ngay */}
+                                            <a
+                                                href="/liên-hệ"
+                                                className="relative font-[Oswald] font-bold text-gray-950 tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
+                                            >
+                                                Hợp tác ngay
+                                                <span
+                                                    className="absolute left-0 bottom-3 w-full h-[1px] bg-black transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

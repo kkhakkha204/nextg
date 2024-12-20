@@ -27,7 +27,7 @@ const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     return (
         <nav
-            className={`z-50 bg-custom-gradient font-[Oswald] shadow-2xl shadow-sky-600 fixed w-full top-0 left-0 transition-all duration-300 opacity-95 ${
+            className={`z-50 border-b-4 border-sky-300 bg-custom-gradient font-[Oswald] shadow-2xl shadow-sky-600 fixed w-full top-0 left-0 transition-all duration-300 opacity-95 ${
                 scrollingDown ? "sm:-translate-y-full" : "sm:translate-y-0"
             }`}>
             <div className="container mx-auto px-4 flex flex-wrap items-center justify-between h-16">
