@@ -439,9 +439,8 @@ const HomePage = () => {
                         <div className=" py-10 sm:py-32">
                             <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
                                 <h2 className="text-center text-2xl font-semibold text-blue-500">NextGency</h2>
-                                <p className="mx-auto text-white mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight sm:text-5xl">
-                                    Chúng tôi thổi hồn vào các thương hiệu, định hình bản sắc của họ bằng chiến lược
-                                    sáng tạo
+                                <p className="mx-auto text-white mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight sm:text-5xl uppercase">
+                                    Dịch Vụ
                                 </p>
                                 <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
                                     <div className="relative lg:row-span-2 h-[530px] my-auto">
@@ -813,7 +812,7 @@ const HomePage = () => {
                                 <blockquote
                                     className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8">
                                     <div>
-                                        <div className="flex gap-0.5 text-red-600">
+                                        <div className="flex gap-0.5 text-orange-500">
                                             <svg
                                                 className="size-5"
                                                 fill="currentColor"
@@ -891,7 +890,7 @@ const HomePage = () => {
                                 <blockquote
                                     className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8">
                                     <div>
-                                        <div className="flex gap-0.5 text-red-600">
+                                        <div className="flex gap-0.5 text-orange-500">
                                             <svg
                                                 className="size-5"
                                                 fill="currentColor"
@@ -968,7 +967,7 @@ const HomePage = () => {
                                 <blockquote
                                     className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8">
                                     <div>
-                                        <div className="flex gap-0.5 text-red-600">
+                                        <div className="flex gap-0.5 text-orange-500">
                                             <svg
                                                 className="size-5"
                                                 fill="currentColor"

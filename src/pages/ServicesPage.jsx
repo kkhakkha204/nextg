@@ -1,4 +1,5 @@
 import React, {useRef} from "react";
+import Accordion from "../components/Accordion";
 import { useState, useEffect } from "react";
 import {
     MdCallMade,
@@ -130,7 +131,7 @@ const ServicesPage = () => {
         },
         {
             id: 4,
-            title: "Social Media",
+            title: "Social",
             description: "Kết nối khách hàng qua nền tảng mạng xã hội.",
             details: ["Chiến lược: Tận dụng sức mạnh của các nền tảng mạng xã hội để xây dựng sự gắn kết với khách hàng và quảng bá sản phẩm/dịch vụ.",
                 "Cách triển khai: Tạo nội dung tương tác như cuộc thi, khảo sát, livestream, và bài đăng đa dạng phù hợp với từng nền tảng mạng xã hội.",
@@ -148,7 +149,7 @@ const ServicesPage = () => {
         },
         {
             id: 6,
-            title: "Email Marketing",
+            title: "Email",
             description: "Gửi email đúng đối tượng, nâng cao tỷ lệ chuyển đổi.",
             details: ["Chiến lược: Xây dựng danh sách email và phát triển các chuỗi email tự động để giữ chân và chăm sóc khách hàng tiềm năng.",
                 "Cách triển khai: Gửi email chào mừng, thông báo khuyến mãi, và các nội dung chăm sóc khách hàng, có tính cá nhân hóa để tăng tỷ lệ mở và tương tác.",
@@ -156,6 +157,64 @@ const ServicesPage = () => {
             image: "/assets/images/marketing/em.jpg",
         },
     ];
+    const items = [
+        {
+            title: "Marketing Plan",
+            content: "Lập kế hoạch marketing hiệu quả, giúp thương hiệu đạt mục tiêu kinh doanh.",
+        },
+        {
+            title: "Content Branding - Content Viral",
+            content: "Tạo nội dung ấn tượng, lan tỏa mạnh mẽ, tăng nhận diện thương hiệu.",
+        },
+        {
+            title: "Seeing Campaign - Event Planer",
+            content: "Tổ chức chiến dịch, sự kiện thu hút, nâng cao uy tín thương hiệu.",
+        },
+    ];
+
+    const itemsmedia = [
+        {
+            title: "Design - Video Edit:",
+            content: "Sáng tạo thiết kế và chỉnh sửa video chuyên nghiệp, thu hút thị giác.",
+        },
+        {
+            title: "Media & Production House:",
+            content: "Sản xuất nội dung chất lượng cao, nâng tầm thương hiệu trên mọi nền tảng.",
+        },
+
+    ];
+
+    const itemsdigital = [
+        {
+            title: "Digital Ads: Facebook - TikTok, Google:",
+            content: "Quảng cáo đa nền tảng, tối ưu hiệu quả và tiếp cận khách hàng mục tiêu.",
+        },
+        {
+            title: "Chăm sóc khách hàng:",
+            content: "Dịch vụ tận tâm, xây dựng lòng tin và giữ chân khách hàng bền vững.",
+        },
+
+    ];
+
+    const itemsphongmarketing = [
+        {
+            title: "Chuyên nghiệp hóa nhận diện thương hiệu:",
+            content: "Đồng bộ hình ảnh trên mội nền tảng nâng cao uy tín.",
+        },
+        {
+            title: "Tiết kiệm chi phí:",
+            content: "Tối ưu hơn so với xây dựng phòng marketing in-house.",
+        },
+        {
+            title: "Tiết kiệm thời gian:",
+            content: "Đảm bảo quy trình chuyên nghiệp mà không cần đào tạo nhân sự.",
+        },
+        {
+            title: "Bắt kịp xu hướng:",
+            content: "Liên tục cập nhật các trend truyền thông mới nhất.",
+        },
+    ];
+
 
     const [selectedItem, setSelectedItem] = useState(data[0]);
 
@@ -390,72 +449,47 @@ const ServicesPage = () => {
             </div>
 
 
-            <div id="content"
-                 className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950  w-full border-t-8 border-blue-400">
+            <div
+                id="content"
+                className="relative bg-gradient-to-br from-gray-950 via-slate-800 to-blue-950 w-full border-t-8 border-blue-400"
+            >
                 <div className="px-6 sm:px-8 md:px-10 sm:pt-0">
-                    <div className="mx-auto w-full max-w-7xl ">
+                    <div className="mx-auto w-full max-w-7xl">
                         <div
                             className="relative isolate overflow-hidden px-6 py-10 sm:py-32 lg:overflow-visible lg:px-0">
-
                             <div
                                 className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-                                <div
-                                    className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-                                    <div className="lg:pr-4">
-                                        <div className="lg:max-w-lg">
-                                            <p className="text-base/7 font-semibold text-blue-500">NEXTGENCY</p>
-                                            <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl uppercase">
-                                                Content
-                                            </h1>
-                                            <div className="border-l-[6px] border-orange-500">
-                                                <p className="ml-4 mt-6 text-xl/8 text-orange-500">
-                                                    Biên soạn nội dung truyền thông tinh tế, khác biệt
-                                                </p>
-                                            </div>
-                                            <p className="mt-6 text-xl/8 text-gray-200">
-                                                Tạo nên những nội dung độc đáo, dễ dàng thu hút sự chú ý, chạm đến trái
-                                                tim người xem và truyền cảm hứng mạnh mẽ. Biến thương hiệu của bạn thành
-                                                tâm điểm, thúc đẩy tương tác tự nhiên, nâng cao nhận diện và tối đa hóa
-                                                hiệu quả kinh doanh thông qua sự lan tỏa không giới hạn.
+                                <div className="lg:pr-4">
+                                    <div className="lg:max-w-lg">
+                                        <p className="text-base/7 font-semibold text-blue-500">NEXTGENCY</p>
+                                        <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl uppercase">
+                                            Content
+                                        </h1>
+                                        <div className="border-l-[6px] border-orange-500">
+                                            <p className="ml-4 mt-6 text-xl/8 text-orange-500">
+                                                Biên soạn nội dung truyền thông tinh tế, khác biệt
                                             </p>
                                         </div>
+                                        <p className="mt-6 text-xl/8 text-gray-200">
+                                            Tạo nên những nội dung độc đáo, dễ dàng thu hút sự chú ý, chạm đến trái tim
+                                            người
+                                            xem và truyền cảm hứng mạnh mẽ. Biến thương hiệu của bạn thành tâm điểm,
+                                            thúc đẩy
+                                            tương tác tự nhiên, nâng cao nhận diện và tối đa hóa hiệu quả kinh doanh
+                                            thông qua
+                                            sự lan tỏa không giới hạn.
+                                        </p>
                                     </div>
                                 </div>
-                                <div
-                                    className="-ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+                                <div className="lg:col-start-2 lg:row-span-2 lg:overflow-hidden">
                                     <img
                                         alt=""
                                         src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
                                         className="w-[48rem] max-w-none border-l-4 border-blue-400 ring-1 ring-gray-400/10 sm:w-[57rem]"
                                     />
                                 </div>
-                                <div
-                                    className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-                                    <div className="lg:pr-4">
-                                        <div className="max-w-xl text-base/7 text-gray-200 lg:max-w-lg">
-
-                                            <ul role="list" className=" space-y-4 ">
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-500 ">Marketing Plan:</strong>Lập kế hoạch marketing hiệu quả, giúp thương hiệu đạt mục tiêu kinh doanh.
-                  </span>
-                                                </li>
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-500 ">Content Branding - Content Viral:</strong>Tạo nội dung ấn tượng, lan tỏa mạnh mẽ, tăng nhận diện thương hiệu.
-                  </span>
-                                                </li>
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-500 ">Seeing Campaign - Event Planer:</strong>Tổ chức chiến dịch, sự kiện thu hút, nâng cao uy tín thương hiệu.
-                  </span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div className="lg:pr-4">
+                                    <Accordion items={items}/>
                                 </div>
                             </div>
                         </div>
@@ -534,48 +568,7 @@ const ServicesPage = () => {
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
-                                        <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
-
-                                            <ul role="list" className=" space-y-4 ">
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-600 ">Design - Video Edit:</strong> Sáng tạo thiết kế và chỉnh sửa video chuyên nghiệp, thu hút thị giác.
-                  </span>
-                                                </li>
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-600 ">Media & Production House:</strong> Sản xuất nội dung chất lượng cao, nâng tầm thương hiệu trên mọi nền tảng.
-                  </span>
-                                                </li>
-
-                                            </ul>
-                                            <div className="mt-24 flex justify-center gap-4">
-                                                {/* Nút Chuyển Sang Trang Liên Hệ */}
-                                                <a
-                                                    href="/liên-hệ"
-                                                    className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
-                                                >
-                                            <span
-                                                className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
-                                            <MdCallMade/>
-                                            </span>
-                                                    <span
-                                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
-                                                </a>
-
-                                                {/* Nút Hợp Tác Ngay */}
-                                                <a
-                                                    href="/liên-hệ"
-                                                    className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
-                                                >
-                                                    Hợp Tác Ngay
-                                                    <span
-                                                        className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        <Accordion items={itemsmedia} textColor="text-gray-700"/>
                                     </div>
                                 </div>
                             </div>
@@ -722,48 +715,7 @@ const ServicesPage = () => {
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
-                                        <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
-
-                                            <ul role="list" className=" space-y-4 ">
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-600 ">Digital Ads: Facebook - TikTok, Google:</strong> Quảng cáo đa nền tảng, tối ưu hiệu quả và tiếp cận khách hàng mục tiêu.
-                  </span>
-                                                </li>
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-600 ">Chăm sóc khách hàng:</strong> Dịch vụ tận tâm, xây dựng lòng tin và giữ chân khách hàng bền vững.
-                  </span>
-                                                </li>
-
-                                            </ul>
-                                            <div className="mt-10 flex justify-center gap-4">
-                                                {/* Nút Chuyển Sang Trang Liên Hệ */}
-                                                <a
-                                                    href="/liên-hệ"
-                                                    className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
-                                                >
-                                            <span
-                                                className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
-                                            <MdCallMade/>
-                                            </span>
-                                                    <span
-                                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
-                                                </a>
-
-                                                {/* Nút Hợp Tác Ngay */}
-                                                <a
-                                                    href="/liên-hệ"
-                                                    className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
-                                                >
-                                                    Hợp Tác Ngay
-                                                    <span
-                                                        className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        <Accordion items={itemsdigital} textColor="text-gray-700"/>
                                     </div>
                                 </div>
                             </div>
@@ -839,59 +791,7 @@ const ServicesPage = () => {
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
-                                        <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
-
-                                            <ul role="list" className=" space-y-4 ">
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-600 ">Chuyên nghiệp hóa nhận diện thương hiệu:</strong> Đồng bộ hình ảnh trên mội nền tảng nâng cao uy tín.
-                  </span>
-                                                </li>
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-600 ">Tiết kiệm chi phí: </strong> Tối ưu hơn so với xây dựng phòng marketing in-house.
-                  </span>
-                                                </li>
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-600 ">Tiết kiệm thời gian: </strong> Đảm bảo quy trình chuyên nghiệp mà không cần đào tạo nhân sự.
-                  </span>
-                                                </li>
-                                                <li className="flex gap-x-3">
-
-                                                    <span>
-                    <strong className="font-bold text-blue-600 ">Bắt kịp xu hướng:  </strong> Liên tục cập nhật các trend truyền thông mới nhất.
-                  </span>
-                                                </li>
-                                            </ul>
-                                            <div className="mt-10 flex justify-center gap-4">
-                                                {/* Nút Chuyển Sang Trang Liên Hệ */}
-                                                <a
-                                                    href="/liên-hệ"
-                                                    className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
-                                                >
-                                            <span
-                                                className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
-                                            <MdCallMade/>
-                                            </span>
-                                                    <span
-                                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
-                                                </a>
-
-                                                {/* Nút Hợp Tác Ngay */}
-                                                <a
-                                                    href="/liên-hệ"
-                                                    className="relative font-[Oswald] font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
-                                                >
-                                                    Hợp Tác Ngay
-                                                    <span
-                                                        className="absolute left-0 bottom-3 w-full h-[1px] bg-[#1F2937] transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        <Accordion items={itemsphongmarketing} textColor="text-gray-700"/>
                                     </div>
                                 </div>
                             </div>
