@@ -360,7 +360,7 @@ const AboutPage = () => {
 
                                 <div className="w-full xl:col-span-7  lg:col-span-6 block">
                                     <div className="w-full  sm:w-auto lg:w-[60.8125rem] xl:ml-16">
-                                        <img src="/assets/images/elements/ai2.webp"
+                                        <img src="/assets/images/elements/ai.webp"
                                              alt="Dashboard image" className="rounded-l-3xl object-cover w-full grayscale-[80%] rounded-[4rem] lg:h-auto "/>
                                     </div>
                                 </div>

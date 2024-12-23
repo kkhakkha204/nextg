@@ -13,13 +13,13 @@ function Accordion({ items, textColor = "text-gray-100" }) {
                 <li key={index} className="">
                     <button
                         onClick={() => toggleAccordion(index)}
-                        className={`w-full flex justify-between items-center px-4 py-2 text-left font-bold text-blue-500`}
+                        className={`w-full flex justify-between items-center pr-8 py-2 text-left text-lg font-bold text-blue-500`}
                     >
                         {item.title}
                         <span className="ml-2">{openIndex === index ? "−" : "+"}</span>
                     </button>
                     {openIndex === index && (
-                        <div className={`px-4 py-2 ${textColor}`}>
+                        <div className={`px-2 py-2 font-semibold italic ${textColor}`}>
                             {item.content}
                         </div>
                     )}

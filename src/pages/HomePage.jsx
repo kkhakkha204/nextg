@@ -489,7 +489,8 @@ const HomePage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="relative max-lg:row-start-1 flex items-center justify-center text-center">
+                                    <div
+                                        className="relative max-lg:row-start-1 flex items-center justify-center text-center">
                                         <div
                                             className="absolute inset-px rounded-lg bg-custom-gradient rounded-t-[2rem]"></div>
                                         <div
@@ -516,7 +517,8 @@ const HomePage = () => {
                                         <div
                                             className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
                                     </div>
-                                    <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 flex items-center justify-center text-center">
+                                    <div
+                                        className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 flex items-center justify-center text-center">
                                         <div
                                             className="absolute inset-px rounded-lg bg-custom-gradient sm:rounded-b-[2rem] "></div>
                                         <div
@@ -533,7 +535,7 @@ const HomePage = () => {
                                             </div>
                                             <div
                                                 className="flex flex-1 items-center  max-lg:py-6 lg:pb-2 mx-10">
-                                            <img
+                                                <img
                                                     className="size-full object-cover object-top "
                                                     src="/assets/images/elements/3.svg"
                                                     alt=""
@@ -590,76 +592,33 @@ const HomePage = () => {
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-                            </div>
-
-                        </div>
-
-                        <div className="">
-                            <div className="mx-auto max-w-7xl pb-24 sm:px-6 sm:pb-32 lg:px-8">
-                                <div
-                                    className="relative isolate overflow-hidden px-6 pt-16 sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-                                    <svg
-                                        viewBox="0 0 1024 1024"
-                                        aria-hidden="true"
-                                        className="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                                <div className="mt-10 flex justify-center gap-4">
+                                    {/* Nút Chuyển Sang Trang Liên Hệ */}
+                                    <a
+                                        href="/liên-hệ"
+                                        className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
                                     >
-                                        <circle r={512} cx={512} cy={512}
-                                                fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7"/>
-                                        <defs>
-                                            <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-                                                <stop stopColor="#7775D6"/>
-                                                <stop offset={1} stopColor="#1d4ed8"/>
-                                            </radialGradient>
-                                        </defs>
-                                    </svg>
-                                    <div
-                                        className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-                                        <h2 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                                            Hợp tác cùng NextGency – Đưa thương hiệu của bạn vươn xa hơn bao giờ hết !
-                                        </h2>
-                                        <p className="mt-6 text-pretty text-xl text-gray-300">
-                                            NextGency đồng hành để nâng tầm thương hiệu và chinh phục mọi mục tiêu kinh
-                                            doanh.
-                                        </p>
-                                        <div className="mt-10 sm:mt-24 flex justify-center gap-4">
-                                            {/* Nút Chuyển Sang Trang Liên Hệ */}
-                                            <a
-                                                href="/liên-hệ"
-                                                className="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white w-32 h-16 font-semibold rounded-[2rem] shadow-lg xl:right-11 flex items-center justify-center relative group transition-all"
-                                            >
                                             <span
                                                 className="absolute text-2xl group-hover:opacity-0 transition-opacity duration-300">
                                             <MdCallMade/>
                                             </span>
-                                                <span
-                                                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên hệ</span>
-                                            </a>
+                                        <span
+                                            className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên Hệ</span>
+                                    </a>
 
-                                            {/* Nút Hợp Tác Ngay */}
-                                            <a
-                                                href="/liên-hệ"
-                                                className="relative font-[Oswald] text-white font-bold tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
-                                            >
-                                                Hợp tác ngay
-                                                <span
-                                                    className="absolute left-0 bottom-3 w-full h-[1px] bg-white transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="relative mt-16 h-auto lg:mt-8 max-w-screen-lg mx-auto">
-                                        <img
-                                            alt="App screenshot"
-                                            src="/assets/images/elements/hoptac.jpg"
-                                            className="w-full h-auto rounded-md bg-white/5 ring-1 ring-white/10"
-                                        />
-                                    </div>
-
+                                    {/* Nút Hợp Tác Ngay */}
+                                    <a
+                                        href="/liên-hệ"
+                                        className="relative font-[Oswald] font-bold text-white tracking-widest uppercase text-base hover:text-[#38bdf8] px-1 py-4 group right-2"
+                                    >
+                                        Hợp tác ngay
+                                        <span
+                                            className="absolute left-0 bottom-3 w-full h-[1px] bg-white transition-all duration-300 group-hover:bg-[#38bdf8]"></span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

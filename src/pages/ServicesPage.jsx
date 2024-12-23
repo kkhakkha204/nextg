@@ -461,16 +461,15 @@ const ServicesPage = () => {
                                 className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
                                 <div className="lg:pr-4">
                                     <div className="lg:max-w-lg">
-                                        <p className="text-base/7 font-semibold text-blue-500">NEXTGENCY</p>
                                         <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl uppercase">
                                             Content
                                         </h1>
                                         <div className="border-l-[6px] border-orange-500">
-                                            <p className="ml-4 mt-6 text-xl/8 text-orange-500 italic">
+                                            <p className="ml-2 mt-6 text-xl/8 text-orange-500 font-semibold italic">
                                                 Biên soạn nội dung truyền thông tinh tế, khác biệt
                                             </p>
                                         </div>
-                                        <p className="mt-6 text-xl/8 text-gray-200">
+                                        <p className=" text-xl/8 text-gray-50 font-semibold text-justify">
                                             Tạo nên những nội dung độc đáo, dễ dàng thu hút sự chú ý, chạm đến trái tim
                                             người
                                             xem và truyền cảm hứng mạnh mẽ. Biến thương hiệu của bạn thành tâm điểm,
@@ -481,11 +480,12 @@ const ServicesPage = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="lg:col-start-2 lg:row-span-2 lg:overflow-hidden">
+                                <div
+                                    className="lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden flex justify-center items-center">
                                     <img
                                         alt=""
-                                        src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
-                                        className="w-[48rem] max-w-none border-l-4 border-blue-400 ring-1 ring-gray-400/10 sm:w-[57rem]"
+                                        src="/assets/images/elements/content.png"
+                                        className=" max-w-[454px] max-h-[368px] sm:max-w-[624px] sm:max-h-[538px] object-contain sm:mt-0 mt-8 rounded-t-3xl"
                                     />
                                 </div>
                                 <div className="lg:pr-4">
@@ -564,16 +564,16 @@ const ServicesPage = () => {
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
                                         <div className="lg:max-w-lg">
-                                            <p className="text-base/7 font-semibold text-blue-600">NEXTGENCY</p>
+
                                             <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
                                                 Media
                                             </h1>
                                             <div className="border-l-[6px] border-orange-600">
-                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600 italic">
+                                                <p className="ml-2 mt-6 text-xl/8 font-semibold text-orange-600 italic">
                                                     Xây dựng chiến lược hình ảnh thương hiệu nổi bật, bắt mắt.
                                                 </p>
                                             </div>
-                                            <p className="mt-6 text-xl/8 text-gray-700">
+                                            <p className=" text-xl/8 font-semibold text-gray-950 text-justify">
                                                 Định hình thương hiệu nhất quán, nhấn mạnh điểm nổi bật riêng biệt. Nội
                                                 dung được thiết kế chỉn chu với hình ảnh sắc nét, sáng tạo vượt trội,
                                                 tạo ấn tượng sâu đậm ngay từ ánh nhìn đầu tiên.
@@ -582,17 +582,17 @@ const ServicesPage = () => {
                                     </div>
                                 </div>
                                 <div
-                                    className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+                                    className="lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden flex justify-center items-center">
                                     <img
                                         alt=""
-                                        src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
-                                        className="w-[48rem] max-w-none border-l-4 border-blue-400 ring-1 ring-gray-400/10 sm:w-[57rem]"
+                                        src="/assets/images/elements/media2.png"
+                                        className=" max-w-[454px] max-h-[368px] sm:max-w-[624px] sm:max-h-[538px] object-contain sm:mt-0 mt-8 rounded-r-3xl"
                                     />
                                 </div>
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
-                                        <Accordion items={itemsmedia} textColor="text-gray-700"/>
+                                    <Accordion items={itemsmedia} textColor="text-gray-950"/>
                                         <div className="mt-10 flex justify-center gap-4">
                                             {/* Nút Chuyển Sang Trang Liên Hệ */}
                                             <a
@@ -735,16 +735,15 @@ const ServicesPage = () => {
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
                                         <div className="lg:max-w-lg">
-                                            <p className="text-base/7 font-semibold text-blue-600">NEXTGENCY</p>
                                             <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl uppercase">
                                                 Digital Ads + Traffic
                                             </h1>
                                             <div className="border-l-[6px] border-orange-600">
-                                                <p className="ml-4 mt-6 text-xl/8 text-orange-600 italic">
+                                                <p className="ml-2 mt-6 text-xl/8 text-orange-600 font-semibold italic">
                                                     Tối ưu chuyển đổi qua các kênh online và offline
                                                 </p>
                                             </div>
-                                            <p className=" text-xl/8 text-gray-700">
+                                            <p className=" text-xl/8 text-gray-950 font-semibold">
                                                 Xây dựng và tối ưu hóa chiến dịch quảng cáo với độ chính xác cao, sử
                                                 dụng dữ liệu chuyên sâu để nhằm mục tiêu hiệu quả, tăng tỷ lệ chuyển
                                                 đổi, và mang lại kết quả ấn tượng
@@ -753,17 +752,17 @@ const ServicesPage = () => {
                                     </div>
                                 </div>
                                 <div
-                                    className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+                                    className="lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden flex justify-center items-center">
                                     <img
                                         alt=""
-                                        src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
-                                        className="w-[48rem] max-w-none border-l-4 border-blue-400 ring-1 ring-gray-400/10 sm:w-[57rem]"
+                                        src="/assets/images/elements/digital.png"
+                                        className=" max-w-[454px] max-h-[368px] sm:max-w-[624px] sm:max-h-[538px] object-contain sm:mt-0 mt-8 rounded-l-3xl"
                                     />
                                 </div>
                                 <div
                                     className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                                     <div className="lg:pr-4">
-                                        <Accordion items={itemsdigital} textColor="text-gray-700"/>
+                                        <Accordion items={itemsdigital} textColor="text-gray-950"/>
                                         <div className="mt-10 flex justify-center gap-4">
                                             {/* Nút Chuyển Sang Trang Liên Hệ */}
                                             <a
