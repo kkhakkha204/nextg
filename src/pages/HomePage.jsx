@@ -144,12 +144,7 @@ const HomePage = () => {
             className="relative bg-custom-gradient md:min-h-screen w-screen overflow-hidden font-[Oswald] text-gray-800 min-h-[70vh]">
             <div className="">
                 <div className="relative pt-16 sm:pt-32 md:pt-48 w-full pb-32 xl:pb-[30rem]"
-                     style={{
-                         backgroundImage: "url('/assets/images/banner/city3.png')",
-                         backgroundSize: "cover",
-                         backgroundRepeat: "no-repeat",
-                         backgroundPosition: "center center",
-                     }}
+
                 >
                     {/* SVG Pattern */}
 
